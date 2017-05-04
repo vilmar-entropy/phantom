@@ -2,3 +2,11 @@
 	font-style: italic;
 	font-weight: bold;
 }
+
+.topic {
+	font-size: 1.2em;
+}
+
+.eq { //normal equation and paragraph
+	text-indent: 6em;
+}

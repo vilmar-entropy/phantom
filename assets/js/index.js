@@ -2,5 +2,5 @@
 alert("hello");
 
 function solution() {
-  $('#stress').hide();
+  $('#stress').toggle();
 }

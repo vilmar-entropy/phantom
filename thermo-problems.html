@@ -68,11 +68,7 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<div data-role="collapsible">
-							    <h4>Solution</h4>
-							    <p>I'm the collapsible content. By default I'm closed, but you can click the header to open me.</p>
-							</div>
-							<span>$ S = F/A$</span>
+							<span id="stress">$ S = F/A$</span>
 							<span>$$x = \frac{-b \pm \sqrt{b^2 - 4ac }}{2a}$$</span>
 							When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
 							$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
@@ -105,6 +101,7 @@
 			</div>
 
 		<!-- Scripts -->
+		<script> $('#stress').hide();</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>

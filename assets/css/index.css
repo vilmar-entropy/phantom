@@ -17,3 +17,33 @@
 p, span {
         font-family: "Times New Roman", Times, serif;
 }
+
+span {
+	display: inline-block;
+}
+
+figure.topimg {
+	text-align: center;
+	margin: 0.01em;
+}
+
+#fig1-1 img {
+	display: inline-block;
+	max-width: 429px;
+	width: 100%;
+	margin: 0.01em auto;
+}
+
+#fig1-2 img {
+	display: inline-block;
+	max-width: 572px;
+	width: 100%;
+	margin: 0.01em auto;
+}
+
+#fig1-8 img {
+	display: inline-block;
+	max-width: 709px;
+	width: 100%;
+	margin: 0.01em auto;
+}

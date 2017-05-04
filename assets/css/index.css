@@ -1,3 +1,11 @@
+span, p, h1 {
+
+        font-family: "Arial", Times, Sans-serif;
+
+}
+
+17
+
 .term {
 	font-style: italic;
 	font-weight: bold;
@@ -11,6 +19,7 @@
 	text-indent: 8%;
 }
 
-span {
-        font-family: "Times New Roman", Times, serif;
-}
+
+//span {
+        //font-family: "Times New Roman", Times, serif;
+//}

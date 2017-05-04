@@ -1,10 +1,4 @@
-span, p, h1 {
 
-        font-family: "Arial", Helvetica, sans-serif;
-
-}
-
-17
 
 .term {
 	font-style: italic;
@@ -20,6 +14,6 @@ span, p, h1 {
 }
 
 
-//span {
-        //font-family: "Times New Roman", Times, serif;
-//}
+p, span {
+        font-family: "Times New Roman", Times, serif;
+}

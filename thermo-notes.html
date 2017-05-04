@@ -72,44 +72,134 @@
 								font-style: italic;
 							} -->
 							<h1> 1. BASIC PRINCIPLES, CONCEPTS AND DEFINITIONS </h1>
-							<strong>1.1 Introduction</strong>
-							<p class="eq"><strong class="term">Thermodynamics</strong> involves the storage, 
+							<strong>1.1 Introduction</strong>   
+							<span class="eq"><strong class="term">Thermodynamics</strong> involves the storage, 
 								transformation, and transfer of energy. Energy is <strong class="term">stored</strong> 
 								as internal energy (due to temperature), kinetic energy (due to motion),
 								potential energy (due to elevation), and chemical energy (due to chemical
 								composition); it is <strong class="term">transformed</strong> from one of these forms
 								to another; and it is <strong class="term">transferred</strong> across
 								a boundary as either heat or work.
-							</p>
-							<strong>1.2 The System and Control Volume</strong>
-							<p class="eq">A <strong class="term">thermodynamic system</strong> is a fixed quantity of matter upon 
-								which attention is focused.
-							</p>
+							</span>    <br> <br>
+							<strong>1.2 The System and Control Volume</strong>    
+							<span class="eq">A <strong class="term">thermodynamic system</strong> is a fixed quantity of matter upon 
+								which attention is focused. It is a region enclosed by a specified 
+								<strong class="term"> boundaries </strong>, which may be imaginary, either fixed or moving. All
+								matter and space external to a system is its <strong class="term"> surroundings </strong>
+								.
+							</span>   
+							<span class="eq">
+								Systems may be defined in several ways; for present purposes, we wish to distinguish
+								between three kinds. A <strong class="term"> closed system </strong> is one in which
+								there is no exchange of matter with the surroundings - mass does not cross its boundaries.
+								An <strong class="term"> open system </strong> is one across whose boundaries there is a flow
+								of mass. Each may have energy crossing its boundary. An <strong class="term"> isolated system </strong>    
+								is one that is completely impervious to its surroundings - neither mass nor energy cross its boundaries.
+							</span>   
+							<span class="eq">
+								In Figure 1.1 let the compressed gas be the system and the movable piston be its boundary. If heat be 
+								applied externally to the cylinder, the gas will undergo an increase in temperature, raising the piston.
+								With the rise of piston, the boundary moves. Energy (heat and work) crosses the boundary during this process 
+								while the mass of gaseous matter remains constant within the system.
+							</span> 
+							
+							<figure class="topimg" id="fig1-1">
+								<img src="images/fig1-1.png" alt="image"/>
+							</figure>
+							
+							<br> <span class="eq">
+								Often the system under analysis is of open type, as a pump shown in Fig 1.2.
+								With open systems we normally specify the boundary as a <strong class="term"> control surface  </strong>
+								and the volume encompassed by that surface as the <strong class="term"> control volume </strong>.
+								Thus the control volume may be defined as a volume in space in which one has interest for a 
+								particular study or analysis. The mass of working substance within the volume may be constant (though
+								not the same molecular matter at any given instant) as in the case of pump, or it may be varying as in
+								the case of tire undergoing inflation.
+								
+							</span>
+							<figure class="topimg" id="fig1-2">
+								<img src="images/fig1-2.png" alt="image"/>
+							</figure> <br>
+							
+							<strong> 1.3 Properties and State of a System </strong> <br>
+							<span class="eq">
+								A <strong class="term"> property  </strong> is any quantity which serves to describe a system. The 
+								<strong class="term">  state </strong> of a system is its condition as described by giving values
+								to its properties at a particular instant. 
+							</span> <br>
+							<span class="eq">
+								Properties may be classified as intensive or extensive. <strong class="term">  Intensive properties </strong>
+								are independent of the mass; for example, temperature, pressure, density, and the voltage. 
+								<strong class="term">  Extensive properties </strong> are dependent upon the mass of the system and
+								are total values such as total volume and total internal energy.
+							</span> <br>
+							<span class="eq">
+								If we divide an extensive property by the mass, a <strong class="term">  specific property results. </strong>
+								Specific properties are those for a unit mass and are intensive by definition such as specific volume. <br> <br>
+								
+							</span>
+							
+							<strong> 1.4 Mass and Weight </strong> <br>
+							<span class="eq">
+								The <strong class="term">  mass </strong>  of a body is the absolute quantity of matter in it.
+								
+							</span>
+							<span class="eq"> 
+								The <strong class="term"> weight  </strong> of a body means the force of gravity $F_g$ on the body.
+								
+							</span> $$F_g = mg \longrightarrow (1.1)$$
+							
+							<strong>1.5 Density, Specific Volume, Specific Weight</strong> <br>
+							<span class="eq">
+								The <strong class="term"> density $\rho$ </strong> of any substance is its mass (not weight) per unit volume.
+								
+							</span> $$\rho = \frac{m}{V} \longrightarrow (1.2)$$
+							<span class="eq">
+								The <strong class="term"> specific volume $v$  </strong> is the volume of a unit mass and is the reciprocal 
+								of the density. 
+							</span> $$ V = \frac{V}{m} = \frac{1}{\rho} \longrightarrow (1.3)$$
+							<span class="eq">
+								The <strong class="term"> specific weight $\gamma$ </strong> of any substance is the force of gravity on 
+								unit volume.
+							</span> $$\gamma = \frac{F_g}{V} \longrightarrow (1.4)$$
+							<br>
+							
+							<strong> 1.6 Pressure </strong> <br>
+							<span class="eq"> 
+								In gases and liquids it is common to call the effect of a normal force acting on an area the <strong class="term"> pressure </strong>
+								
+							</span>
+							<span class="eq">
+								The SI unit of pressure is the Pascal (Pa) where 1 Pa = 1 $N/m^2 = 1 kg/{m \cdot s^2} $. The corresponding 
+								English unit is $lb_f/ft^2$, although $lb_f/in^2$ (psi) is commonly used.
+							</span>
+							<span class="eq">
+								In the atmosphere pressure varies with elevation. This variation can be expressed mathematically by 
+							</span>	$$ P = \gamma h  = \rho gh \longrightarrow (1.5) $$
+							
+							<span class="eq">
+								The standard reference atmospheric pressure is 760 mmHg or 29.92 inHg at 32$^{\circ}$F, or 14.7 psia, or 1 atm, or 101.325 kPa.
+							</span>
+							<span class="eq">
+								In most thermodynamic relations <strong class="term"> absolute pressure </strong> must be used. Absolute pressure is 
+								gage pressure plus the local atmospheric prssure:
+							</span> $$ P_{abs} = P_{atm} + P_g  \longrightarrow (1.6)$$
+							<span class="eq">
+								 A negative gage pressure is often called a <strong class="term"> vacuum, and gages </strong>
+								 capable of reading negative pressures are <strong class="term"> vacuum gages.</strong>
+								A gage pressure of -50 kPa would be referred to as a vacuum of 50kPa, with the sign omitted.
+							</span>
+							<span class="eq">
+								Fig 1.8 shows the relationships between absolute and gage pressure.
+							</span>
+							<figure class="topimg" id="fig1-8">
+								<img src="images/fig1-8.png" alt="image"/>
+							</figure> <br>
 						</div>
 					</div>
 
 				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner"> <!--
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="field half first">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="field half">
-										<input type="email" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="field">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="special" /></li>
-									</ul>
-								</form>
-							</section> -->
-						</div>
-					</footer>
+					
 
 			</div>
 

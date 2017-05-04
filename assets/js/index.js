@@ -1,2 +1,2 @@
-$('#stress').hide();
+//$('#stress').hide();
 alert("hello");

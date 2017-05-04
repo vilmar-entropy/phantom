@@ -7,6 +7,6 @@
 	font-size: 1.3em;
 }
 
-.eq { //normal equation and paragraph
-	text-indent: 50vw;
+p { 
+	text-indent: 50%;
 }

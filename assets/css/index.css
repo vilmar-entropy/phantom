@@ -5,6 +5,14 @@
 	font-weight: bold;
 }
 
+.it {
+	font-style: italic;
+}
+
+.bold {
+	font-weight: bold;
+}
+
 .topic {
 	font-size: 1.5em;
 }

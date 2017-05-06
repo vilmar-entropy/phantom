@@ -1,4 +1,10 @@
 
+.sub_prob {
+	font-style: italic;
+	font-weight: bold;
+	text-indent: 5%;
+	display: inline-block;
+}
 
 .term {
 	font-style: italic;

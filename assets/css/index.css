@@ -96,9 +96,8 @@ div.absolute {
 body {
   background: white;    
 }
-
 /*
-@media screen and (min-width: 980px) /* Desktop *//* {
+@media screen and (min-width: 980px) /* Desktop  {
   body {
     background: red;
   }
@@ -109,9 +108,30 @@ body {
     background: blue;
   }
 }
-
-@media screen and (max-width: 500px) /* Mobile */ {
+/*
+@media screen and (max-width: 500px) /* Mobile  {
   body {
     background: green;
   }
-}
+} */
+
+@media screen and (max-width: 500px) /* Mobile */ {
+  
+    .content {
+	    position: relative;
+	    width: 60vw;
+	} 
+
+	.indentedText {
+	    position: absolute;
+		left: 5vw;
+	} 
+
+	.forAds {
+		position: relative;
+		width: 0vw;
+		right: 0vw;
+	}
+  }
+
+

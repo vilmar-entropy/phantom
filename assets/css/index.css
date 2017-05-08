@@ -65,7 +65,8 @@ figure.topimg {
 
 .content {
     position: relative;
-    width: 70vw;
+    width: 60vw;
+	left: 5vw;
     border: 3px solid #73AD21;
 } 
 

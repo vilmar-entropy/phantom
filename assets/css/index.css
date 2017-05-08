@@ -104,9 +104,21 @@ body {
 } */
 
 @media screen  and (max-width: 979px) /* Tablet */ {
-  body {
-    background: blue;
-  }
+     .content {
+	    position: relative;
+	    width: 90vw;
+	} 
+
+	.indentedText {
+	    position: absolute;
+		left: 5vw;
+	} 
+
+	.forAds {
+		position: relative;
+		width: 0vw;
+		right: 0vw;
+	}
 }
 /*
 @media screen and (max-width: 500px) /* Mobile  {
@@ -119,7 +131,7 @@ body {
   
     .content {
 	    position: relative;
-	    width: 91.5vw;
+	    width: 90vw;
 	} 
 
 	.indentedText {

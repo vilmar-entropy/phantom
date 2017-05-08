@@ -65,14 +65,20 @@ figure.topimg {
 
 .content {
     position: relative;
-    width: 60vw;
-    border: 3px solid #73AD21;
+    width: 61vw;
 } 
 
 .indentedText {
     position: absolute;
-	left: 5vw;
+	left: 3vw;
 } 
+
+.forAds {
+	position: relative;
+	width: 30vw;
+	right: 3vw;
+	border: 3px solid #73AD21;
+}
 
 div.absolute {
     position: absolute;

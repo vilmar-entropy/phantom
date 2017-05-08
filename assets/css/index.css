@@ -70,6 +70,12 @@ figure.topimg {
     border: 3px solid #73AD21;
 } 
 
+.indentedText {
+    position: absolute;
+	left: 5vw;
+    border: 3px solid #73AD21;
+} 
+
 div.absolute {
     position: absolute;
     top: 80px;

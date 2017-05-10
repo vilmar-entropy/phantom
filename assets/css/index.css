@@ -138,13 +138,13 @@ body {
 	    position: absolute;
 		left: 5vw;
 	} 
-
+/*
 	.forAds_landscape {
 		position: relative;
 		width: 0vw;
 		right: 0vw;
 	}
-	
+*/
 	.forAds_portrait {
 		position: relative;
 		width: 100vw;

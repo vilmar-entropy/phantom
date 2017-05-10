@@ -73,10 +73,15 @@ figure.topimg {
 		left: 5vw;
 	} 
 
-	.forAds_landscape {
+	.forAds_landscape { /*
 		position: relative;
 		width: 25vw;
+		right: 0vw; */
+		
+		width: 100vw;
 		right: 0vw;
+		
+		height: 50vh;
 	}
 	
 }

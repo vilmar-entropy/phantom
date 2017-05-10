@@ -78,6 +78,16 @@ figure.topimg {
 		width: 25vw;
 		right: 0vw;
 	}
+	
+	.forAds_portrait {
+		position: relative;
+		width: 100vw;
+		height: 9vh;
+		left: 0vw;
+		top: 0%;
+		
+		
+	}
 }
 
 div.absolute {
@@ -138,13 +148,13 @@ body {
 	    position: absolute;
 		left: 5vw;
 	} 
-/*
+
 	.forAds_landscape {
 		position: relative;
 		width: 0vw;
 		right: 0vw;
 	}
-*/
+
 	.forAds_portrait {
 		position: relative;
 		width: 100vw;

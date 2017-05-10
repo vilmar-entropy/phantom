@@ -66,6 +66,7 @@ figure.topimg {
 	.content {
 	    position: relative;
 	    width: 65vw;
+		background-color: #dcdadb;
 	} 
 
 	.indentedText {

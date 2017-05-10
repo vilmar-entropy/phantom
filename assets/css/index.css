@@ -71,7 +71,7 @@ figure.topimg {
 	.indentedText {
 	    position: absolute;
 		left: 5vw;
-		background-color: #FFFFFF; //#FAEBD7;
+		background-color: #FFFFFF; /*#FAEBD7; */
 	} 
 
 	.forAds { 

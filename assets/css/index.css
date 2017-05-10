@@ -148,9 +148,9 @@ body {
 	.forAds_portrait {
 		position: relative;
 		width: 100vw;
-		height: 0.09vw;
+		height: 9vh;
 		left: 0vw;
-		bottom: 0vw;
+		bottom: 0vh;
 		
 		
 	}

@@ -73,7 +73,7 @@ figure.topimg {
 		left: 5vw;
 	} 
 
-	.forAds {
+	.forAds_landscape {
 		position: relative;
 		width: 25vw;
 		right: 0vw;
@@ -114,7 +114,7 @@ body {
 		left: 5vw;
 	} 
 
-	.forAds {
+	.forAds_landscape {
 		position: relative;
 		width: 0vw;
 		right: 0vw;
@@ -139,10 +139,20 @@ body {
 		left: 5vw;
 	} 
 
-	.forAds {
+	.forAds_landscape {
 		position: relative;
 		width: 0vw;
 		right: 0vw;
+	}
+	
+	.forAds_portrait {
+		position: relative;
+		width: 100vw;
+		height: 0.09vw;
+		left: 0vw;
+		bottom: 0vw;
+		
+		
 	}
   }
 

@@ -1,0 +1,956 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+ 
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+  <meta name="viewport" content="width=device-width">
+
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+  <script type="text/javascript" src="js/index.js"></script>
+
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/index.css" />
+
+  <title>Random Test - Mechanical Engineering</title>
+</head>
+  <body>
+	  
+		<div id="content">
+			<br>
+			<span id="question"></span>
+			<div id="choices"></div> 
+			<button id="submit" class="button"> Submit Answer</button>
+		</div>
+
+	
+	<script>
+	
+	  
+  
+	
+	//start method 2
+
+
+//How to use the apply the function
+//var duplicates  =[];
+
+for (var i = 1; i <= 6 ; i++) { 
+   // document.write(getRandomIntNoDuplicates(1,10,duplicates));
+}
+
+//end 
+/*
+ //start method 1 to get random no. with no dupe
+ var nums = [0,1,2];
+ var gen_nums = [];
+
+ function in_array(array, el) {
+ for(var i = 0 ; i < array.length; i++) 
+ if(array[i] == el) return true;
+ return false;
+ }
+
+ function get_rand(array) {
+ var rand = array[Math.floor(Math.random()*array.length)];
+ if(!in_array(gen_nums, rand)) {
+ gen_nums.push(rand); 
+ return rand;
+ }
+ return get_rand(array);
+ }
+ */
+for(var i = 0; i < 0; i++) {
+    //document.write(get_rand(nums));
+    //alert(get_rand(nums));
+}
+//end
+
+//Prime
+var quiz = [{
+	"question": "The term “thermodynamics” comes from Greek words “therme” and “dynamis”  which means",
+	"choices": ["Heat power", "Heat transfer", "Heat energy", "Heat motion"],
+	"correct": "Heat power"
+},{
+	"question": "The term “thermodynamics” was first used in 1849 in the publication of",
+	"choices": ["Rudolph Clausius", "William Rankine", "Lord Kelvin", "Thomas Savery"],
+	"correct": "Lord Kelvin"
+},{
+	"question": "What law asserts that energy is a thermodynamic property?",
+	"choices": ["First law of Thermodynamics", "Second law of Thermodynamics", "Third law of Thermodynamics", "Zeroth law of Thermodynamics"],
+	"correct": "First law of Thermodynamics"
+},{
+	"question": "What law asserts that energy has quality as well as quantity?",
+	"choices": ["First law of Thermodynamics", "Second law of Thermodynamics", "Third law of Thermodynamics", "Zeroth law of Thermodynamics"],
+	"correct": "Second law of Thermodynamics"
+},{
+	"question": "The macroscopic approach to the study of thermodynamics that does not require a knowledge of the behavior of individual particles is called _____.",
+	"choices": ["Dynamic thermodynamics", "Static thermodynamics", "Statistical thermodynamics", "Classical thermodynamics"],
+	"correct": "Classical thermodynamics"
+},{
+	"question": "What is the more elaborate approach to the study of thermodynamics and based on the average behavior of large groups of individual particles?",
+	"choices": ["Dynamic thermodynamics", "Static thermodynamics", "Statistical thermodynamics", "Classical thermodynamics"],
+	"correct": "Statistical thermodynamics"
+},{
+	"question": "What is defined a region in space chosen for study? ",
+	"choices": ["Surroundings", "System", "Boundary", "Volume"],
+	"correct": "System"
+},{
+	"question": "The first law of thermodynamics is based on which of the following principles?",
+	"choices": ["Conservation of mass", "Conservation of energy", "Action and reaction", "The entropy-temperature relationship"],
+	"correct": "Conservation of energy"
+},{
+	"question": "What is the mass or region outside the system called?",
+	"choices": ["Surroundings", "Boundary", "Volume", "Environment"],
+	"correct": "Surroundings"
+},{
+	"question": "What is the real or imaginary surface that separates the system from its surroundings? ",
+	"choices": ["Division", "Wall", "Boundary", "Interface"],
+	"correct": "Boundary"
+},{
+	"question": "A system which consists of fixed amount of mass and no mass can cross its boundary is called _____.",
+	"choices": ["Equilibrium system", "Thermal equilibrium system", "Open system", " Closed system"],
+	"correct": " Closed system"
+},{
+	"question": "A system in which even energy is not allowed to cross the boundary is called ____. ",
+	"choices": ["Closed system", "Exclusive system", "Isolated system", "Special system"],
+	"correct": "Isolated system"
+},{
+	"question": "A system in which there is a flow of mass is known as _____.",
+	"choices": ["Equilibrium system", "Isolated system", "Open system", "Closed system"],
+	"correct": "Open system"
+},{
+	"question": "Open system usually encloses which of the following devices?",
+	"choices": ["Compressor", "Turbine", "Nozzle", "All of these"],
+	"correct": "All of these"
+},{
+	"question": "The boundaries of a control volume, which may either real or imaginary is called _____.",
+	"choices": ["Control boundary", "Control system", "Interface", "Control surface"],
+	"correct": "Control surface"
+},{
+	"question": "Any characteristic of a thermodynamics system is called a _____.",
+	"choices": ["Property", "Process", "Phase", "Cycle"],
+	"correct": "Property"
+},{
+	"question": "How are thermodynamic properties classified? ",
+	"choices": ["Physical and chemical", "Intensive and extensive", "Real and imaginary", "Homogeneous and heterogeneous"],
+	"correct": "Intensive and extensive"
+},{
+	"question": "The thermodynamic properties that are independent on the size of the system is called _____. ",
+	"choices": ["Extensive property", "Intensive property", "Open property", "Closed property"],
+	"correct": "Intensive property"
+},{
+	"question": "The thermodynamic properties that are dependent on the size or extent of the system is called _____.",
+	"choices": ["Extensive property", "Intensive property", "Open property", "Closed property"],
+	"correct": "Extensive property"
+},{
+	"question": "Which is NOT an intensive property of thermodynamics?",
+	"choices": ["Temperature", "Mass", "Pressure", "Density"],
+	"correct": "Mass"
+},{
+	"question": "Which is NOT an extensive property of thermodynamics?",
+	"choices": ["Density", "Mass", "Volume", "Energy"],
+	"correct": "Density"
+},{
+	"question": "Extensive properties per unit mass are called _____. ",
+	"choices": ["Specific properties", " Relative properties", "Unit properties", "Phase properties"],
+	"correct": "Specific properties"
+},{
+	"question": "A system is in ______ equilibrium if the temperature is the same throughout the entire system.",
+	"choices": ["Static", "Thermal", "Mechanical", "Phase"],
+	"correct": "Thermal"
+},{
+	"question": "A system is in ______ equilibrium if there is no change in pressure at any point of the system with time.",
+	"choices": ["Pressure", "Thermal", "Mechanical", "Phase"],
+	"correct": "Mechanical"
+},{
+	"question": "If a system involves two phases, it is in ______ equilibrium when the mass of each phase reaches an equilibrium level and stays there.",
+	"choices": ["Chemical", "Thermal", "Mechanical", "Phase"],
+	"correct": "Phase"
+},{
+	"question": "A system is in ______ equilibrium if its chemical composition does not change with time, i.e., no chemical reaction occurs. ",
+	"choices": ["Chemical", "Thermal", "Mechanical", "Phase"],
+	"correct": "Chemical"
+},{
+	"question": "“The state of a simple compressible system is completely specified by two independent, intensive properties”. This is known as ______.",
+	"choices": ["Equilibrium postulate", "State postulate", "Environment postulate", " Compressible system postulate"],
+	"correct": "State postulate"
+},{
+	"question": "What is the unit of the total energy of the system?",
+	"choices": ["Kj", "Kj/Kg", "Kg", " g"],
+	"correct": "Kj"
+},{
+	"question": "Without electrical, mechanical, gravitational, surface tension and motion effects, a system is called _____ system.",
+	"choices": ["Simple", "Simple compressible", "Compressible", "Independent"],
+	"correct": "Simple compressible"
+},{
+	"question": "What refers to any change that a system undergoes from one equilibrium state to another equilibrium state?",
+	"choices": ["Process", "Path", "Phase", "Cycle"],
+	"correct": "Process"
+},{
+	"question": "What refers to the series of state through which a system passes during a process?",
+	"choices": ["Path", "Phase", "Cycle", "Direction"],
+	"correct": "Path"
+},{
+	"question": "How many independent properties are required to completely fix the equilibrium state of a pure gaseous compound?",
+	"choices": ["4", "3", "2", "1"],
+	"correct": "2"
+},{
+	"question": "What is a process in which the system remains infinitesimally closed to an equilibrium state at all times? ",
+	"choices": ["Path equilibrium process", "Cycle equilibrium process", "Phase equilibrium process", "Quasi-state or quasi- equilibrium process"],
+	"correct": "Quasi-state or quasi- equilibrium process"
+},{
+	"question": "A closed system may refer to ______. ",
+	"choices": ["Control mass", "Control volume", "Control energy", "Control temperature"],
+	"correct": "Control mass"
+},{
+	"question": "An open system may refer to ______.",
+	"choices": ["Control mass", "Control volume", "Control energy", " Control temperature"],
+	"correct": "Control volume"
+},{
+	"question": " A system is said to be in thermodynamic equilibrium if it maintains ______ equilibrium.",
+	"choices": ["Mechanical and phase", "Thermal and chemical", "Thermal, mechanical and chemical", "Thermal, phase, mechanical and chemical"],
+	"correct": "Thermal, phase, mechanical and chemical"
+},{
+	"question": "What is a process with identical end states called?",
+	"choices": ["Cycle", "Path", "Phase", "Either path or phase"],
+	"correct": "Cycle"
+},{
+	"question": "What is a process during which the temperature remains constant?",
+	"choices": ["Isobaric process", "Isothermal process", "Isochoric process", "Isometric process"],
+	"correct": "Isothermal process"
+},{
+	"question": "What is a process during which the pressure remains constant?",
+	"choices": ["Isobaric process", "Isothermal process", "Isochoric process", "Isometric process"],
+	"correct": "Isobaric process"
+},{
+	"question": "What is a process during which the specific volume remains constant?",
+	"choices": ["Isobaric process", "Isothermal process", "Isochoric or isometric process", "Isovolumetric process"],
+	"correct": "Isochoric or isometric process"
+},{
+	"question": "The prefix “iso” used to designate a process means ______.",
+	"choices": ["Cannot be interchanged", "Remains constant", "Approximately equal", "Slight difference"],
+	"correct": "Remains constant"
+},{
+	"question": "What does the term “steady” implies? ",
+	"choices": ["No change with volume", "No change with time", "No change with location", "No change with mass"],
+	"correct": "No change with time"
+},{
+	"question": "What does the term “uniform” implies? ",
+	"choices": ["No change with volume", "No change with time", "No change with location", "No change with mass"],
+	"correct": "No change with location"
+},{
+	"question": "What is defined as a process during which a fluid flows through a control volume steadily?",
+	"choices": ["Transient-flow process", "Steady and uniform process", "Uniform-flow process", "Steady-flow process"],
+	"correct": "Steady-flow process"
+},{
+	"question": "The sum of all the microscopic form of energy is called _____.",
+	"choices": ["Total energy", "Internal energy", "System energy", "Phase energy"],
+	"correct": "Internal energy"
+},{
+	"question": "What type of system energy is related to the molecular structure of a system?",
+	"choices": ["Macroscopic form of energy", "Microscopic form of energy", "Internal energy", " External energy"],
+	"correct": "Microscopic form of energy"
+},{
+	"question": "What form of energy refers to those a system possesses as a whole with respect to some outside reference frame, such as potential and kinetic energies? ",
+	"choices": ["Macroscopic form of energy", "Microscopic form of energy", "Internal energy", "External energy"],
+	"correct": "Macroscopic form of energy"
+},{
+	"question": "Who coined the word “energy” in 1807? ",
+	"choices": ["William Rankine", "Rudolph Clausius", " Lord Kelvin", "Thomas Young"],
+	"correct": "Thomas Young"
+},{
+	"question": "The molecules of a gas moving through space with some velocity possesses what kind of energy?",
+	"choices": ["Translational energy", "Spin energy", "Rotational kinetic energy", "Sensible energy"],
+	"correct": "Translational energy"
+},{
+	"question": "The electrons in an atom which rotate about the nucleus possess what kind of energy?",
+	"choices": ["Translational energy", "Spin energy", "Rotational kinetic energy", "Sensible energy"],
+	"correct": "Rotational kinetic energy"
+},{
+	"question": "An air bubble rises from the bottom of well where the temperature is 25˚C, to the surface where the temperature is 27˚C. Find the percent increase in the volume of the bubble if the depth of the well is 5 m. Atmospheric pressure is 101,528 Pascals.",
+	"choices": ["49.3", "56.7", "41.3", "38.6"],
+	"correct": "49.3"
+},{
+	"question": "An ideal gas is 45 psig and 80˚F is heated in a closed container to 130˚F. What is the final pressure? ",
+	"choices": ["54 psia", "65 psia", "75 psia", "43 psia"],
+	"correct": "65 psia"
+},{
+	"question": "A large mining company was provided with a 3000 cm^3 of compressed air tank. Air pressure in the tank drops from 700 kPa to 180 kPa while the temperature remains unchanged at 28˚C. What percentage has the mass of air in the tank been reduced?",
+	"choices": ["74", "72", "76", "78"],
+	"correct": "74"
+},{
+	"question": "How much work is necessary to compress air in an insulated cylnder from 0.20 m^3 to 0.01 m^3? Use T1 = 20˚C and P1 = 100 kPa.",
+	"choices": ["113.4 kJ", "121.4 kJ", "110.1 kJ", "115.7 kJ"],
+	"correct": "115.7 kJ"
+},{
+	"question": "A heat engine is operated between temperature limits of 1370˚C and 260˚C. Engine is supplied with 14,142 kJ/kwh. Find the Carnot cycle efficiency in percent. ",
+	"choices": ["70.10", "65.05", "67.56", "69.32"],
+	"correct": "67.56"
+},{
+	"question": "A closed vessel contains air at pressure of 160 kN/m^2 gauge and temperature of 30˚C. The air is heated at constant volume to 60˚C with the atmospheric pressure of 759 mm Hg. What is the final gauge pressure?",
+	"choices": ["174", "186", "167", "172"],
+	"correct": "186"
+},{
+	"question": "What is the temperature in ˚C of 2 liters of water at 30˚C after 500 calories of heat have been added?",
+	"choices": ["35.70", "30.25", "38", "39.75"],
+	"correct": "30.25"
+},{
+	"question": "A volume of 450 cm^3 of air is measured at a pressure of 740 mm Hg absolute and a temperature of 20˚C. What is the volume in cm^3 at 760 mm Hg absolute and 0˚C?",
+	"choices": ["516.12", "408.25", "620.76", "375.85"],
+	"correct": "408.25"
+},{
+	"question": "Assuming compression is according to the law PV = constant. Calculate the initial volume of gas at a pressure of 2 bar which will occupy a volume of 6 m^3 when it is compressed to a pressure of 42 bar.",
+	"choices": ["126 m^3", "120 m^3", "130 m^3", "136 m^3"],
+	"correct": "126 m^3"
+},{
+	"question": "A steam condenser receives 10 kg per second of steam with an enthalpy of 2,570 kJ/kg. Steam condenses into liquid and leaves with an enthalpy of 160 kJ/kg. Cooling water passes through the condenser with temperature increases from 13˚C to 24˚C. Calculate the cooling water flowrate in kg/s.",
+	"choices": ["533", "518", "523", "528"],
+	"correct": "523"
+},{
+	"question": "A steam expands adiabatically in a turbine from 2000 kPa, 400˚C to 400 kPa, 250˚C. What is the effectiveness of the process in percent assuming an atmospheric temperature of 15˚C. Neglect changes in kinetic and potential energy. Properties of steam: At 2000 kPa and 400˚C (h = 3247.6 kJ/kg, s = 7.1271 kJ/kg-K) and at 400kPa and 250˚C (h = 2964.2 kJ/kg, s = 7.3789 kJ/kg-K)",
+	"choices": ["82", "84", "80", "86"],
+	"correct": "80"
+},{
+	"question": "Steam enters the superheaters of a boiler at a pressure of 25 bar and dryness of 0.98 and leaves at the same pressure at a temperature of 370˚C. Calculate the heat energy supplied in the superheaters. Properties of Steam: At 25 bar and 370˚C (h = 3171.8 kJ/kg) and at 25 bar and 0.98 dryness (hf = 962.11 kJ/kg, hfg = 1841.01 kJ/kg)",
+	"choices": ["407.46", "408.57", "405.51", "406.54"],
+	"correct": "405.51"
+},{
+	"question": "The thermal efficiency of a particular engine operating on an ideal cycle is 35%. Calculate the heat supplied per 1200 watt-hr of work developed in kJ.",
+	"choices": ["12343", "10216", "14218", "11108"],
+	"correct": "12343"
+},{
+	"question": "Determine the average cp value in kJ/kg-K of a gas if 522 kJ of heat is necessary to raise the temperature from 300 K to 800 K making the pressure constant?",
+	"choices": ["1.440", "1.044", "1.038", "1.026"],
+	"correct": "1.044"
+},{
+	"question": "Determine the force in Newtons required to produce an acceleration of 0.30 m/s^2 on a 0.05 kg mass.",
+	"choices": ["0.018 N", "0.025 N", "0.015 N", "0.200 N"],
+	"correct": "0.015 N"
+},{
+	"question": "Ammonia weighing 22 kg is confined inside a cylinder equipped with a piston has an initial pressure of 413 kPa at 38˚C. If 2900 kJ of heat is added to the ammonia until its pressure and temperature are 413 kPa and 100˚C, respectively, What is the amount of work done by the fluid in kJ?",
+	"choices": ["667", "304", "420", "502"],
+	"correct": "667"
+},{
+	"question": "What is the total required heating energy in raising the temperature of a given amount of water when the energy supplied is 1000 kwh with heat losses of 25%?",
+	"choices": ["1000", "1500", "1333", "1250"],
+	"correct": "1333"
+},{
+	"question": "A vessel of 0.058 m^3 capacity is well insulated and is divided equally by rigid conducting diaphragm. Initially both halves contain air at pressure 137.8 kPa and 413.4 kPa and a temperature of 27˚C and 177˚C respectively. What is the increase of entropy of the system in kJ/˚C?",
+	"choices": ["1.002", "0.5080", "0.00173", "0.1080"],
+	"correct": "0.00173"
+},{
+	"question": "A certain gas at 101.325 kPa and 16˚C whose volume is 2.83 m^3 are compressed into a storage vessel of 0.31 m^3 capacity. Before admission, the stroge vessel contained gas at a pressure and temperature of 137.8 kPa and 24˚C. After admission, the pressure has increased to 1171.8 kPa. What should be the final temperature of the gas in the vessel in Kelvin?",
+	"choices": ["298", "319", "180", "420"],
+	"correct": "319"
+},{
+	"question": "Steam enters a throttling calorimeter at a pressure of 1.03 MPa. The calorimeter downstream pressure and temperature are respectively 0.100 MPa and 125˚C. What is the percentage moisture of the supply steam? Properties of Steam: At P = 1.03 MPa (hg = 2779.25 kJ/jg, hfg = 2010.7 kJ/kg), at 0.100 MPa and 125˚C (h = 2726.6 kJ/kg)",
+	"choices": ["2.62", "5.21", "3.15", "1.98"],
+	"correct": "2.62"
+},{
+	"question": "What pressure is column of water 100 cm high equivalent to ?",
+	"choices": ["9807 dynes/cm^2", "9807 N/m^2", "0.10 bar", "98100 N/m^2"],
+	"correct": "9807 N/m^2"
+},{
+	"question": "A water temperature rise of 18˚F in the water cooled condenser is equivalent in ˚C to:",
+	"choices": ["-9.44˚C", "263.56K", "10˚C", "7.78˚C"],
+	"correct": "10˚C"
+},{
+	"question": "Steam flows into a turbine at the rate of 10 kg/s and 10 kW of heat are lost from the turbine. Ignoring elevation and kinetic energy effects, calculate the power output from the turbine. Note: h1 = 2739 kJ/kg and h2 = 2300.5 kJ/kg",
+	"choices": ["4605 kW", "4973 kW", "4375 kW", "4000 kW"],
+	"correct": "4375 kW"
+},{
+	"question": "The enthalpy of air is increased by 139.586 kJ/kg in a compressor. The rate of air flow is 16.42 kg/min. The power input is 48.2 kW. Which of the following values most nearly equals the heat loss from the compressor in kW?",
+	"choices": ["-10", "10.2", "-9.95", "9.95"],
+	"correct": "-10"
+},{
+	"question": "A Carnot engine requires 35 kJ/s from the hot source. The engine produces 15 kW of power and the temperature of the sink is 26˚C. What is the temperature of the hot source in ˚C?",
+	"choices": ["245.57", "210.10", "250.25", "260.68"],
+	"correct": "250.25"
+},{
+	"question": "The maximum thermal efficiency possible for a power cycle operating between 1200˚F and 225˚F is: ",
+	"choices": ["58%", "8.73%", "58.73%", "57.40%"],
+	"correct": "58.73%"
+},{
+	"question": "A Carnot engine receives 130 Btu of heat from a hot reservoir at 700˚F and rejects 49 Btu of heat. Calculate the temperature of the cold reservoir.",
+	"choices": ["-21.9˚F", "-24.2˚F", "-20.8˚F", "-22.7˚F"],
+	"correct": "-22.7˚F"
+},{
+	"question": "A tank contains 80 ft^3 of air at a pressure of 350 psi. If the air is cooled until its pressure and temperature decrease to 200 psi and 70˚F respectively, what is the decrease in internal energy?",
+	"choices": ["4575", "-5507", "5552", "0"],
+	"correct": "-5507"
+},{
+	"question": "If 10 lbs of water evaporated at atmospheric pressure until volume of 288.5 ft^3 is occupied, how much work is done?",
+	"choices": ["610358 ft-lb", "0", "-610358 ft-lb", "550000 ft-lb"],
+	"correct": "610358 ft-lb"
+},{
+	"question": "A reverse Carnot cycle requires 3 hp and extracts energy from a lake to heat a house. If the house is kept  at 70˚F and requires 2000 Btu per minute, what is the temperature of the lake?",
+	"choices": ["35˚F", "36˚F", "39˚F", "40˚F"],
+	"correct": "36˚F"
+},{
+	"question": "A pressure gage registers 50 psig in a region where the barometer is 14.25 psia. Find the absolute pressure in psia.",
+	"choices": ["64.25", "443", "151.325", "35.75"],
+	"correct": "64.25"
+},{
+	"question": "A pump discharges 50 tons of water per hour to a height of 8 m, the overall efficiency of the pumping system being 69%. Calculate the output and input power.",
+	"choices": ["1.09 kW & 1.58 kW", "2.09 kW & 2.58 kW", "1.09 kW & 2.58 kW", "2.09 kW & 1.58 kW"],
+	"correct": "1.09 kW & 1.58 kW"
+},{
+	"question": "A condenser vacuum gauge reads 715 mm Hg when the barometer stands at 757 mm Hg. What is the absolute pressure in the condenser in kPa?",
+	"choices": ["196.25 kPa", "100.92 kPa", "5.60 kPa", "95.33 kPa"],
+	"correct": "5.60 kPa"
+},{
+	"question": "Oil flows full bore at a velocity of 2 m/s through a nest of 16 tubes in a single pass cooler. The internal diameter of the tubes is 30 mm and the density of the oil is 0.85 g/L. Fin the volume flow in liters per second.",
+	"choices": ["20", "21", "22", "23"],
+	"correct": "23"
+},{
+	"question": "Calculate the quantity of heat to be transferred to 2.25 kg of brass to raise its temperature from 20˚C to 240˚C taking the specific heat of the brass as 0.394 kJ/kg-K",
+	"choices": ["519.03 kJ", "159.03 kJ", "195.03 kJ", "591.03 kJ"],
+	"correct": "195.03 kJ"
+},{
+	"question": "Three cubic meters of air at a pressure of 20 kPag is compressed at constant temperature to a pressure of 425 kPag. Calculate the final volume of the air.",
+	"choices": ["0.80 m^3", "0.69 m^3", "0.92 m^3", "0.96 m^3"],
+	"correct": "0.69 m^3"
+},{
+	"question": "The pressure of the air in a starting air vessel is 40 bar and the temperature is 24˚C. If a fire in the vicinity causes the temperature to rise to 65˚C, find the pressure of the air. Neglect any increase in volume of the vessel.",
+	"choices": ["45.52 bar", "54.52 bar", "45.55 bar", "44.55 bar"],
+	"correct": "45.52 bar"
+},{
+	"question": "One cubic meter of a perfect gas at a constant pressure of 1 bar and temperature of 17˚C are compressed to a volume of 0.50 m^3 and the final pressure is 6 bar. Calculate the final temperature.",
+	"choices": ["870˚C", "560˚C", "597˚C", "860˚C"],
+	"correct": "597˚C"
+},{
+	"question": "An air compressor delivers 0.20 m^3 of air at a pressure of 850 kPa and 31˚C into an air reservoir. Taking the gas constant of air as 0.287 kJ/kg-K, calculate the mass of air delivered.",
+	"choices": ["1.59 kg", "1.95 kg", "5.91 kg", "5.19 kg"],
+	"correct": "1.95 kg"
+},{
+	"question": "An oxygen cylinder of volume 2.3 ft^3 has a pressure of 2200 psig and is at 70˚F. Determine the mass of oxygen in the cylinder.",
+	"choices": ["26.66 lbs", "26.86 lbs", "28.66 lbs", "28.88 lbs"],
+	"correct": "28.66 lbs"
+},{
+	"question": "What is the power of a steam jet 15 mm diameter moving at 750 m/s? Steam condition, 1.4 kg/cm^2, dry and saturated (v = 1.256 m^3/kg).",
+	"choices": ["29.67 kW", "39.67 kW", "19.67 kW", "49.67 kW"],
+	"correct": "29.67 kW"
+},{
+	"question": "How much power is there in the kinetic energy of the atmosphere (density = 1.217 kg/m^3) at 56 kph wind velocity? Consider the section that passes through a 3 m diameter circular area normal to the velocity. ",
+	"choices": ["10.21 kW", "15.21 kW", "16.21 kW", "17.21 kW"],
+	"correct": "16.21 kW"
+},{
+	"question": "An electric heater is to heat 11 kg of oil per min. from 4.5˚C to 65.5. Specific heat of the oil is 2.1 J/gm-˚C. HOw many watts should this heater consume?",
+	"choices": ["20 448 W", "33 448 W", "20 400 W", "23 442 W"],
+	"correct": "23 442 W"
+},{
+	"question": "Find the enthalpy of 1 kg of wet saturated steam at a pressure of 0.20 bar and dryness fraction of 0.85. At 0.20 bar, hf = 251 kJ/kg, hfg = 2358 kJ/kg",
+	"choices": ["2200 kJ/kg", "2525.30 kJ/kg", "2255.30 kJ/kg", "2000 kJ/kg"],
+	"correct": "2255.30 kJ/kg"
+},{
+	"question": "If the enthalpy of wet saturated steam at a pressure of 11 bar is 2681 kJ/kg, find its dryness fraction. At 11 bar, hf = 781 kJ/kg & hfg = 2000 kJ/kg.",
+	"choices": ["0.75", "0.85", "0.95", "0.65"],
+	"correct": "0.95"
+},{
+	"question": "Find the heat transfer required to convert 5 kg of water at a pressure of 20 bar and temperature of 21˚C into steam of dryness fraction 0.90 at the same pressure. Properties of Steam: P = 20 bar; hf = 909 kJ/kg; hfg = 1890 kJ/kg. Note: for water at 21˚C, h = 88 kJ/kg",
+	"choices": ["10 610 kJ", "11 610 kJ", "12 610 kJ", "15 610 kJ"],
+	"correct": "12 610 kJ"
+},{
+	"question": "A closed vessel contains air at a pressure of 140 kPag and temperature of 20˚C. Find the final gauge pressure if the air is heated at constant volume to 40˚C. Take the atmospheric pressure as 759 mm Hg.  ",
+	"choices": ["156.46", "146.46", "136.46", "126.46"],
+	"correct": "156.46"
+},{
+	"question": "Water substance at 70 bar and 65˚C enters a boiler tube of constant inside diameter of 25 mm. The water leaves the boiler tube at 50 bar and 700K at velocity of 100 m/s. Calculate the inlet volume flow in L/s. At 70 bar & 65˚C, v1 = 0.001017 m^3/kg, at 50 bar & 700 K, v2 = 0.06081 m^3/kg.",
+	"choices": ["0.75", "0.64", "0.82", "0.96"],
+	"correct": "0.82"
+},{
+	"question": "A group of 50 persons attend a secret meeting in room which is 12 m wide by 10 m long and a celing height of 3 m. The room is completely sealed off and insulated. Each person gives off 150 kcal per hour of heat and occupies a volume of 0.20 m^3. The room has an initial pressure of 101.3 kPa and temperature of 16˚C. Calculate the room temperature after 10 mins. Use R = 0.287 kJ/kg-K and cv = 0.171 kcal/kg-K.",
+	"choices": ["33.1˚C", "37.7˚C", "38.7˚C", "31.7˚C"],
+	"correct": "33.1˚C"
+},{
+	"question": "Steam at 1000 lb/ft^2 pressure and 300˚R has specific volume of 6.5 ft^3/lb and a specific enthalpy of 9800 ft-lbf/lbm. Find the internal energy per pound mass of steam. ",
+	"choices": ["2500 ft-lbf/lbm", "3300 ft-lbf/lbm", "5400 ft-lbf/lbm", "6900 ft-lbf/lbm"],
+	"correct": "3300 ft-lbf/lbm"
+},{
+	"question": "The electrons which spins about its axis will possess what kind of energy?",
+	"choices": ["Translational energy", "Spin energy", "Rotational kinetic energy", "Sensible energy"],
+	"correct": "Spin energy"
+},{
+	"question": "What refers to the portion of the internal energy of a system associated with the kinetic energies of the molecules?",
+	"choices": ["Translational energy", "Spin energy", "Rotational kinetic energy", "Sensible energy"],
+	"correct": "Sensible energy"
+},{
+	"question": "What is the internal energy associated with the phase of a system called?",
+	"choices": ["Chemical energy", "Latent energy", "Phase energy", "Thermal energy"],
+	"correct": "Latent energy"
+},{
+	"question": "What is the internal energy associated with the atomic bonds in a molecule called?",
+	"choices": ["Chemical energy", "Latent energy", "Phase energy", "State energy"],
+	"correct": "Chemical energy"
+},{
+	"question": "What is the extremely large amount of energy associated with the strong bonds within the nucleus of the atom itself called?",
+	"choices": ["Chemical energy", "Latent energy", "Phase energy", "Nuclear energy"],
+	"correct": "Nuclear energy"
+},{
+	"question": "What are the only two forms of energy interactions associated with a closed system? ",
+	"choices": ["Kinetic energy and heat", "Heat transfer and work", "Thermal energy and chemical energy", "Latent energy and thermal energy"],
+	"correct": "Heat transfer and work"
+},{
+	"question": "What states that if two bodies are in thermal equilibrium with a third body, they are also in equilibrium with each other?",
+	"choices": ["Third law of thermodynamics", "Zeroth law of thermodynamics", "First law of thermodynamics", "Second law of thermodynamics"],
+	"correct": "Zeroth law of thermodynamics"
+},{
+	"question": "Who formulated the zeroth law of thermodynamics in 1931?",
+	"choices": ["A. Celsuis", "A. Einstein", "R.H. Fowler", "G. Fahrenheit"],
+	"correct": "R.H. Fowler"
+},{
+	"question": "What is the thermodynamic temperature scale in the SI system?",
+	"choices": ["Kelvin scale", "Celsius scale", "Fahrenheit scale", "Rankine scale"],
+	"correct": "Kelvin scale"
+},{
+	"question": "What is the thermodynamic temperature scale in the English system? ",
+	"choices": ["Kelvin scale", "Celsius scale", "Fahrenheit scale", "Rankine scale"],
+	"correct": "Rankine scale"
+},{
+	"question": "What temperature scale is identical to the Kelvin scale? ",
+	"choices": ["Ideal gas temperature scale", "Ideal temperature scale", "Absolute gas temperature scale", "Triple point temperature scale"],
+	"correct": "Ideal gas temperature scale"
+},{
+	"question": "The temperatures of the ideal gas temperature scale are measured by using a ______.",
+	"choices": ["Constant-volume gas thermometer", "Constant-mass gas thermometer", "Constant-temperature gas thermometer", "Constant-pressure gas thermometer"],
+	"correct": "Constant-volume gas thermometer"
+},{
+	"question": "What refers to the strong repulsion between the positively charged nuclei which makes fusion reaction difficult to attain? ",
+	"choices": ["Atomic repulsion", "Nuclear repulsion", "Coulomb repulsion", "Charge repulsion"],
+	"correct": "Coulomb repulsion"
+},{
+	"question": "What gas thermometer is based on the principle that at low pressure, the temperature of a gas is proportional to its pressure at constant volume? ",
+	"choices": ["Constant-pressure gas thermometer", "Isobaric gas thermometer", "Isometric gas thermometer", "Constant-volume gas thermometer"],
+	"correct": "Constant-volume gas thermometer"
+},{
+	"question": "What is the state at which all three phases of water coexist in equilibrium?",
+	"choices": ["Tripoint of water", "Triple point of water", "Triple phase point of water", "Phase point of water"],
+	"correct": "Triple point of water"
+},{
+	"question": "What is defined as the force per unit area? ",
+	"choices": ["Pressure", "Energy", "Work", "Power"],
+	"correct": "Pressure"
+},{
+	"question": "The unit “pascal” is equivalent to ______.",
+	"choices": ["N/m^2", "N/m", "N-m", "N-m^2"],
+	"correct": "N/m^2"
+},{
+	"question": "Which of the following is NOT a value of the standard atmospheric pressure?",
+	"choices": ["1 bar", "1 atm", "1 kgf/cm^2", "14.223 psi"],
+	"correct": "14.223 psi"
+},{
+	"question": "What is the SI unit of pressure?",
+	"choices": ["Atm", "Bar", "Pa", "Psi"],
+	"correct": "Pa"
+},{
+	"question": "1 bar is equivalent to how many pascals? ",
+	"choices": ["10^3", "10^4", "10^5", "10^6"],
+	"correct": "10^5"
+},{
+	"question": "1 atm is equivalent to how many pascals? ",
+	"choices": ["101,325", "101,689", "101,102", "101,812"],
+	"correct": "101,325"
+},{
+	"question": "What is considered as the actual pressure at a given position and is measured relative to absolute vacuum?",
+	"choices": ["Gage pressure", "Absolute pressure", "Atmospheric pressure", "Vacuum pressure"],
+	"correct": "Absolute pressure"
+},{
+	"question": "What is the pressure below atmospheric pressure called?",
+	"choices": ["Gage pressure", "Absolute pressure", "Atmospheric pressure", "Vacuum pressure"],
+	"correct": "Vacuum pressure"
+},{
+	"question": "The difference between the absolute pressure and the atmospheric pressure is called the _____ pressure.",
+	"choices": ["Gage", "Normal", "Standard", "Vacuum"],
+	"correct": "Gage"
+},{
+	"question": "Which of the following is NOT an instrument used to measure pressure?",
+	"choices": ["Bourdon tube", "Pitot tube", "Aneroid", "Manometer"],
+	"correct": "Pitot tube"
+},{
+	"question": "What instrument is used to measure atmospheric pressure?",
+	"choices": ["Pitot tube", " Wind vane", "Barometer", "Manometer"],
+	"correct": "Barometer"
+},{
+	"question": "Another unit used to measure atmospheric pressure is the “torr”. This is named after the Italian physicist, Evangelista Torrecelli. An average atmospheric pressure is how many torr?",
+	"choices": ["740", "750", "760", "770"],
+	"correct": "760"
+},{
+	"question": "What states that for a confined fluid, the pressure at a point has the same magnitude in all directions?",
+	"choices": ["Avogadro’s Law", "Amagat Law", "Pascal’s Law", "Bernoulli’s Theorem"],
+	"correct": "Pascal’s Law"
+},{
+	"question": "What pressure measuring device consists of a coiled hollow tube that tends to straighten out when the tube is subjected to an internal pressure?",
+	"choices": ["Aneroid", "Manometer", "Bourdon pressure gage", "Barometer"],
+	"correct": "Bourdon pressure gage"
+},{
+	"question": "What is an energy that can be transferred from one object to another causing a change in temperature of each object? ",
+	"choices": ["Power", "Heat transfer", "Heat", "Work"],
+	"correct": "Heat"
+},{
+	"question": "What is the SI unit of energy? ",
+	"choices": ["Newton", "Btu", "Calorie", "Joule"],
+	"correct": "Joule"
+},{
+	"question": "One joule is equivalent to one _____.",
+	"choices": ["Kg ∙ m^2/s", "Kg ∙ m^2/s^2", "Kg ∙ m/ s^2", "Kg ∙ m/s"],
+	"correct": "Kg ∙ m^2/s^2"
+},{
+	"question": "One calorie is equivalent to how many joules? ",
+	"choices": ["4.448", "4.184", "4.418", "4.814"],
+	"correct": "4.184"
+},{
+	"question": "One erg is equivalent to how many joules?",
+	"choices": ["10^-8", "10^-7", "10^-6", "10^-5"],
+	"correct": "10^-7"
+},{
+	"question": "The first law of thermodynamics is the:",
+	"choices": ["Law of conservation of momentum", "Law of conservation of mass", "Law of conservation of power", "Law of conservation of energy"],
+	"correct": "Law of conservation of energy"
+},{
+	"question": "What is the study of energy and its transformations?",
+	"choices": ["Thermostatics", "Thermophysics", "Thermochemistry", "Thermodynamics"],
+	"correct": "Thermodynamics"
+},{
+	"question": "What is considered as the heat content of a system? ",
+	"choices": ["Enthalpy", "Entropy", "Internal heat", "Molar heat"],
+	"correct": "Enthalpy"
+},{
+	"question": "What refers to the amount of heat needed to raise the temperature of an object by one degree Celsius or 1K?",
+	"choices": ["Heat capacity", "Molar heat", "Latent heat", "Specific heat"],
+	"correct": "Heat capacity"
+},{
+	"question": "What is the heat capacity of one mole of substance?",
+	"choices": ["Molecular heat", "Specific heat", "Latent heat", "Molar heat"],
+	"correct": "Molar heat"
+},{
+	"question": "What is the heat capacity of one gram of a substance? ",
+	"choices": [" Molecular heat", "Specific heat", "Latent heat", "Molar heat"],
+	"correct": "Specific heat"
+},{
+	"question": "“The enthalpy change for any chemical reaction is independent of the intermediate stages, provided the initial and final conditions are the same for each route.” This statement is known as:",
+	"choices": ["Dulong’s Law", "Dalton’s Law", "Hess’s Law", "Petit Law"],
+	"correct": "Hess’s Law"
+},{
+	"question": "What refers to the measure of the disorder present in a given substance or system?",
+	"choices": ["Enthalpy", "Entropy", "Heat capacity", " Molar heat"],
+	"correct": "Entropy"
+},{
+	"question": "Entropy is measured in ______.",
+	"choices": ["Joule/Kelvin", "Joule-Meter/Kelvin", " Meter/Kelvin", "Newton/Kelvin"],
+	"correct": "Joule/Kelvin"
+},{
+	"question": "What is the energy absorbed during chemical reaction under constant volume conditions?",
+	"choices": ["Entropy", " Ion exchange", "Enthalpy", "Enthalpy of reaction"],
+	"correct": "Enthalpy"
+},{
+	"question": "When water exists in the liquid phase and is not about to vaporize, it is considered as _____liquid.",
+	"choices": ["Saturated", "Compressed or subcooled", "Superheated", "Unsaturated"],
+	"correct": "Compressed or subcooled"
+},{
+	"question": "A liquid that is about to vaporize is called ______ liquid. ",
+	"choices": ["Saturated", "Compressed or subcooled", "Superheated", "Unsaturated"],
+	"correct": "Saturated"
+},{
+	"question": "A vapor that is about to condense is called ______ vapor.",
+	"choices": ["Saturated", "Compressed or subcooled", "Superheated", "Unsaturated"],
+	"correct": "Saturated"
+},{
+	"question": "A vapor that is not about to condense is called _____ vapor.",
+	"choices": ["Saturated", "Compressed or subcooled", "Superheated", "Unsaturated"],
+	"correct": "Superheated"
+},{
+	"question": "A substance that has a fixed chemical composition is known as ______ substance.",
+	"choices": ["Monoatomic", "Heterogeneous", "Homogeneous", "Pure"],
+	"correct": "Pure"
+},{
+	"question": "What refers to the temperature at which a pure substance changes phase at a given pressure?",
+	"choices": ["Equilibrium temperature", "Saturation temperature", "Superheated temperature", "Subcooled temperature"],
+	"correct": "Saturation temperature"
+}]; 
+
+//var quiz end
+
+// define elements
+var content = $("content"),
+  questionContainer = $("question"),
+  choicesContainer = $("choices"),
+  submitBtn = $("submit");
+
+// init vars
+var currentQuestion = 0,
+	score = 0,
+  askingQuestion = true,
+  questionNumber = 0,
+  maxQ = 1,
+  gCurrentQuestion;
+  
+  maxQ = prompt("How many items do you like?");
+  wrongAnswerQ = "",
+  wrongAnswerNo=0;
+  var yourAnswer = "You did not pick any answer.";
+  var choicesMistakesG = "";
+  if(maxQ > quiz.length) {
+	maxQ = quiz.length;
+  }
+  var isOnReviewWrongPage = false;
+  var duplicates  =[];
+
+function $(id) { // shortcut for document.getElementById
+  return document.getElementById(id);
+}
+
+function askQuestion() {
+//start method 1 to get random no. with no dupe
+
+  var nums = [0,1,2,3];
+var gen_nums = [];
+
+function in_array(array, el) {
+   for(var i = 0 ; i < array.length; i++) 
+       if(array[i] == el) return true;
+   return false;
+}
+
+function get_rand(array) {
+    var rand = array[Math.floor(Math.random()*array.length)];
+    if(!in_array(gen_nums, rand)) {
+       gen_nums.push(rand); 
+       return rand;
+    }
+    return get_rand(array);
+}
+
+
+
+function inArray(arr, el) {
+    for(var i = 0 ; i < arr.length; i++) 
+            if(arr[i] == el) return true;
+    return false;
+}
+
+function getRandomIntNoDuplicates(min, max, DuplicateArr) {
+    var RandomInt = Math.floor(Math.random() * (max - min + 1)) + min;
+    if (DuplicateArr.length > (max-min) ) return false;  // break endless recursion
+    if(!inArray(DuplicateArr, RandomInt)) {
+       DuplicateArr.push(RandomInt); 
+       return RandomInt;
+    }
+    return getRandomIntNoDuplicates(min, max, DuplicateArr); //recurse
+}
+
+//tempCurrentQuestion = get_rand(numsQuestion);
+ gCurrentQuestion = getRandomIntNoDuplicates(0,quiz.length-1,duplicates);
+ //alert(gCurrentQuestion);
+
+  var choices = quiz[gCurrentQuestion].choices,
+    choicesHtml = "", choicesMistakes="" ;
+	var tempi;
+	
+	
+
+
+  // loop through choices, and create radio buttons
+  for (var i = 0; i < choices.length; i++) {
+  //alert(get_rand(nums));
+   tempi = get_rand(nums);
+    choicesHtml += "<input type='radio' name='quiz" + gCurrentQuestion +
+      "' id='choice" + ( tempi + 1) +
+      "' value='" + choices[tempi] + "'>" +
+      " <label for='choice" + (tempi + 1) + "'>" + choices[tempi] + "</label> <br>";
+	  
+	  choicesMistakes += "<span name='quiz" + gCurrentQuestion +
+      "' id='choice" + (tempi + 1) +
+      "' value='" + choices[tempi] + "'>"+ (i+1) + ". " + choices[tempi] + "</span><br>";
+	   if(choices[tempi] === quiz[gCurrentQuestion].correct) {
+			correctAnswer = choices[tempi];
+			correctAnswerIndex = tempi;
+	  }
+	  
+	  choicesMistakesG = choicesMistakes;
+  }
+
+  // load the question
+  questionContainer.textContent = (questionNumber + 1) + ". " +
+    quiz[gCurrentQuestion].question;
+
+  // load the choices
+  choicesContainer.innerHTML = choicesHtml;
+
+  // setup for the first time
+  if (questionNumber === 0) {
+    submitBtn.textContent = "Submit Answer";
+	//alert(quiz.length);
+  }
+
+  clear();
+}
+
+function checkAnswer() {
+	var yourAnswer = "You did not pick any answer.";
+  // are we asking a question, or proceeding to next question?
+  if (askingQuestion) {
+    submitBtn.textContent = "Next Question";
+    askingQuestion = false;
+
+    // determine which radio button they clicked
+    var userpick,
+      correctIndex,
+      radios = document.getElementsByName("quiz" + gCurrentQuestion);
+    for (var i = 0; i < radios.length; i++) {
+      if (radios[i].checked) { // if this radio button is checked
+        userpick = radios[i].value;
+		yourAnswer = userpick;
+      }
+
+      // get index of correct answer
+      if (radios[i].value == quiz[gCurrentQuestion].correct) {
+        correctIndex = i;
+      }
+    }
+
+    // setup if they got it right, or wrong
+    var labelStyle = document.getElementsByTagName("label")[correctIndex].style;
+    labelStyle.fontWeight = "bold";
+    if (userpick == quiz[gCurrentQuestion].correct) {
+      labelStyle.color = "green";
+	  score++;
+    } else {
+		wrongAnswerNo++;
+      labelStyle.color = "red";
+	  wrongAnswerQ += "<br> <span id='question'> " + wrongAnswerNo+". " + quiz[gCurrentQuestion].question + "</span><br> " + "<div>" + choicesMistakesG + " <strong id='answer'>" + "Correct answer: " + correctAnswer  + "</strong></div> ";//  + 
+
+    }
+
+ 
+  } else { // move to next question
+    // setting up so user can ask a question
+    askingQuestion = true;
+    // change button text back to "Submit Answer"
+    submitBtn.textContent = "Submit Answer";
+    // if we're not on last question, increase question number
+    if (questionNumber < maxQ - 1) {
+      //currentQuestion++;
+	  questionNumber++;
+      askQuestion();
+    } else {
+      showFinalResults();
+    }
+	
+  }
+}
+
+
+function showFinalResults() {
+	isOnReviewWrongPage = true;
+	
+	if(score === maxQ) {
+	  var answer = confirm ("Congrats buddy. You got perfect. " + score + " out of " + maxQ +  " . Do you want to restart the test?");
+	  if (answer)
+			reloadCurrentPage();
+	  else
+		  document.location.href = "contents-quiz.html";
+	} else if(score/maxQ >= 0.6){
+	  var answer = confirm ("You passed the test. Congrats. You got " + score + " out of " + maxQ +  ".  " + Math.floor(score/maxQ*100) +"%. Do you want to restart the test? Press cancel if you like to review your incorrectly answered questions.");
+	  if (answer)
+		 reloadCurrentPage();
+	  else
+		content.innerHTML = wrongAnswerQ;
+	} else {
+	  var answer = confirm ("You failed. You need at least 60%  right answers. You got " + score + " out of " + maxQ + ".  " + Math.floor(score/maxQ*100) + "% . Do you want to restart the test? Press cancel if you like to review your incorrectly answered questions.");
+	  if (answer)
+		 reloadCurrentPage();
+	  else
+		 content.innerHTML = wrongAnswerQ;
+	}
+}
+
+function reloadCurrentPage() {
+	if(isOnReviewWrongPage) {
+		window.location.reload(true);
+	} else {
+		var restart = confirm("Are you sure you want to restart and leave the current test?");
+		if(restart)  {
+			alert ("You got " + score + " out of " + maxQ +   ".");
+			  window.location.reload(true);
+		}
+	}
+}
+
+function exitTest() {
+
+	if(isOnReviewWrongPage) {
+		document.location.href = "contents-quiz.html";
+	} else {
+		var restart = confirm("Are you sure you want to leave the current test?");
+		if(restart)  {
+			alert ("You got " + score + " out of " + maxQ +  ". Time elapsed:  " + timeElapsed + ".");
+			  document.location.href = "contents-quiz.html";
+		}
+	}
+}
+
+window.addEventListener("load", askQuestion, false);
+submitBtn.addEventListener("click", checkAnswer, false);
+$("reloadCurrentPage").addEventListener("click", reloadCurrentPage, false);
+$("exitTest").addEventListener("click", exitTest, false);
+
+
+
+</script>
+
+<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			
+			
+	  
+	 
+	  <script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-100005074-1', 'auto');
+			  ga('send', 'pageview');
+
+		</script>
+		
+		
+					<div class="adsForDesktop">
+							<!-- <img id="adsPortrait" src="images/ads.jpg" alt="image"/> -->
+							
+							<!-- Start of StatCounter Code for Default Guide -->
+							<script type="text/javascript">
+								var sc_project=11354570; 
+								var sc_invisible=0; 
+								var sc_security="d06d77bd"; 
+								var scJsHost = (("https:" == document.location.protocol) ?
+								"https://secure." : "http://www.");
+								document.write("<sc"+"ript type='text/javascript' src='" +
+								scJsHost+
+								"statcounter.com/counter/counter.js'></"+"script>");
+							</script>
+							<noscript>
+								<div class="statcounter">
+									<a title="web stats"
+										href="http://statcounter.com/" target="_blank"><img
+										class="statcounter"
+										src="//c.statcounter.com/11354570/0/d06d77bd/0/" alt="web
+										stats">
+									</a>
+								</div>
+							</noscript>
+							<!-- End of StatCounter Code for Default Guide -->
+						</div>	
+						
+
+</body>
+</html>

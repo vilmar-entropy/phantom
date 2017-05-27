@@ -41,6 +41,8 @@ figure.topimg {
 	margin: 0.01em;
 }
 
+/* images */
+
 #fig1-1 img {
 	display: inline-block;
 	max-width: 429px;
@@ -62,49 +64,65 @@ figure.topimg {
 	margin: 0.01em auto;
 }
 
+
+
+
+
 @media screen and (min-width: 980px) /* Desktop */ {
 	.content {
 	    position: relative;
 	    width: 65vw;
-		background-color: #dcdadb;
 	} 
 
 	.indentedText {
 	    position: absolute;
 		left: 5vw;
-		background-color: #FFFFFF; /*#FAEBD7; */
 	} 
-
-	.forAds { 
+	
+	
+	#thermo_problems_contents {
 		position: relative;
-		width: 25vw;
-		right: 0vw; 
+		width: 23vw;
+	} 
+	
+	
+	.adsForDesktop { 
+		position: absolute;
+		left: 70vw;
+		width: 24vw;
+		
+		
 	}
+	
+	
+	#adsPortrait {
+		position: relative;
+		width: 23vw;
+	}
+	
+	
+	/*
+	.adsForMobile {
+		width: 0vw;
+		height: 0vh;
+
+	}
+	#adsLandscape {
+		position: fixed;
+		width: 0vw;
+		height: 0vh;
+		bottom: 0;
+		left: 2.5vw;
+	} */
 	
 }
 
-div.absolute {
-    position: absolute;
-    top: 80px;
-    right: 0;
-    width: 200px;
-    height: 100px;
-    border: 3px solid #73AD21;
-}
 
 /*
 [MV] Akdong Musucian(악동뮤지션) _ I love you(All about my romance(내 연애의 모든 것) OST Part 3)
 */
 
-body {
- // background: white;    
-}
-/*
-@media screen and (min-width: 980px) /* Desktop  {
-  body {
-    background: red;
-  }
-} */
+
 
 @media screen  and (max-width: 979px) /* Tablet */ {
      .content {
@@ -116,12 +134,38 @@ body {
 	    position: absolute;
 		left: 5vw;
 	} 
+	
+	/*
 
-	.forAds {
-		position: relative;
-		width: 0vw;
-		right: 0vw;
+	.adsForMobile {
+		position: fixed;
+		width: 95vw;
+		height: 10vh;
+		bottom: 0;
+		left: 2.5vw;
 	}
+	
+	#adsLandscape {
+		position: fixed;
+		width: 95vw;
+		height: 10vh;
+		bottom: 0;
+		left: 2.5vw;
+	}
+	*/
+	
+	.adsForDesktop { 
+		position: absolute;
+		left: 70vw;
+		width: 0vw;
+		
+		
+	}
+	
+	#adsPortrait {
+		position: absolute;
+		width: 0vw;
+	} 
 }
 /*
 @media screen and (max-width: 500px) /* Mobile  {
@@ -141,15 +185,38 @@ body {
 	    position: absolute;
 		left: 5vw;
 	} 
-
-	.forAds {
-		position: relative;
-		width: 100vw;
-		right: 0vw;
+	
+	.adsForDesktop { 
+		position: absolute;
+		left: 70vw;
+		width: 0vw;
 		
-		height: 50vh;
+		
 	}
 
+	/*
+	.adsForMobile {
+		position: fixed;
+		width: 95vw;
+		height: 10vh;
+		bottom: 0;
+		left: 2.5vw;
+	}
+	
+	#adsLandscape {
+		position: fixed;
+		width: 95vw;
+		height: 10vh;
+		bottom: 0;
+		left: 2.5vw;
+	}
+	*/
+	
+	#adsPortrait {
+		position: absolute;
+		width: 0vw;
+	}
+	
   }
 
 

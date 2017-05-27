@@ -64,9 +64,10 @@ figure.topimg {
 	margin: 0.01em auto;
 }
 
-.statcounter {
+.stat {
 	/* display: none; */
 	 /* visibility:hidden; */
+	 position: absolute; 
 	 bottom: 0px;
 	 right: 0px;
 }
@@ -225,4 +226,6 @@ figure.topimg {
 	
   }
 
-
+.statcounter {
+	width: 0;
+}

@@ -71,12 +71,12 @@ figure.topimg {
 @media screen and (min-width: 980px) /* Desktop */ {
 	.content {
 	    position: relative;
-	    width: 65vw;
+	    width: 64vw;
 	} 
 
 	.indentedText {
 	    position: absolute;
-		left: 5vw;
+		left: 4vw;
 	} 
 	
 	
@@ -89,7 +89,7 @@ figure.topimg {
 	.adsForDesktop { 
 		position: absolute;
 		left: 70vw;
-		width: 24vw;
+		width: 26vw;
 		
 		
 	}
@@ -97,7 +97,7 @@ figure.topimg {
 	
 	#adsPortrait {
 		position: relative;
-		width: 23vw;
+		width: 26vw;
 	}
 	
 	

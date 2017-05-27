@@ -1,0 +1,233 @@
+
+.sub_prob {
+	font-style: italic;
+	font-weight: bold;
+	text-indent: 5%;
+	display: inline-block;
+}
+
+.term {
+	font-style: italic;
+	font-weight: bold;
+}
+
+.it {
+	font-style: italic;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.topic {
+	font-size: 1.5em;
+}
+
+.eq { 
+	text-indent: 8%;
+}
+
+
+p, span {
+        font-family: "Times New Roman", Times, serif;
+}
+
+span {
+	display: inline-block;
+}
+
+figure.topimg {
+	text-align: center;
+	margin: 0.01em;
+}
+
+/* images */
+
+#fig1-1 img {
+	display: inline-block;
+	max-width: 429px;
+	width: 100%;
+	margin: 0.01em auto;
+}
+
+#fig1-2 img {
+	display: inline-block;
+	max-width: 572px;
+	width: 100%;
+	margin: 0.01em auto;
+}
+
+#fig1-8 img {
+	display: inline-block;
+	max-width: 709px;
+	width: 100%;
+	margin: 0.01em auto;
+}
+
+.stat {
+	/* display: none; */
+	 /* visibility:hidden; */
+	 position: absolute; 
+	 bottom: 0px;
+	 right: 0px;
+}
+
+
+
+@media screen and (min-width: 980px) /* Desktop */ {
+	.content {
+	    position: relative;
+	    width: 64vw;
+		
+	} 
+
+	.indentedText {
+	    position: absolute;
+		left: 4vw;
+		background: #73AD21;
+	} 
+	
+	
+	#thermo_problems_contents {
+		position: relative;
+		width: 23vw;
+	} 
+	
+	
+	.adsForDesktop { 
+		position: relative;
+		left: 70vw;
+		width: 26vw;
+		background: #73AD21;
+		
+	}
+	
+	
+	#adsPortrait {
+		position: relative;
+		width: 26vw;
+		height: 26vw;
+	}
+	
+	
+	/*
+	.adsForMobile {
+		width: 0vw;
+		height: 0vh;
+
+	}
+	#adsLandscape {
+		position: fixed;
+		width: 0vw;
+		height: 0vh;
+		bottom: 0;
+		left: 2.5vw;
+	} */
+	
+}
+
+
+/*
+[MV] Akdong Musucian(악동뮤지션) _ I love you(All about my romance(내 연애의 모든 것) OST Part 3)
+*/
+
+
+
+@media screen  and (max-width: 979px) /* Tablet */ {
+     .content {
+	    position: relative;
+	    width: 90vw;
+	} 
+
+	.indentedText {
+	    position: absolute;
+		left: 5vw;
+	} 
+	
+	/*
+
+	.adsForMobile {
+		position: fixed;
+		width: 95vw;
+		height: 10vh;
+		bottom: 0;
+		left: 2.5vw;
+	}
+	
+	#adsLandscape {
+		position: fixed;
+		width: 95vw;
+		height: 10vh;
+		bottom: 0;
+		left: 2.5vw;
+	}
+	*/
+	
+	.adsForDesktop { 
+		position: absolute;
+		left: 70vw;
+		width: 0vw;
+		
+		
+	}
+	
+	.adsPortrait {
+		position: absolute;
+		width: 0vw;
+	} 
+}
+/*
+@media screen and (max-width: 500px) /* Mobile  {
+  body {
+    background: green;
+  }
+} */
+
+@media screen and (max-width: 500px) /* Mobile */ {
+  
+    .content {
+	    position: relative;
+	    width: 90vw;
+	} 
+
+	.indentedText {
+	    position: absolute;
+		left: 5vw;
+	} 
+	
+	.adsForDesktop { 
+		position: absolute;
+		left: 70vw;
+		width: 0vw;
+		
+		
+	}
+
+	/*
+	.adsForMobile {
+		position: fixed;
+		width: 95vw;
+		height: 10vh;
+		bottom: 0;
+		left: 2.5vw;
+	}
+	
+	#adsLandscape {
+		position: fixed;
+		width: 95vw;
+		height: 10vh;
+		bottom: 0;
+		left: 2.5vw;
+	}
+	*/
+	
+	#adsPortrait {
+		position: absolute;
+		width: 0vw;
+	}
+	
+  }
+
+.statcounter {
+	width: 0;
+}

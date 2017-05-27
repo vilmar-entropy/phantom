@@ -1,6 +1,6 @@
 //$('#stress').hide();
 //alert("hello");
-$(.statcounter).hide();
+$('.statcounter').hide();
 
 
 $("#thermo_solution1_1").hide();

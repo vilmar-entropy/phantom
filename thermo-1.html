@@ -1,0 +1,544 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+ 
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+  <meta name="viewport" content="width=device-width">
+
+   <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">-->
+  <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+
+  <!-- <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> -->
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+  <!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+   <script type="text/javascript" src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+
+  <script type="text/javascript" src="js/index.js"></script>
+  <!-- <script type="text/javascript" src="/sdcard/Download/econ.js"></script> -->
+
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <!-- <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+  <!-- <script type="text/javascript" async src="C:\Users\jericson b\Dropbox\MyApp3\MathJax-master\MathJax-master\MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+
+  
+    <meta charset="utf-8">
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by anonymous (http://jsbin.com/eRiSUhIB/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Quiz app</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  
+<style id="jsbin-css">
+/*! normalize.css v1.1.2 | MIT License | git.io/normalize */article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-size:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.67em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}p,pre{margin:1em 0}code,kbd,pre,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;*overflow:visible}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+</style>
+</head>
+  <body>
+    <div class="inner">
+	  
+		<div id="content">
+			<br>
+			<span id="question"></span>
+			<div id="choices"></div> 
+			<button id="submit" class="button"> Submit Answer</button>
+		</div>
+		
+	</div>
+	
+	<script>
+	
+	  
+  
+	
+	//start method 2
+
+
+//How to use the apply the function
+//var duplicates  =[];
+
+for (var i = 1; i <= 6 ; i++) { 
+   // document.write(getRandomIntNoDuplicates(1,10,duplicates));
+}
+
+//end 
+/*
+ //start method 1 to get random no. with no dupe
+ var nums = [0,1,2];
+ var gen_nums = [];
+
+ function in_array(array, el) {
+ for(var i = 0 ; i < array.length; i++) 
+ if(array[i] == el) return true;
+ return false;
+ }
+
+ function get_rand(array) {
+ var rand = array[Math.floor(Math.random()*array.length)];
+ if(!in_array(gen_nums, rand)) {
+ gen_nums.push(rand); 
+ return rand;
+ }
+ return get_rand(array);
+ }
+ */
+for(var i = 0; i < 0; i++) {
+    //document.write(get_rand(nums));
+    //alert(get_rand(nums));
+}
+//end
+
+//Prime
+var quiz = [{
+	"question": "An air bubble rises from the bottom of well where the temperature is 25˚C, to the surface where the temperature is 27˚C. Find the percent increase in the volume of the bubble if the depth of the well is 5 m. Atmospheric pressure is 101,528 Pascals.",
+	"choices": ["49.3", "56.7", "41.3", "38.6"],
+	"correct": "49.3"
+},{
+	"question": "An ideal gas is 45 psig and 80˚F is heated in a closed container to 130˚F. What is the final pressure? ",
+	"choices": ["54 psia", "65 psia", "75 psia", "43 psia"],
+	"correct": "65 psia"
+},{
+	"question": "A large mining company was provided with a 3000 cm^3 of compressed air tank. Air pressure in the tank drops from 700 kPa to 180 kPa while the temperature remains unchanged at 28˚C. What percentage has the mass of air in the tank been reduced?",
+	"choices": ["74", "72", "76", "78"],
+	"correct": "74"
+},{
+	"question": "How much work is necessary to compress air in an insulated cylnder from 0.20 m^3 to 0.01 m^3? Use T1 = 20˚C and P1 = 100 kPa.",
+	"choices": ["113.4 kJ", "121.4 kJ", "110.1 kJ", "115.7 kJ"],
+	"correct": "115.7 kJ"
+},{
+	"question": "A heat engine is operated between temperature limits of 1370˚C and 260˚C. Engine is supplied with 14,142 kJ/kwh. Find the Carnot cycle efficiency in percent. ",
+	"choices": ["70.10", "65.05", "67.56", "69.32"],
+	"correct": "67.56"
+},{
+	"question": "A closed vessel contains air at pressure of 160 kN/m^2 gauge and temperature of 30˚C. The air is heated at constant volume to 60˚C with the atmospheric pressure of 759 mm Hg. What is the final gauge pressure?",
+	"choices": ["174", "186", "167", "172"],
+	"correct": "186"
+},{
+	"question": "What is the temperature in ˚C of 2 liters of water at 30˚C after 500 calories of heat have been added?",
+	"choices": ["35.70", "30.25", "38", "39.75"],
+	"correct": "30.25"
+},{
+	"question": "A volume of 450 cm^3 of air is measured at a pressure of 740 mm Hg absolute and a temperature of 20˚C. What is the volume in cm^3 at 760 mm Hg absolute and 0˚C?",
+	"choices": ["516.12", "408.25", "620.76", "375.85"],
+	"correct": "408.25"
+},{
+	"question": "Assuming compression is according to the law PV = constant. Calculate the initial volume of gas at a pressure of 2 bar which will occupy a volume of 6 m^3 when it is compressed to a pressure of 42 bar.",
+	"choices": ["126 m^3", "120 m^3", "130 m^3", "136 m^3"],
+	"correct": "126 m^3"
+},{
+	"question": "A steam condenser receives 10 kg per second of steam with an enthalpy of 2,570 kJ/kg. Steam condenses into liquid and leaves with an enthalpy of 160 kJ/kg. Cooling water passes through the condenser with temperature increases from 13˚C to 24˚C. Calculate the cooling water flowrate in kg/s.",
+	"choices": ["533", "518", "523", "528"],
+	"correct": "523"
+},{
+	"question": "A steam expands adiabatically in a turbine from 2000 kPa, 400˚C to 400 kPa, 250˚C. What is the effectiveness of the process in percent assuming an atmospheric temperature of 15˚C. Neglect changes in kinetic and potential energy. Properties of steam: At 2000 kPa and 400˚C (h = 3247.6 kJ/kg, s = 7.1271 kJ/kg-K) and at 400kPa and 250˚C (h = 2964.2 kJ/kg, s = 7.3789 kJ/kg-K)",
+	"choices": ["82", "84", "80", "86"],
+	"correct": "80"
+},{
+	"question": "Steam enters the superheaters of a boiler at a pressure of 25 bar and dryness of 0.98 and leaves at the same pressure at a temperature of 370˚C. Calculate the heat energy supplied in the superheaters. Properties of Steam: At 25 bar and 370˚C (h = 3171.8 kJ/kg) and at 25 bar and 0.98 dryness (hf = 962.11 kJ/kg, hfg = 1841.01 kJ/kg)",
+	"choices": ["407.46", "408.57", "405.51", "406.54"],
+	"correct": "405.51"
+},{
+	"question": "The thermal efficiency of a particular engine operating on an ideal cycle is 35%. Calculate the heat supplied per 1200 watt-hr of work developed in kJ.",
+	"choices": ["12343", "10216", "14218", "11108"],
+	"correct": "12343"
+},{
+	"question": "Determine the average cp value in kJ/kg-K of a gas if 522 kJ of heat is necessary to raise the temperature from 300 K to 800 K making the pressure constant?",
+	"choices": ["1.440", "1.044", "1.038", "1.026"],
+	"correct": "1.044"
+},{
+	"question": "Determine the force in Newtons required to produce an acceleration of 0.30 m/s^2 on a 0.05 kg mass.",
+	"choices": ["0.018 N", "0.025 N", "0.015 N", "0.200 N"],
+	"correct": "0.015 N"
+},{
+	"question": "Ammonia weighing 22 kg is confined inside a cylinder equipped with a piston has an initial pressure of 413 kPa at 38˚C. If 2900 kJ of heat is added to the ammonia until its pressure and temperature are 413 kPa and 100˚C, respectively, What is the amount of work done by the fluid in kJ?",
+	"choices": ["667", "304", "420", "502"],
+	"correct": "667"
+},{
+	"question": "What is the total required heating energy in raising the temperature of a given amount of water when the energy supplied is 1000 kwh with heat losses of 25%?",
+	"choices": ["1000", "1500", "1333", "1250"],
+	"correct": "1333"
+},{
+	"question": "A vessel of 0.058 m^3 capacity is well insulated and is divided equally by rigid conducting diaphragm. Initially both halves contain air at pressure 137.8 kPa and 413.4 kPa and a temperature of 27˚C and 177˚C respectively. What is the increase of entropy of the system in kJ/˚C?",
+	"choices": ["1.002", "0.5080", "0.00173", "0.1080"],
+	"correct": "0.00173"
+},{
+	"question": "A certain gas at 101.325 kPa and 16˚C whose volume is 2.83 m^3 are compressed into a storage vessel of 0.31 m^3 capacity. Before admission, the stroge vessel contained gas at a pressure and temperature of 137.8 kPa and 24˚C. After admission, the pressure has increased to 1171.8 kPa. What should be the final temperature of the gas in the vessel in Kelvin?",
+	"choices": ["298", "319", "180", "420"],
+	"correct": "319"
+},{
+	"question": "Steam enters a throttling calorimeter at a pressure of 1.03 MPa. The calorimeter downstream pressure and temperature are respectively 0.100 MPa and 125˚C. What is the percentage moisture of the supply steam? Properties of Steam: At P = 1.03 MPa (hg = 2779.25 kJ/jg, hfg = 2010.7 kJ/kg), at 0.100 MPa and 125˚C (h = 2726.6 kJ/kg)",
+	"choices": ["2.62", "5.21", "3.15", "1.98"],
+	"correct": "2.62"
+},{
+	"question": "What pressure is column of water 100 cm high equivalent to ?",
+	"choices": ["9807 dynes/cm^2", "9807 N/m^2", "0.10 bar", "98100 N/m^2"],
+	"correct": "9807 N/m^2"
+},{
+	"question": "A water temperature rise of 18˚F in the water cooled condenser is equivalent in ˚C to:",
+	"choices": ["-9.44˚C", "263.56K", "10˚C", "7.78˚C"],
+	"correct": "10˚C"
+},{
+	"question": "Steam flows into a turbine at the rate of 10 kg/s and 10 kW of heat are lost from the turbine. Ignoring elevation and kinetic energy effects, calculate the power output from the turbine. Note: h1 = 2739 kJ/kg and h2 = 2300.5 kJ/kg",
+	"choices": ["4605 kW", "4973 kW", "4375 kW", "4000 kW"],
+	"correct": "4375 kW"
+},{
+	"question": "The enthalpy of air is increased by 139.586 kJ/kg in a compressor. The rate of air flow is 16.42 kg/min. The power input is 48.2 kW. Which of the following values most nearly equals the heat loss from the compressor in kW?",
+	"choices": ["-10", "10.2", "-9.95", "9.95"],
+	"correct": "-10"
+},{
+	"question": "A Carnot engine requires 35 kJ/s from the hot source. The engine produces 15 kW of power and the temperature of the sink is 26˚C. What is the temperature of the hot source in ˚C?",
+	"choices": ["245.57", "210.10", "250.25", "260.68"],
+	"correct": "250.25"
+},{
+	"question": "The maximum thermal efficiency possible for a power cycle operating between 1200˚F and 225˚F is: ",
+	"choices": ["58%", "8.73%", "58.73%", "57.40%"],
+	"correct": "58.73%"
+},{
+	"question": "A Carnot engine receives 130 Btu of heat from a hot reservoir at 700˚F and rejects 49 Btu of heat. Calculate the temperature of the cold reservoir.",
+	"choices": ["-21.9˚F", "-24.2˚F", "-20.8˚F", "-22.7˚F"],
+	"correct": "-22.7˚F"
+},{
+	"question": "A tank contains 80 ft^3 of air at a pressure of 350 psi. If the air is cooled until its pressure and temperature decrease to 200 psi and 70˚F respectively, what is the decrease in internal energy?",
+	"choices": ["4575", "-5507", "5552", "0"],
+	"correct": "-5507"
+},{
+	"question": "If 10 lbs of water evaporated at atmospheric pressure until volume of 288.5 ft^3 is occupied, how much work is done?",
+	"choices": ["610358 ft-lb", "0", "-610358 ft-lb", "550000 ft-lb"],
+	"correct": "610358 ft-lb"
+},{
+	"question": "A reverse Carnot cycle requires 3 hp and extracts energy from a lake to heat a house. If the house is kept  at 70˚F and requires 2000 Btu per minute, what is the temperature of the lake?",
+	"choices": ["35˚F", "36˚F", "39˚F", "40˚F"],
+	"correct": "36˚F"
+},{
+	"question": "A pressure gage registers 50 psig in a region where the barometer is 14.25 psia. Find the absolute pressure in psia.",
+	"choices": ["64.25", "443", "151.325", "35.75"],
+	"correct": "64.25"
+},{
+	"question": "A pump discharges 50 tons of water per hour to a height of 8 m, the overall efficiency of the pumping system being 69%. Calculate the output and input power.",
+	"choices": ["1.09 kW & 1.58 kW", "2.09 kW & 2.58 kW", "1.09 kW & 2.58 kW", "2.09 kW & 1.58 kW"],
+	"correct": "1.09 kW & 1.58 kW"
+},{
+	"question": "A condenser vacuum gauge reads 715 mm Hg when the barometer stands at 757 mm Hg. What is the absolute pressure in the condenser in kPa?",
+	"choices": ["196.25 kPa", "100.92 kPa", "5.60 kPa", "95.33 kPa"],
+	"correct": "5.60 kPa"
+},{
+	"question": "Oil flows full bore at a velocity of 2 m/s through a nest of 16 tubes in a single pass cooler. The internal diameter of the tubes is 30 mm and the density of the oil is 0.85 g/L. Fin the volume flow in liters per second.",
+	"choices": ["20", "21", "22", "23"],
+	"correct": "23"
+},{
+	"question": "Calculate the quantity of heat to be transferred to 2.25 kg of brass to raise its temperature from 20˚C to 240˚C taking the specific heat of the brass as 0.394 kJ/kg-K",
+	"choices": ["519.03 kJ", "159.03 kJ", "195.03 kJ", "591.03 kJ"],
+	"correct": "195.03 kJ"
+},{
+	"question": "Three cubic meters of air at a pressure of 20 kPag is compressed at constant temperature to a pressure of 425 kPag. Calculate the final volume of the air.",
+	"choices": ["0.80 m^3", "0.69 m^3", "0.92 m^3", "0.96 m^3"],
+	"correct": "0.69 m^3"
+},{
+	"question": "The pressure of the air in a starting air vessel is 40 bar and the temperature is 24˚C. If a fire in the vicinity causes the temperature to rise to 65˚C, find the pressure of the air. Neglect any increase in volume of the vessel.",
+	"choices": ["45.52 bar", "54.52 bar", "45.55 bar", "44.55 bar"],
+	"correct": "45.52 bar"
+},{
+	"question": "One cubic meter of a perfect gas at a constant pressure of 1 bar and temperature of 17˚C are compressed to a volume of 0.50 m^3 and the final pressure is 6 bar. Calculate the final temperature.",
+	"choices": ["870˚C", "560˚C", "597˚C", "860˚C"],
+	"correct": "597˚C"
+},{
+	"question": "An air compressor delivers 0.20 m^3 of air at a pressure of 850 kPa and 31˚C into an air reservoir. Taking the gas constant of air as 0.287 kJ/kg-K, calculate the mass of air delivered.",
+	"choices": ["1.59 kg", "1.95 kg", "5.91 kg", "5.19 kg"],
+	"correct": "1.95 kg"
+},{
+	"question": "An oxygen cylinder of volume 2.3 ft^3 has a pressure of 2200 psig and is at 70˚F. Determine the mass of oxygen in the cylinder.",
+	"choices": ["26.66 lbs", "26.86 lbs", "28.66 lbs", "28.88 lbs"],
+	"correct": "28.66 lbs"
+},{
+	"question": "What is the power of a steam jet 15 mm diameter moving at 750 m/s? Steam condition, 1.4 kg/cm^2, dry and saturated (v = 1.256 m^3/kg).",
+	"choices": ["29.67 kW", "39.67 kW", "19.67 kW", "49.67 kW"],
+	"correct": "29.67 kW"
+},{
+	"question": "How much power is there in the kinetic energy of the atmosphere (density = 1.217 kg/m^3) at 56 kph wind velocity? Consider the section that passes through a 3 m diameter circular area normal to the velocity. ",
+	"choices": ["10.21 kW", "15.21 kW", "16.21 kW", "17.21 kW"],
+	"correct": "16.21 kW"
+},{
+	"question": "An electric heater is to heat 11 kg of oil per min. from 4.5˚C to 65.5. Specific heat of the oil is 2.1 J/gm-˚C. HOw many watts should this heater consume?",
+	"choices": ["20 448 W", "33 448 W", "20 400 W", "23 442 W"],
+	"correct": "23 442 W"
+},{
+	"question": "Find the enthalpy of 1 kg of wet saturated steam at a pressure of 0.20 bar and dryness fraction of 0.85. At 0.20 bar, hf = 251 kJ/kg, hfg = 2358 kJ/kg",
+	"choices": ["2200 kJ/kg", "2525.30 kJ/kg", "2255.30 kJ/kg", "2000 kJ/kg"],
+	"correct": "2255.30 kJ/kg"
+},{
+	"question": "If the enthalpy of wet saturated steam at a pressure of 11 bar is 2681 kJ/kg, find its dryness fraction. At 11 bar, hf = 781 kJ/kg & hfg = 2000 kJ/kg.",
+	"choices": ["0.75", "0.85", "0.95", "0.65"],
+	"correct": "0.95"
+},{
+	"question": "Find the heat transfer required to convert 5 kg of water at a pressure of 20 bar and temperature of 21˚C into steam of dryness fraction 0.90 at the same pressure. Properties of Steam: P = 20 bar; hf = 909 kJ/kg; hfg = 1890 kJ/kg. Note: for water at 21˚C, h = 88 kJ/kg",
+	"choices": ["10 610 kJ", "11 610 kJ", "12 610 kJ", "15 610 kJ"],
+	"correct": "12 610 kJ"
+},{
+	"question": "A closed vessel contains air at a pressure of 140 kPag and temperature of 20˚C. Find the final gauge pressure if the air is heated at constant volume to 40˚C. Take the atmospheric pressure as 759 mm Hg.  ",
+	"choices": ["156.46", "146.46", "136.46", "126.46"],
+	"correct": "156.46"
+},{
+	"question": "Water substance at 70 bar and 65˚C enters a boiler tube of constant inside diameter of 25 mm. The water leaves the boiler tube at 50 bar and 700K at velocity of 100 m/s. Calculate the inlet volume flow in L/s. At 70 bar & 65˚C, v1 = 0.001017 m^3/kg, at 50 bar & 700 K, v2 = 0.06081 m^3/kg.",
+	"choices": ["0.75", "0.64", "0.82", "0.96"],
+	"correct": "0.82"
+},{
+	"question": "A group of 50 persons attend a secret meeting in room which is 12 m wide by 10 m long and a celing height of 3 m. The room is completely sealed off and insulated. Each person gives off 150 kcal per hour of heat and occupies a volume of 0.20 m^3. The room has an initial pressure of 101.3 kPa and temperature of 16˚C. Calculate the room temperature after 10 mins. Use R = 0.287 kJ/kg-K and cv = 0.171 kcal/kg-K.",
+	"choices": ["33.1˚C", "37.7˚C", "38.7˚C", "31.7˚C"],
+	"correct": "33.1˚C"
+},{
+	"question": "Steam at 1000 lb/ft^2 pressure and 300˚R has specific volume of 6.5 ft^3/lb and a specific enthalpy of 9800 ft-lbf/lbm. Find the internal energy per pound mass of steam. ",
+	"choices": ["2500 ft-lbf/lbm", "3300 ft-lbf/lbm", "5400 ft-lbf/lbm", "6900 ft-lbf/lbm"],
+	"correct": "3300 ft-lbf/lbm"
+}]; 
+
+
+// define elements
+var content = $("content"),
+  questionContainer = $("question"),
+  choicesContainer = $("choices"),
+  submitBtn = $("submit");
+
+// init vars
+var currentQuestion = 0,
+	score = 0,
+  askingQuestion = true,
+  questionNumber = 0,
+  maxQ = 50,
+  gCurrentQuestion;
+  
+  wrongAnswerQ = "",
+  wrongAnswerNo=0;
+  var yourAnswer = "You did not pick any answer.";
+  var choicesMistakesG = "";
+  if(maxQ > quiz.length) {
+	maxQ = quiz.length;
+  }
+  var isOnReviewWrongPage = false;
+  var duplicates  =[];
+
+function $(id) { // shortcut for document.getElementById
+  return document.getElementById(id);
+}
+
+function askQuestion() {
+//start method 1 to get random no. with no dupe
+
+  var nums = [0,1,2,3];
+var gen_nums = [];
+
+function in_array(array, el) {
+   for(var i = 0 ; i < array.length; i++) 
+       if(array[i] == el) return true;
+   return false;
+}
+
+function get_rand(array) {
+    var rand = array[Math.floor(Math.random()*array.length)];
+    if(!in_array(gen_nums, rand)) {
+       gen_nums.push(rand); 
+       return rand;
+    }
+    return get_rand(array);
+}
+
+
+
+function inArray(arr, el) {
+    for(var i = 0 ; i < arr.length; i++) 
+            if(arr[i] == el) return true;
+    return false;
+}
+
+function getRandomIntNoDuplicates(min, max, DuplicateArr) {
+    var RandomInt = Math.floor(Math.random() * (max - min + 1)) + min;
+    if (DuplicateArr.length > (max-min) ) return false;  // break endless recursion
+    if(!inArray(DuplicateArr, RandomInt)) {
+       DuplicateArr.push(RandomInt); 
+       return RandomInt;
+    }
+    return getRandomIntNoDuplicates(min, max, DuplicateArr); //recurse
+}
+
+//tempCurrentQuestion = get_rand(numsQuestion);
+ gCurrentQuestion = getRandomIntNoDuplicates(0,quiz.length-1,duplicates);
+ //alert(gCurrentQuestion);
+
+  var choices = quiz[gCurrentQuestion].choices,
+    choicesHtml = "", choicesMistakes="" ;
+	var tempi;
+	
+	
+
+
+  // loop through choices, and create radio buttons
+  for (var i = 0; i < choices.length; i++) {
+  //alert(get_rand(nums));
+   tempi = get_rand(nums);
+    choicesHtml += "<input type='radio' name='quiz" + gCurrentQuestion +
+      "' id='choice" + ( tempi + 1) +
+      "' value='" + choices[tempi] + "'>" +
+      " <label for='choice" + (tempi + 1) + "'>" + choices[tempi] + "</label> <br>";
+	  
+	  choicesMistakes += "<span name='quiz" + gCurrentQuestion +
+      "' id='choice" + (tempi + 1) +
+      "' value='" + choices[tempi] + "'>"+ (i+1) + ". " + choices[tempi] + "</span><br>";
+	   if(choices[tempi] === quiz[gCurrentQuestion].correct) {
+			correctAnswer = choices[tempi];
+			correctAnswerIndex = tempi;
+	  }
+	  
+	  choicesMistakesG = choicesMistakes;
+  }
+
+  // load the question
+  questionContainer.textContent = (questionNumber + 1) + ". " +
+    quiz[gCurrentQuestion].question;
+
+  // load the choices
+  choicesContainer.innerHTML = choicesHtml;
+
+  // setup for the first time
+  if (questionNumber === 0) {
+    submitBtn.textContent = "Submit Answer";
+	//alert(quiz.length);
+  }
+
+  clear();
+}
+
+function checkAnswer() {
+	var yourAnswer = "You did not pick any answer.";
+  // are we asking a question, or proceeding to next question?
+  if (askingQuestion) {
+    submitBtn.textContent = "Next Question";
+    askingQuestion = false;
+
+    // determine which radio button they clicked
+    var userpick,
+      correctIndex,
+      radios = document.getElementsByName("quiz" + gCurrentQuestion);
+    for (var i = 0; i < radios.length; i++) {
+      if (radios[i].checked) { // if this radio button is checked
+        userpick = radios[i].value;
+		yourAnswer = userpick;
+      }
+
+      // get index of correct answer
+      if (radios[i].value == quiz[gCurrentQuestion].correct) {
+        correctIndex = i;
+      }
+    }
+
+    // setup if they got it right, or wrong
+    var labelStyle = document.getElementsByTagName("label")[correctIndex].style;
+    labelStyle.fontWeight = "bold";
+    if (userpick == quiz[gCurrentQuestion].correct) {
+      labelStyle.color = "green";
+	  score++;
+    } else {
+		wrongAnswerNo++;
+      labelStyle.color = "red";
+	  wrongAnswerQ += "<br> <span id='question'> " + wrongAnswerNo+". " + quiz[gCurrentQuestion].question + "</span><br> " + "<div id='choices'>" + choicesMistakesG + " <strong id='answer'>" + "Correct answer: " + correctAnswer  + "</strong></div> ";//  + 
+
+    }
+
+ 
+  } else { // move to next question
+    // setting up so user can ask a question
+    askingQuestion = true;
+    // change button text back to "Submit Answer"
+    submitBtn.textContent = "Submit Answer";
+    // if we're not on last question, increase question number
+    if (questionNumber < maxQ - 1) {
+      //currentQuestion++;
+	  questionNumber++;
+      askQuestion();
+    } else {
+      showFinalResults();
+    }
+	
+  }
+}
+
+
+function showFinalResults() {
+	isOnReviewWrongPage = true;
+	
+	if(score === maxQ) {
+	  var answer = confirm ("Congrats buddy. You got perfect. " + score + " out of " + maxQ +  " . Do you want to restart the test?");
+	  if (answer)
+			reloadCurrentPage();
+	  else
+		  document.location.href = "contents-quiz.html";
+	} else if(score/maxQ >= 0.6){
+	  var answer = confirm ("You passed the test. Congrats. You got " + score + " out of " + maxQ +  ".  " + Math.floor(score/maxQ*100) +"%. Do you want to restart the test? Press cancel if you like to review your incorrectly answered questions.");
+	  if (answer)
+		 reloadCurrentPage();
+	  else
+		content.innerHTML = wrongAnswerQ;
+	} else {
+	  var answer = confirm ("You failed. You need at least 60%  right answers. You got " + score + " out of " + maxQ + ".  " + Math.floor(score/maxQ*100) + "% . Do you want to restart the test? Press cancel if you like to review your incorrectly answered questions.");
+	  if (answer)
+		 reloadCurrentPage();
+	  else
+		 content.innerHTML = wrongAnswerQ;
+	}
+}
+
+function reloadCurrentPage() {
+	if(isOnReviewWrongPage) {
+		window.location.reload(true);
+	} else {
+		var restart = confirm("Are you sure you want to restart and leave the current test?");
+		if(restart)  {
+			alert ("You got " + score + " out of " + maxQ +   ".");
+			  window.location.reload(true);
+		}
+	}
+}
+
+function exitTest() {
+
+	if(isOnReviewWrongPage) {
+		document.location.href = "contents-quiz.html";
+	} else {
+		var restart = confirm("Are you sure you want to leave the current test?");
+		if(restart)  {
+			alert ("You got " + score + " out of " + maxQ +  ". Time elapsed:  " + timeElapsed + ".");
+			  document.location.href = "contents-quiz.html";
+		}
+	}
+}
+
+window.addEventListener("load", askQuestion, false);
+submitBtn.addEventListener("click", checkAnswer, false);
+$("reloadCurrentPage").addEventListener("click", reloadCurrentPage, false);
+$("exitTest").addEventListener("click", exitTest, false);
+
+
+
+</script>
+
+<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+</body>
+</html>

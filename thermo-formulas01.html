@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Vilmar Agustin Cabañero</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link rel="stylesheet" href="assets/css/index.css" />
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript" async src="https://example.com/MathJax.js?config=TeX-AMS_CHTML">
+		</script>
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="thermo-home-formulas.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Thermodynamics Formulas</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="thermo-home-formulas.html">1. Basic Principles, Concepts and Definitions</a></li>
+							 <!--
+							<li><a href="#">2. Energy Concepts</a></li>
+							<li><a href="#">Solved Problems</a></li>
+							<li><a href="#">Solved Problems</a></li>
+							<li><a href="#">Solved Problems</a></li>
+							<li><a href="#">Solved Problems</a></li>
+							<li><a href="#">Solved Problems</a></li>
+							<li><a href="#">Solved Problems</a></li>
+							<li><a href="#">Solved Problems</a></li>
+							<li><a href="#">Solved Problems</a></li> -->
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="content"> 
+						<div class="indentedText">
+						<div class="inner">
+							<h1>1. BASIC PRINCIPLES, CONCEPTS AND DEFINITIONS</h1>
+							<hr>
+							<strong class="term">
+								<a href="#1.1" class="term">1.1 Mass and Weight</a> <br> <!-- 1.1 -->
+									<a href="#1.1.1" class="sub_prob"> Weight, $F_g$  </a> <br>
+								<a href="#1.2" class="term">1.2 Density, Specific Volume, Specific Weight</a> <br> <!-- 1.2 -->
+									<a href="#1.2.1" class="sub_prob"> Density, $\rho$  </a> <br>
+									<a href="#1.2.2" class="sub_prob"> Specific Volume, $\text{v}$</a> <br>
+									<a href="#1.2.3" class="sub_prob"> Specific Weight, $\gamma$ </a> <br>
+								<a href="#1.3" class="term">1.3 Pressure</a> <br> <!-- 1.3 -->
+									<a href="#1.3.1" class="sub_prob"> Pressure due to Elevation, $P$</a> <br>
+									<a href="#1.3.2" class="sub_prob"> Absolute Pressure, $P_{abs}$</a> <br>
+								<a href="#1.4" class="term">1.4 Temperature</a> <br> <!-- 1.4 -->
+									<a href="#1.4.1" class="sub_prob">  Temperature in Fahrenheit, $t_F$</a> <br>
+									<a href="#1.4.2" class="sub_prob"> Temperature in Celsius, $t_C$</a> <br>
+								
+								<a href="#1.5" class="term">1.5 Conservation of Mass</a> <br> <!-- 1.5 -->
+									<a href="#1.5.1" class="sub_prob"> Law of Conservation of Mass</a> <br>
+									<a href="#1.5.2" class="sub_prob"> Mass flow rate, $\dot m$</a> <br>
+									<a href="#1.5.3" class="sub_prob"> Continuity equation of Steady Flow</a> <br>
+							</strong>
+							<hr>
+							
+							<a name="1.1"></a>
+							<a href="#top" class="term">1.1 Mass and Weight</a> <br>
+							<a name="1.1.1"></a>
+							<strong onclick="weight();">1) Weight, $F_g$ </strong> <br>
+							<span class="eq" > $F_g = mg$ </span>
+							<p  id="weight"> 
+								where:<br>
+								$m=$ mass <br>
+								$g=$ gravitational acceleration
+							</p>
+							<span class="it"> Note: You can click the formula name (e.g. Weight, $F_g$) to see the notations used in the formula.</span>
+							<hr>
+							
+							<a name="1.2"></a>
+							<a href="#top" class="term">1.2 Density, Specific Volume, Specific Weight</a> <br> <!-- 1.5 -->
+							<a name="1.2.1"></a>
+							<strong onclick="density();">2) Density, $\rho$ </strong> <br>
+							<span class="eq" > $\rho =\frac{m}{V}$ </span>
+							<p  id="density"> 
+								where:<br>
+								$m=$ mass <br>
+								$V=$ total volume
+							</p>
+	
+							<hr>
+							
+							<a name="1.2.2"></a>
+							<strong onclick="spvolume();">3) Specific Volume, $\text{v}$ </strong> <br>
+							<span class="eq" > $\text{v} =\frac{V}{m} = \frac{1}{\rho}$ </span>
+							<p  id="spvolume">
+								where:<br>
+								$m=$ mass <br>
+								$V=$ total volume <br>
+								$\rho =$ density
+							</p>
+	
+							<hr>
+							
+							<a name="1.2.3"></a>
+							<strong onclick="spweight();">4) Specific Weight, $\gamma$ </strong> <br>
+							<span class="eq" > $\gamma =\frac{F_g}{V} = \rho g$ </span>
+							<p  id="spweight">
+								where:<br>
+								$F_g =$ weight <br>
+								$V=$ total volume <br>
+								$\rho =$ density <br>
+								$g=$ gravitational acceleration
+							</p>
+	
+							<hr>
+							
+							<a name="1.3"></a>
+							<a href="#top" class="term">1.3 Pressure</a> <br> <!-- 1.5 -->
+							<a name="1.3.1"></a>
+							<strong onclick="P();">5) Pressure due to Elevation, $P$ </strong> <br>
+							<span class="eq" > $P = \gamma h = \rho g h$ </span>
+							<p  id="P"> 
+								where:<br>
+								$\gamma =$ specific weight <br>
+								$h = $ the elevation where the pressure is measured <br>
+								$\rho =$ density <br>
+								$g=$ gravitational acceleration
+							</p>
+	
+							<hr>
+							
+							<a name="1.3.2"></a>
+							<strong onclick="Pabs();">6) Absolute Pressure, $P_{abs}$ </strong> <br>
+							<span class="eq" > $P_{abs} = P_{atm} + P_g$ </span>
+							<p  id="Pabs">
+								where:<br>
+								$ P_{atm} = $ atmospheric pressure   <br>
+								$ P_g = $ gage pressure   <br>
+							</p>
+	
+							<hr> 
+							
+							<a name="1.4"></a>
+							<a href="#top" class="term">1.4 Temperature</a> <br> <!-- 1.5 -->
+							<a name="1.4.1"></a>
+							<strong onclick="t_F();">7) Temperature in Fahrenheit, $t_F$</strong> <br>
+							<span class="eq" > $t_F = \frac{9}{5} t_C + 32$ </span>
+							<p  id="t_F">
+								where:<br>
+								$ t_C = $  temperature in Celsius  
+							</p>
+	
+							<hr>
+							
+							<a name="1.4.2"></a>
+							<strong onclick="t_C();">8) Temperature in Celsius, $t_C$</strong> <br>
+							<span class="eq" > $t_C = \frac{5}{9}(t_F - 32)$ </span>
+							<p  id="t_C">
+								where:<br>
+								$ t_F = $  temperature in Fahrenheit  
+							</p>
+	
+							<hr>
+							
+							<a name="1.5"></a>
+							<a href="#top" class="term">1.5 Conservation of Mass</a> <br> <!-- 1.5 -->
+							<a name="1.5.1"></a>
+							<strong >9) Law of Conservation of Mass</strong> <br>
+							<span class="eq" > $[\text{mass entering}]  -  $ $ [\text{mass leaving}] =  $ 
+											$[\text{change of mass stored in system }] $  </span>
+	
+							<hr>
+							
+							<a name="1.5.2"></a>
+							<strong onclick="dotm();">10)Mass flow rate, $\dot m$ </strong> <br>
+							<span class="eq" > $ \dot m = \rho v A $</span>
+							<p  id="dotm">
+								where:<br>
+								$\rho = $ density   <br>
+								$ v = $ velocity of fluid   <br>
+								$ A = $ cross sectional area of the conduit where the fluid pass through  
+							</p>
+	
+							<hr>
+							
+							<a name="1.5.3"></a>
+							<strong onclick="cont();">11) Continuity equation of Steady Flow</strong> <br>
+							<span>$[\text{mass entering}]  =  $ $ [\text{mass leaving}] $   </span> <br>
+							<span class="eq" >$ \dot m = \rho _1 A_1 v_1 = \rho _2 A_2 v_2 $   </span>
+							<p  id="cont">
+								where:<br>
+								$\rho_1 = $ density of entering fluid   <br>
+								$ v_1 = $ velocity of entering fluid   <br>
+								$ A_1 = $ cross sectional area of the conduit where the fluid enters  <br>
+								$\rho_2 = $ density of leaving fluid   <br>
+								$ v_2 = $ velocity of leaving fluid   <br>
+								$ A_2 = $ cross sectional area of the conduit where the fluid leaves 
+							</p>
+							
+							<hr>
+							
+							<!-- 
+							<a name="1.2.2"></a>
+							<strong onclick="spvolume();">3) Specific Volume, $\text{v}$ </strong> <br>
+							<span class="eq" > $\text{v} =\frac{V}{m} = \frac{1}{\rho}$ </span>
+							<p  id="spvolume">
+								where:<br>
+								$ $   <br>
+								$ $  <br>
+								$ $  <br>
+								$ $   <br>
+								$ $   <br>
+								$ $  
+							</p>
+	
+							<hr>
+							-->
+							
+						</div>
+					</div>
+				</div> <!-- div for indentedText> -->
+				</div> <!-- div for content> -->
+				
+				<div class="forAds"> </div>   <!-- div for forAds_landscape> -->
+				<div class="forMobile"> </div>   <!-- div for forAds_portrait> -->
+
+				<!-- Footer -->
+					
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/index.js"></script>
+
+	</body>
+</html>
+

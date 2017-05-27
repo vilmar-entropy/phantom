@@ -1,0 +1,802 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Vilmar Agustin Cabañero</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link rel="stylesheet" href="assets/css/index.css" />
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript" async src="https://example.com/MathJax.js?config=TeX-AMS_CHTML">
+		</script>
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.js"></script>
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="thermo-home-problems.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title"> 1. BASIC PRINCIPLES, CONCEPTS AND DEFINITIONS </span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="#" onclick="problem1_1();">Problem 1 - Mass</a></li>
+							<li><a href="#" onclick="problem1_2();">Problem 2 - Weight</a></li>
+							<li><a href="#" onclick="problem1_3();">Problem 3 - Density</a></li>
+							<li><a href="#" onclick="problem1_4();">Problem 4 - Pressure</a></li>
+							<li><a href="#" onclick="problem1_5();">Problem 5 - Pressure</a></li>
+							<li><a href="#" onclick="problem1_6();">Problem 6 - Pressure</a></li>
+							<li><a href="#" onclick="problem1_7();">Problem 7 - Pressure</a></li>
+							<li><a href="#" onclick="problem1_8();">Problem 8 - Pressure</a></li>
+							<li><a href="#" onclick="problem1_9();">Problem 9 Temperature</a></li>
+							<li><a href="#" onclick="problem1_10();">Problem 10 - Conservation of Mass</a></li>
+							<li><a href="#" onclick="problem1_11();">Problem 11 - Conservation of Mass</a></li>
+							<li><a href="#" onclick="problem1_12();">Problem 12 - Mass</a></li>
+							<li><a href="#" onclick="problem1_13();">Problem 13 - Acceleration</a></li>
+							<li><a href="#" onclick="problem1_14();">Problem 14 - Mass</a></li>
+							<li><a href="#" onclick="problem1_15();">Problem 15 - Weight</a></li>
+							<li><a href="#" onclick="problem1_16();">Problem 16 - Specific Volume, specific weight</a></li>
+							<li><a href="#" onclick="problem1_17();">Problem 17 - Specific Volume, specific weight</a></li>
+							<li><a href="#" onclick="problem1_18();">Problem 18 - Pressure</a></li>
+							<li><a href="#" onclick="problem1_19();">Problem 19 - Pressure</a></li>
+							<li><a href="#" onclick="problem1_20();">Problem 20 - Pressure</a></li>
+							<li><a href="#" onclick="problem1_21();">Problem 21 - Conservation of Mass</a></li>
+							<li><a href="#" onclick="problem1_22();">Problem 22 - Conservation of Mass</a></li>
+							<li><a href="#" onclick="problem1_23();">Problem 23 - Force</a></li>
+							<li><a href="#" onclick="problem1_24();">Problem 24 - Specific Weight, Density</a></li>
+							<li><a href="#" onclick="problem1_25();">Problem 25 - Mass, Weight</a></li>
+							
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="content"> 
+						<div class="indentedText">
+						<div class="inner">
+
+							<div id="problem1_1">
+							<p>
+								1. Five masses in a region where the acceleration due to gravity is 30.5 $ft/s^2$ 
+								are as follows: <br>
+								<span class="eq">$m_1$ is 500$g$ of mass; </span> <br>
+								<span class="eq"> $m_2$ weighs $800g_f$; </span>  <br>
+								<span class="eq"> $m_3$ weighs 15 $poundals$;  </span> <br>
+								<span class="eq"> $m_4$ weighs $3lb_f$; </span>  <br>
+								<span class="eq"> $m_5$ is 0.10 $slug$ of mass. </span>  <br>
+								What is the total mass expressed (a) in grams,  (b)  in pounds and (c)
+								 in slugs.
+							</p>
+							<ul class="actions small">
+								<li><button class="button small" onclick="thermo_solution1_1();">Solution</button></li>
+								<li><button class="button small" onclick="thermo_answer1_1();">Answer</button></li> <br> 
+								<p id="thermo_solution1_1">
+									Data: <br>
+									<span class="eq">$m_1 = 500 g_m$ </span><br>
+									<span class="eq">$m_2 = 800 g_f$ </span><br>
+									<span class="eq">$m_3 = 15 poundals$ </span><br>
+									<span class="eq">$m_4 = 3 lb_f$ </span><br>
+									<span class="eq">$m_5 = 0.10slug$ </span><br>
+									<span class="eq">$g = 30.5 ft/s^2$ </span><br>
+									Unknown: <br>
+									<span class="eq">a) Total mass, $m_T$ in $g_m$ </span><br>
+									<span class="eq">b) $m_T$ in $lb_m$ </span><br>
+									<span class="eq">c) $m_T$ in $slugs$ </span><br>
+									Solution: <br>
+									<span class="eq"> $m_T = m_1 + m_2 +$ $m_3 + m_4 + m_5 \longrightarrow (eq. 1)$</span> <br>
+									<span class="eq"> $g = 30.5 \frac{ft}{s^2} \cdot \frac{1m}{3.2808ft}$ $= 9.295 m/s^2 = 929.5 cm/s^2$ </span> <br>
+									<span class="eq">$m_2 = 800 g_f \cdot \frac{981 dynes}{1g_f}$ $ = 784,800 dynes$ </span> <br>
+									But <br>
+									<span class="eq">$ F_g = m_2 g = 784,800 dynes$ </span> <br>
+									Then <br>
+									<span class="eq"> $ m_2 = \frac{784,800}{929.65}$ $ = 844.19 g_m$ </span> <br>
+									(Note: dyne = $ g_m \cdot cm/s^2$) <br>
+									Similarly <br>
+									<span class="eq"> $m_3 = \frac{F_g}{g} = \frac{15 lb_m \cdot ft/s^2}{30.5 ft/s^2}$ $= 0.4918 lb_m \cdot \frac{453.6 g_m}{1lb_m} $ $ = 223.08 g_m$  </span> <br>
+									<span class="eq"> $m_4 = 3lb_f \cdot \frac{4.45N}{1lb_f}$ $ \cdot \frac{100,000 dynes}{1N} = 1,335,000 dynes$ </span> <br>
+									<span class="eq"> $m_4 = \frac{1,355,000g_m \cdot cm/s^2}{929.65 cm/s^2} = 1436.02 g_m$ </span> <br>
+									<span class="eq"> $m_5 = 0.10slug \cdot \frac{32.2lb_m}{slug}$ $ \cdot \frac{453.6g_m}{lb_m} = 1460.59 g_m$</span> <br>
+									Then from $(eq. 1)$ <br>
+									<span class="eq">$a) m_T = 500 + 844.19 + $ $ 223.08 + 1436.02 $ $ + 1460.59 = $ $ \underline{4463.88 g_m}$ </span> <br>
+									<span class="eq">$b) m_T = 4463.88 g_m \cdot \frac{lb_m}{453.6 g_m}$ $ = \underline{9.84 lb_m}$</span> <br>
+									<span class="eq"> $c) m_T = 9.84lb_m \cdot \frac{slug}{32.2 lb_m}$ $= \underline{0.3056slug}$ </span> <br>
+								
+								
+									<span class="eq"> </span> <br>
+								</p> <br> 	
+								<p id="thermo_answer1_1"> 
+									a) $m_T = 4463.88 g_m$ <br>
+									b) $m_T = 9.84lb_m$ <br>
+									c) $m_T = 0.3056 slug$ <br>
+								</p>	
+							</ul> 
+							
+							</div>
+
+							<div id="problem1_2">
+							<p>
+								2. Note that the gravity of acceleration of equatorial sea level is $g = 32.088fps^2$
+								and that its variation is $ -0.003 fps^2$ per 1000 $ft$ ascent. Find the height in miles 
+								above this point for which (a) the gravity acceleration becomes 30.504 $fps^2$, (b) the 
+								weight of a given man is decreased by 5%, (c) What is the weight of a 180 $lb_m$ man atop
+								the $29,131 -ft$ Mt. Everest in Tibet, relative to this point?
+							</p>
+							<ul class="actions small">
+								<li><button class="button small" onclick="thermo_solution1_2();">Solution</button></li> 
+								<li><button class="button small" onclick="thermo_answer1_2();">Answer</button></li>
+								<br> 
+								<p id="thermo_solution1_2">Data: <br> 
+									<span class="eq"> $g_{sea} = 32.088 fps^2 $ </span> <br>
+									<span class="eq"> $\Delta g = -0.003 fps^2 $ per 1000 ft </span> <br>
+									Unknown: <br>
+									<span class="eq"> a) Height, $h$ if g is 30.504 $fps^2$ </span> <br>
+									<span class="eq"> b) $h$ if $F_g$ is 95% of original </span> <br>
+									<span class="eq"> c) $F_g$ if $h$ is 29,131 ft and $m$ is 180 $lb_m$</span> <br>
+									Solution: <br>
+									<span class="eq">a) $h = (30.504 - 32.088)fps^2$ x $\frac{1000ft}{-0.003 fps^2}$ $= 528,000ft$ $= \underline{100mi}$ </span> <br>
+									<span class="eq"> b) $h = (32.088)(0.95 - 1)$ $fps^2$ x $\frac{1000ft}{-0.003 fps^2}$ $= 534,800$ ft or $\underline{101.29 mi}$</span> <br>
+									<span class="eq"> c) $F_g = mg \longrightarrow (eq. 1)$ </span> <br>
+									But <br>
+									<span class="eq"> $m = 180 lb_m$ x $\frac{1 slug}{32.2 lb_m}$ $=5.59 slugs$ </span> <br>
+									<span class="eq"> $g = 29,131ft$ x $\frac{-0.003 fps^2}{1000 ft}$ $+ 32.088 fps^2$ $32.00 fps^2$</span> <br>
+									Then from $(eq. 1)$ <br>
+									<span class="eq"> $F_g = 5.59 slugs$ x $32.00 fps^2$ $=\underline{178.88 lb_f}$</span> <br>
+								</p>	
+								<br> 
+								<p id="thermo_answer1_2">
+									a) $h =100 mi$ <br>
+									b) $h = 101.29 mi$ <br>
+									c) $ F_g = 178.88 lb_f $ <br>
+								</p>	
+							</ul>
+							</div>
+
+							<div id="problem1_3">
+							<p>
+								3. Two liquids of different densities ($\rho_1 = 1500 kg/m^3, \rho_2 = 500 kg/m^3$) are 
+								poured together into a 100-L tank, filling it. If the resulting density of the mixture is 800 $kg/m^3$
+								, find the respective quantities of liquid used. Also, find the weight of the mixture; local g = 9.675 
+								$mps^2$.
+							</p>
+							<ul class="actions small">
+								<li><button class="button small" onclick="thermo_solution1_3();">Solution</button></li>
+								<li><button class="button small" onclick="thermo_answer1_3();">Answer</button></li>
+								<br> 
+								<p id="thermo_solution1_3">
+									Data: <br> 
+									<span class="eq"> $\rho _1 = 1500 kg/m^3$ </span> <br>
+									<span class="eq"> $\rho _2 = 500 kg/m^3$ </span> <br>
+									<span class="eq"> $V_{mix} = 100L = 0.100 m^3$ </span> <br>
+									<span class="eq"> $\rho _{mix} = 800 kg/m^3$ </span> <br>
+									<span class="eq"> $g = 9.675 m/s^2$ </span> <br>
+									Unknown: <br>
+									<span class="eq"> a) mass of liquid 1, $m_1$ </span> <br>
+									<span class="eq"> b) $m_2$ </span> <br>
+									<span class="eq"> c) weight of the mixture, $F_{gmix}$ </span> <br>
+									Solution: <br>
+									<span class="eq"> a) $m_1 = \rho _1 V_1 \longrightarrow (eq. 1)$ </span> <br>
+									But <br>
+									<span class="eq"> $V_1 + V_2 = 0.100 \longrightarrow (eq. 2)$ </span> <br>
+									<span class="eq"> $m_2 = \rho _2 V_2 \longrightarrow (eq. 3)$ </span> <br>
+									From <br>
+									<span class="eq"> $\rho _{mix} $ $= \frac{m_{mix}}{V_{mix}}$ $= \frac{m_1 + m_2}{0.100}$ </span> <br>
+									We arrive at <br>
+									<span class="eq"> 800 $ = \frac{1500(V_1) + 500(0.1 - V_1)}{0.1}$ </span> <br>
+									Solving for $V_1$ we get <br>
+									<span class="eq"> $V_1 = 0.03 m^3$ </span> <br>
+									Then from $(eq. 1)$ <br>
+									<span class="eq"> $m_1 = (1500)(0.03)$ $= \underline{45 kg}$ </span> <br>
+									<span class="eq"> b) From $(eq. 3)$ </span> <br>
+									<span class="eq"> $m_2 = \rho _2 V_2$ </span> <br>
+									But from $(eq. 2)$ <br>
+									<span class="eq"> $ V_2 =0.1 - V_1 $ $= 0.1 - 0.03 $ $= 0.07 m^3$ </span> <br>
+									Then <br> 
+									<span class="eq"> $ m_2 = 500(0.07) $ $= \underline{35 kg}$ </span> <br>
+									<span class="eq"> c) $ F_{gmix} = m_{mix} g $ </span> <br>
+									But <br>
+									<span class="eq"> $ m_{mix} = m_1 + m_2 $ $= 45 + 35 $ $= 80 kg$ </span> <br>
+									Then <br>
+									<span class="eq"> $ F_{gmix} $ $= (80)(9.675)$ $= \underline{774N}$ </span> <br>
+									
+								</p>	
+								<br> 
+								<p id="thermo_answer1_3">
+									a) $m_1 = 45 kg$ <br>
+									b) $m_2 = 35 kg$ <br>
+									c) $F_{gmix} = 774 N $ <br>
+								</p>	
+							</ul>
+							</div>
+
+							<div id="problem1_4">
+							<p>
+								4. A vertical column of water will be supported to what height by standard atmospheric pressure.  
+							</p>
+							<ul class="actions small">
+								<li><button class="button small" onclick="thermo_solution1_4();">Solution</button></li> 
+								<li><button class="button small" onclick="thermo_answer1_4();">Answer</button></li>
+								<br> 
+								<p id="thermo_solution1_4">
+									Data: <br> 
+									<span class="eq"> $P_{atm} = 101,325$ Pa </span> <br>
+									<span class="eq"> $g = 8.91 m/s^2$ </span> <br>
+									<span class="eq"> For $H_2O$, $\rho = 1000 kg/m^3$ </span> <br>
+									Unknown: <br>
+									<span class="eq">Column of $H_2O$, $h$ </span> <br>
+									Solution: <br>
+									<span class="eq"> $P = \rho g h$ </span> <br>
+									<span class="eq"> $h = \frac{P}{\rho g}$ $= \frac{101,325}{1000(9.81)}$ $= \underline{10.33 m}$ </span> <br>
+
+								</p>	
+								<br> 
+								<p id="thermo_answer1_4">
+									a) $h = 10.33 m H_2O$ <br>
+								</p>	
+							</ul>
+							</div>
+
+							<div id="problem1_5">
+							<p>
+								5. The pressure of a boiler is 9.5 $kg/cm^2$. The barometric pressure of the atmosphere is 768 mm of Hg.
+								Find the absolute pressure in the boiler.
+							</p>
+							<ul class="actions small">
+								<li><button class="button small" onclick="thermo_solution1_5();">Solution</button></li> 
+								<li><button class="button small" onclick="thermo_answer1_5();">Answer</button></li>
+								<br> 
+								<p id="thermo_solution1_5">
+									Data: <br> 
+									<span class="eq"> $P_g = 9.5 kg/cm^2$ </span> <br>
+									<span class="eq"> $P_{atm} = 768 mm Hg$ </span> <br>
+									Unknown: <br>
+									<span class="eq"> Absolute pressure in the boiler, $P_{abs}$ </span> <br>
+									Solution: <br>
+									<span class="eq"> $P_{abs}$ $= P_{atm}$ $+ P_g \longrightarrow (eq. 1)$ </span> <br>
+									But <br>
+									<span class="eq"> $P_{atm} = 768 mmHg$ x $\frac{101325N/m^2}{760mmHg}$ x $\frac{1kg}{9.81N}$ x $\frac{m^2}{100^2cm^2}$ $= 1.044 kg/cm^2$ </span> <br>
+									Then from $(eq. 1)$ <br>
+									<span class="eq"> $P_abs = 1.044 + 9.5$ $= \underline{10.54 kg/cm^2}$ </span>
+								</p>	
+								<br> 
+								<p id="thermo_answer1_5">
+									a) $P_{abs} = 10.54 kg/cm^2$ <br>
+								</p>	
+							</ul>
+							
+							</div>
+
+							<div id="problem1_6">
+							<p>
+								6. A 30$-m$ vertical column of fluid (density 1878 $kg/m^3$) is located where g = $9.65 mps^2$. Find the 
+								pressure at the base of the column.
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_6();">Solution</button></li> -->
+								<li><button class="button small" onclick="thermo_answer1_6();">Answer</button></li>
+								<br> <p id="thermo_solution1_6">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_6">
+									a) $P_g = 543.68 kPag$ <br>
+								</p>	
+							</ul>
+							</div>
+
+							<div id="problem1_7">
+							<p>
+								7. A pressure gage registers 40 psig in a region where the barometer is 14.5 psia. Find the absolute
+								pressure in psia, and in kPa.
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_7();">Solution</button></li> -->
+								<li><button class="button small" onclick="thermo_answer1_7();">Answer</button></li>
+								<br> <p id="thermo_solution1_7">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_7">
+									a) $P_{abs} = 54.5 psia$ <br>
+									b) $P_{abs} = 375.66 kPaa$ <br>
+								</p>	
+							</ul>
+							</div>
+							
+							<div id="problem1_8">
+							<p>
+								8. Given the barometric pressure of 14.7 psia (29.92 in Hg), make these conversions:<br>
+								<span> (a) 80 psig to psia and to atmosphere, </span> <br>
+								<span> (b) 20 in. Hg vacuum to in. Hg abs and to psia, </span> <br>
+								<span> (c) 10 psia to psi vacuum and to Pa, </span> <br>
+								<span> (d) 15 in. Hg gage to psia, to torrs, and to Pa.</span>
+								
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_8();">Solution</button></li> -->
+								<li><button class="button small" onclick="thermo_answer1_8();">Answer</button></li>
+								<br> <p id="thermo_solution1_8">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_8">
+									a)  <span  > $ P_{abs} = 94.7 psia $ </span> <br>
+									<span  > $P_{abs} = 6.44 atm$ </span> <br> <br>
+									b)  <span  > $ P_{abs} = 9.92$ in Hg abs </span> <br> 
+									<span  > $P_{abs} = 4.87 $ psia </span> <br> <br>
+									c)  <span  > $P_g = 4.7 $psi vacuum </span> <br>
+									<span  > $P_g = 32,396.43$ Pa vacuum </span> <br> <br>
+									d)  <span  >$ P_{abs} = 22.07$ psia </span> <br>
+									<span  > $P_{abs} = 1141.03$ torr (abs)</span> <br>
+									<span  > $P_{abs} = 152,124.82 $ Pa (abs) </span> 
+								</p>	
+							</ul>
+							</div>
+
+							<div id="problem1_9">
+							<p>
+								9. Convert $\dfrac{Btu}{lb-F^{\circ}}$ to $\dfrac{cal}{g-C^{\circ}}$.
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_9();">Solution</button></li> -->
+								<li><button class="button small" onclick="thermo_answer1_9();">Answer</button></li>
+								<br> <p id="thermo_solution1_9">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_9">
+									a) $1 \dfrac{cal}{g-C^{\circ}}$
+								</p>	
+							</ul>
+							</div>
+
+							<div id="problem1_10">
+							<p>
+								10. Two gaseous streams enter a combining tube and leave as a single mixture. These
+								data apply at the entrance section: <br>
+								For one gas, <br>
+									<span class="eq"> $A_1 = 75 in^2$  </span> <br>
+									<span class="eq"> $v_1 = 500 fps$ </span> <br>
+									<span class="eq"> $\text{v} _1 = 10 ft^3/lb$ </span> <br>
+								For the other gas,<br>
+									<span class="eq"> $A_2 = 50 in^2$ </span> <br>
+									<span class="eq"> $\dot m _2 = 16.67 lb/s$ </span> <br>
+									<span class="eq"> $\rho _2 = 0.12 lb/ft^3 $ </span> <br>
+								At exit, <br>
+									<span class="eq"> $v_3 = 350 fps$ </span> <br>
+									<span class="eq"> $\text{v}_3 = 7 ft^3/lb$ </span> <br>
+								Find (a) the speed $v_2$ at section 2 and (b) the flow and area at the exit section.
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_10();">Solution</button></li> -->
+								<li><button class="button small" onclick="thermo_answer1_10();">Answer</button></li>
+								<br> <p id="thermo_solution1_10">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_10">
+									a) $v_2 = 400 fps$ <br>
+									b) $\dot m_3 = 42.71 lb/s$, $A_3 = 0.85 ft^2$ 
+								</p>	
+							</ul>
+							</div>
+
+							<div id="problem1_11">
+							<p>
+								11. A 10-ft diameter by 15-ft height vertical tank is receiving water ($\rho=62.1 lb/ft^3$) at the rate 
+								of 300 gpm and is discharging through a 6-in ID line with a constant speed of 5 fps. At a given instant,
+								the tank is half full. Find the water level and the mass change in the tank 15 minutes later.
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_11();">Solution</button></li> -->
+								<li><button class="button small" onclick="thermo_answer1_11();">Answer</button></li>
+								<br> <p id="thermo_solution1_11">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_11">
+									a) $h_f = 3.91 ft$ <br>
+									b) $\Delta m = -17,507.55 lbs$
+								</p>	
+							</ul>
+							</div>
+							
+							<div id="problem1_12">
+							<p>
+								12. What is the mass in grams and the weight in dynes and in gram-force of 12 oz of salt?
+								Local g is 9.65 $m/s^2$.
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_12();">Solution</button></li> -->
+								<li><button class="button small" onclick="thermo_answer1_12();">Answer</button></li>
+								<br> <p id="thermo_solution1_12">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_12">
+									a) $m = 340.2g$ <br>
+									b) $F_g = 328 293 dynes$ <br>
+									c) $ F_g = 334.65 g_f$ 
+								</p>	
+							</ul>
+							</div>
+														
+							<div id="problem1_13">
+							<p>
+								13. A mass of 0.10 slug in space is subjected to an external vertical force of 4 lb. If the
+								local gravity acceleration is g = 30.5 $fps^2$ and if friction effects are neglected, determine
+								the acceleration of the mass if the external vertical force is acting (a) upward and (b) downward.
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_13();">Solution</button></li> -->
+								<li><button class="button small" onclick="thermo_answer1_13();">Answer</button></li>
+								<br> <p id="thermo_solution1_13">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_13">
+									a) $a = 9.5 fps^2$ <br>
+									b) $a = 70.5 fps^2$ 
+								</p>	
+							</ul>
+							</div>
+							
+							<div id="problem1_14">
+							<p>
+								14. The mass of a given airplane at sea level (g = 32.1 $fps^2$) is 10 tons. Find its mass 
+								in lb, slugs, and kg and its (gravitational) weight in lb when it is travelling at 50, 000-ft
+								elevation. The acceleration of gravity g decreases by 3.33 x $10^{-6}fps^2$ for each foot of
+								elevation.
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_14();">Solution</button></li> -->
+								<li><button class="button small" onclick="thermo_answer1_14();">Answer</button></li>
+								<br> <p id="thermo_solution1_14">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_14">
+									a) $m = 20,000 lbs$ <br>
+									b) $m = 621.12 slugs$ <br>
+									c) $m = 9071.94 kg $ <br>
+									d) $F_g = 19,832.36 lbs $
+								</p>
+							</ul>
+							</div>
+							
+							<div id="problem1_15">
+							<p>
+								15. The weight of a lunar excursion module (LEM) on earth where g = 9.75 $mps^2$ is 1500 $kg_f$.
+								What will be its weight on the surface of the moon where $g_m = 1.70 mps^2$? On the surface of
+								the moon, what will be the force in $kg_f$ and in newtons required to accelerate the module 
+								at 10 $mps^2$?
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_15();">Solution</button></li> -->
+								<li><button class="button small" onclick="thermo_answer1_15();">Answer</button></li>
+								<br> <p id="thermo_solution1_15">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_15">
+									a) $F_{gmoon} = 261.54 kg_f$ <br>
+									b) $F = 15,092.3 N$ <br>
+									c) $F = 1538.46 kg_f$
+								</p>	
+							</ul>
+							</div>
+							
+							<div id="problem1_16">
+							<p>
+								16. The mass of a fluid system is 0.311 slug, its density is 30 $lb/ft^3$ and g is 31.90
+								$fps^2$. Find (a) the specific volume, (b) the specific weight, and (c) the total volume.
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_16();">Solution</button></li> -->
+								<li><button class="button small" onclick="thermo_answer1_16();">Answer</button></li>
+								<br> <p id="thermo_solution1_16">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_16">
+									a) $\text{v} = 0.033 ft^3/lb_m$ <br>
+									b) $\gamma = 29.72 lb_f/ft^3$ <br>
+									c) $V = 0.334 ft^3 $
+								</p>	
+							</ul>
+							</div>
+							
+							<div id="problem1_17">
+							<p>
+								17. A cylindrical drum (2-ft diameter, 3-ft height) is filled with a fluid whose density 
+								is 40 $lb/ft^3$. Determine (a) the total volume of fluid, (b) its total mass in pounds and slugs,
+								(c) its specific volume, and (d) its specific weight where g = 31.90 $fps^2$.
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_17();">Solution</button></li> -->
+								<li><button class="button small" onclick="thermo_answer1_17();">Answer</button></li>
+								<br> <p id="thermo_solution1_17">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_17">
+									a) $V = 9.42 ft^3$ <br>
+									b) $m = 376.8 lbs, 11.7 $ slugs <br>
+									c) $\text{v} = 0.025 ft^3/lb$ <br>
+									d) $\gamma = 39.62 lb/ft^3$ 
+								</p>	
+							</ul>
+							</div>
+							
+							<div id="problem1_18">
+							<p>
+								18. A weatherman carried an aneroid barometer from the ground floor to his office atop the Sears Tower
+								in Chicago. On the ground level, the barometer read 30.15 in. Hg absolute; topside it read 28.607 in. Hg
+								absolute. Assume that the average atmospheric air density was 0.075 $lb/ft^3$ and estimate the height of
+								the building.
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_18();">Solution</button></li> -->
+								<li><button class="button small" onclick="thermo_answer1_18();">Answer</button></li>
+								<br> <p id="thermo_solution1_18">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_18">
+									a) $H = 1455.6 ft$
+								</p>	
+							</ul>
+							</div>
+							
+							<div id="problem1_19">
+							<p>
+								19. A vacuum gage mounted on a condenser reads 0.66 m Hg. What is the absolute pressure in the condenser
+								in kPa when the atmospheric pressure is 101.3 kPa?
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_19();">Solution</button></li> -->
+								<li><button class="button small" onclick="thermo_answer1_19();">Answer</button></li>
+								<br> <p id="thermo_solution1_19">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_19">
+									a) $P_{abs} = 13.34 kPa$ 
+								</p>	
+							</ul>
+							</div>
+							
+							<div id="problem1_20">
+							<p>
+								20. Convert the following readings of pressure to kPa absolute, assuming that the barometer
+								reads 760 mm Hg; <br>
+								(a) 90 cm Hg gage <br>
+								(b) 40 cm Hg vacuum <br>
+								(c) 100 psig <br>
+								(d) 8 in Hg vacuum <br>
+								(e) 76 in Hg gage
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_20();">Solution</button></li> -->
+								<li><button class="button small" onclick="thermo_answer1_20();">Answer</button></li>
+								<br> <p id="thermo_solution1_20">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_20">
+									a) $P_{abs} = 221.32 kPaa $ <br>
+									b) $P_{abs} = 48 kPaa $ <br>
+									c) $P_{abs} = 790.61 kPaa $ <br>
+									d) $P_{abs} = 74.23 kPaa $ <br>
+									e) $P_{abs} = 358.7 kPaa $ 
+								</p>	
+							</ul>
+							</div>
+														
+							<div id="problem1_21">
+							<p>
+								21. A fluid moves in a steady flow manner between two sections in a flow line. 
+								At section 1: $A_1 = 10ft^2$, $v_1 = 100 $ fpm, $\text{v}_1 = 4 ft^3/lb.$ At 
+								section 2: $A_2 = 2ft^2$, $\rho_2 = 0.20 lb/ft^3$. Calculate (a) the mass flow rate
+								and (b) the speed at section 2.
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_21();">Solution</button></li> -->
+								<li><button class="button small" onclick="thermo_answer1_21();">Answer</button></li>
+								<br> <p id="thermo_solution1_21">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_21">
+									a) $\dot m = 250 lb/min$ <br>
+									b) $v_2 = 625 fpm$ 
+								</p>	
+							</ul>
+							</div>
+							
+							<div id="problem1_22">
+							<p>
+								22. If a pump discharges 75 gpm of water whose specific weight is 61.5 $lb/ft^3$
+								( g = 31.95 $fps^2$), find (a) the mass flow rate in lb/min, and (b) total time
+								required to fill a vertical cylinder tank 10 ft in diameter and 12 ft high.
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_22();">Solution</button></li> -->
+								<li><button class="button small" onclick="thermo_answer1_22();">Answer</button></li>
+								<br> <p id="thermo_solution1_22">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_22">
+									a) $\dot m = 621.76 lb/min$ <br>
+									b) $T = 93.97 min$ 
+								</p>	
+							</ul>
+							</div>
+							
+							<div id="problem1_23">
+							<p>
+								23. Determine the force necessary to accelerate a mass of 20 lbm at a rate of 60 $fps^2$
+								vertically upward.
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_23();">Solution</button></li> -->
+								<li><button class="button small" onclick="thermo_answer1_23();">Answer</button></li>
+								<br> <p id="thermo_solution1_23">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_23">
+									a) $F = 57.2 lb_f$ 
+								</p>	
+							</ul>
+							</div>
+							
+							<div id="problem1_24">
+							<p>
+								24. A cubic meter of water at room temperature has a weight of 9800 N at a location where
+								g = 9.80 $m/s^2$. What is its specific weight and its density at a location where g = 9.77 $m/s^2$?
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_24();">Solution</button></li> -->
+								<li><button class="button small" onclick="thermo_answer1_24();">Answer</button></li>
+								<br> <p id="thermo_solution1_24">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_24">
+									a) $\gamma = 9770 N/m^3$ <br>
+									b) $\rho = 1000 kg/m^3$ 
+								</p>	
+							</ul>
+							</div>
+							
+							<div id="problem1_25">
+							<p>
+								25. Assume the acceleration of gravity on a celestial body to be given as a function of altitude
+								by the expression g = 4 - 1.6 x $10^{-6} h$ ($m/s^2$), where $h$ is in meters above the surface of the planet.
+								A space probe weighed 100 kN on earth at sea level. Determine (a) the mass of the probe, (b) its weight
+								on the surface of the planet, and (c) its weight at an elevation of 200 km above the surface of the planet.
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_25();">Solution</button></li> -->
+								<li><button class="button small" onclick="thermo_answer1_25();">Answer</button></li>
+								<br> <p id="thermo_solution1_25">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_25">
+									a) $ m = 10,193.68 kg$ <br>
+									b) $ F_g = 40,774.72 N$ <br>
+									c) $ F_g = 37,512.74 N $
+								</p>	
+							</ul>
+							</div>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+	
+							
+							<!--
+							<p>
+								2. Note that the gravity of acceleration of equatorial sea level is $g = 32.088fps^2$
+								and that its variation is $ -0.003 fps^2$ per 1000 $ft$ ascent. Find the height in miles 
+								above this point for which (a) the gravity acceleration becomes 30.504 $fps^2$, (b) the 
+								weight of a given man is decreased by 5%, (c) What is the weight of a 180 $lb_m$ man atop
+								the $29,131 -ft$ Mt. Everest in Tibet, relative to this point?
+							</p>
+							<ul class="actions small">
+								<!-- <li><button class="button small" onclick="thermo_solution1_2();">Solution</button></li> --
+								<li><button class="button small" onclick="thermo_answer1_2();">Answer</button></li>
+								<br> <p id="thermo_solution1_2">Data: <br> </p>	
+								<br> 
+								<p id="thermo_answer1_2">
+									a) $h =100 mi$ <br>
+									b) $h = 101.29 mi$ <br>
+									c) $ F_g = 178.88 lb_f $ <br>
+								</p>	
+							</ul>
+							<hr>
+							-->
+							
+							
+							<!--
+							<a name="1.1"></a>
+							<a href="#top" class="bold">1.1 Mass and Weight</a> <br> <br>
+							<a name="1.1.1"></a>
+							<a href="#top" class="bold">1.1.1 Sta. Maria</a> <br> <br>
+							<p>
+							</p>
+							<ul class="actions small">
+								<li><button class="button small" onclick="thermo_solution1_1();">Solution</button></li>
+								<li><button class="button small" onclick="thermo_answer1_1();">Answer</button></li>
+								<br> <p id="thermo_solution1_1">Data: <br> $S = \frac{F}{A}$</p>	
+								<br> <p id="thermo_answer1_1">25 MPa</p>	
+							</ul>
+							<hr>
+							-->
+							
+							<!--
+							
+							-->
+							
+							
+							<ul class="actions fit small">
+								<li><a href="#" id="previous" class="button fit small icon fa-backward">  </a></li>
+								<li><a href="#" id="next" class="button fit small icon fa-forward"></a></li>
+							</ul>
+						</div>
+						
+						</div>
+						</div>
+						
+						<!--
+						<div class="adsForDesktop">
+							<img id="adsPortrait" src="images/ads.jpg" alt="image"/> 
+							
+						</div>
+						
+						<div class="adsForMobile">
+							<!-- <img id="adsLandscape" src="images/ads.jpg" alt="image"/> 
+
+						</div>-->
+					</div>
+
+				<!-- Footer -->
+				<!--
+					<footer id="footer">
+						<div class="inner"> <!--
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="field half first">
+										<input type="text" name="name" id="name" placeholder="Name" />
+									</div>
+									<div class="field half">
+										<input type="email" name="email" id="email" placeholder="Email" />
+									</div>
+									<div class="field">
+										<textarea name="message" id="message" placeholder="Message"></textarea>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="special" /></li>
+									</ul>
+								</form>
+							</section> --
+						</div>
+					</footer> -->
+
+			</div>
+
+		<!-- Scripts -->
+
+		
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/index.js"></script>
+			<script src="assets/js/thermo-problems.js"></script>
+			<script src="assets/js/thermo-solutions.js"></script>
+			<script src="assets/js/thermo-formulas.js"></script>
+
+	</body>
+</html>

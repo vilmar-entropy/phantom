@@ -1,5 +1,6 @@
 //$('#stress').hide();
 //alert("hello");
+$(.statcounter).hide();
 
 
 $("#thermo_solution1_1").hide();

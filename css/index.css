@@ -78,11 +78,13 @@ figure.topimg {
 	.content {
 	    position: relative;
 	    width: 64vw;
+		
 	} 
 
 	.indentedText {
 	    position: absolute;
 		left: 4vw;
+		background: #73AD21;
 	} 
 	
 	
@@ -93,9 +95,10 @@ figure.topimg {
 	
 	
 	.adsForDesktop { 
-		position: absolute;
+		position: relative;
 		left: 70vw;
 		width: 26vw;
+		background: #73AD21;
 		
 	}
 	
@@ -164,13 +167,15 @@ figure.topimg {
 		position: absolute;
 		left: 70vw;
 		width: 0vw;
+		display: none;
 		
 		
 	}
 	
-	#adsPortrait {
+	.adsPortrait {
 		position: absolute;
 		width: 0vw;
+		display: none;
 	} 
 }
 /*
@@ -196,7 +201,7 @@ figure.topimg {
 		position: absolute;
 		left: 70vw;
 		width: 0vw;
-		
+		display: none;
 		
 	}
 
@@ -221,10 +226,8 @@ figure.topimg {
 	#adsPortrait {
 		position: absolute;
 		width: 0vw;
+		display: none;
 	}
 	
   }
 
-.statcounter {
-	width: 0;
-}

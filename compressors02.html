@@ -1,0 +1,575 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	
+		<title>Entropiya | Compressors 2</title> <!-- need to be updated per test -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link rel="stylesheet" href="css/index.css" />
+		<script src="js/index.js"></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<!-- FontAwesome, jQuery and jQuery Mobile -->
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+		
+		<!-- jqmath -->
+		<link rel="stylesheet" href="mathscribe/jqmath-0.4.3.css">
+		<script src="mathscribe/jquery-1.4.3.min.js"></script>
+		<script src="mathscribe/jqmath-etc-0.4.5.min.js" charset="utf-8"></script>
+		
+		<script>
+			$(document).ready(function() {
+				solutionIsVisible = true;
+				
+				//mga nadagdag for view_solution
+				
+				$('.for_view_solution').hide();
+				$('#view_solution').css('visibility', 'hidden');
+				
+				for(i=0; i<quiz.length; i++) {
+					$('#solution_' + (i+1)).hide();
+				}
+				
+				$('#view_solution').click(function() {
+					for(i=0; i<quiz.length; i++) {
+						$('#solution_' + (i+1)).hide();
+					}
+						
+					$('#solution_' + (questionNumber + 1)).fadeToggle('slow');
+					$('.for_view_solution').fadeToggle('slow');
+					
+					if(solutionIsVisible) {
+						document.getElementById('view_solution').textContent = 'Hide Solution';
+						solutionIsVisible = false;
+					}else if(!solutionIsVisible){
+						document.getElementById('view_solution').textContent = 'View Solution';
+						solutionIsVisible = true;
+					}
+					
+				});
+
+				
+				// Image factory
+				var createImage = function(src, title, id) {
+				  var img   = new Image();
+				  img.src   = src;
+				  img.id = id;
+				  img.alt   = title;
+				  img.title = title;
+				  return img; 
+				};
+
+				// array of images dun dineclare sa main script para global
+				//var images = [];
+
+				// push two images to the array
+				//images.push(createImage("images/for_q_1.png", "pic01 title", "for_q_1"));
+				//images.push(createImage("images/for_q_2.png", "pic03 title", "for_q_2"));
+				
+				// mga nadagdag quiz with images
+				if((questionNumber+1) === 1) {
+					$('#question').after(images[0]);
+				} else if((questionNumber+1) === 2) {
+					$('#question').after(images[1]);
+				}
+				
+			});
+		</script>
+	
+	</head>
+	
+	<body>
+		<div data-role="panel" data-position="right" data-display="overlay" data-theme="a" id="panel">
+			<div class="nav_in_panel_container"> 
+				<ul data-role="listview" data-inset="true" data-theme="b" data-dividertheme="f">
+					<li data-icon="false"><a class="nav_in_panel" href="index.html" rel="external"><i class="fa fa-home" aria-hidden="true" ></i>  Home  </a> </li>
+					<li data-icon="false"><a class="nav_in_panel" href="about.html" rel="external"><i class="fa fa-user-o" aria-hidden="true" ></i>  About  </a> </li>
+					<li data-icon="false"><a class="nav_in_panel" href="references.html" rel="external"><i class="fa fa-book" aria-hidden="true" ></i>  References  </a>
+					<li data-icon="false"><a class="nav_in_panel" href="https://www.facebook.com/vilmar.empino?__nodl" rel="external" ><i class="fa fa-facebook-square" aria-hidden="true"></i>  Like us on facebook!  </a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="header_container">
+			<figure class="logo" id="logo">
+				<a href="index.html" rel="external"><img src="images/logo.png" alt="image"/></a>
+			</figure>
+			<ul class="home_nav_quiz"> 
+				<a href="#panel" class="right_panel"> <i class="fa fa-bars" id="icon_for_right_panel" aria-hidden="true"></i> </a>
+				<div class="toBeHidden">
+				<li class="li"><a class="a" href="references.html" rel="external">References</a></li>
+				<li class="li"><a class="a" href="about.html" rel="external">About</a></li>
+				<!-- <li class="li" id="dropdown">
+					<a class="a" href="javascript:void(0)" class="dropbtn">MCQs <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+					<div class="dropdown-content">
+					<a class="a" href="home-me.html" rel="external">Mechanical Engineering</a>
+					<a class="a" href="home-ece.html" rel="external">Electronics Engineering</a> 
+					</div>
+				</li> -->
+				<li class="li"><a class="a" href="index.html" rel="external">Home</a></li>
+				</div>
+			</ul>
+		</div>
+		<div id="body_container"> 
+			
+			<div id="for_contents_quiz">
+				
+				<div id="for_left_content_quiz">
+					<div id="for_title">
+						<strong class="for_h2">Compressors - Test 2 (21-40)</strong> <!-- need to be updated per test -->
+					</div>
+					<br>
+					<div id="for_top_ads_quiz">
+						<span> FTA  </span>
+					</div>
+					<div id="for_left_navbar"> <!-- need to be updated per test -->
+						<div data-role="collapsible">
+							<h3>Problems</h3>
+							<ul data-role="listview" id="left_nav" data-inset="true" data-theme="c" data-dividertheme="f">
+								<li><a href="compressors01.html"  rel="external">Test 1</a></li>
+								<li><a href="compressors02.html"  rel="external">Test 2</a></li>
+								<li><a href="compressors03.html"  rel="external">Test 3</a></li>
+							</ul>
+						</div>
+					</div>
+					<div id="for_right_navbar"> <!-- need to be updated per test -->
+						<div data-role="collapsible">
+							<h3>Elements</h3>
+							<ul data-role="listview" id="right_nav" data-inset="true" data-theme="c" data-dividertheme="f">
+								<li><a href="#"  rel="external">Test I</a></li>
+								
+							</ul>
+						</div>
+					</div>
+					<br>
+					<div class="for_quiz">
+						<div id="content">
+							<strong id="timerContinue"><time>00:00:00</time></strong>
+							<strong id="score">Score: 0/50</strong> <br><br>
+							<div class="for_question"><span id="question"></span> </div> 
+							<div id="choices"></div> 
+							<button id="submit" class="button"> Submit Answer</button>
+						</div>
+					</div>
+					<br>
+					<!-- //mga nadagdag for view_solution -->
+					<!-- <div class="for_view_solution">
+						<p id="solution_1">
+							<span>Solution 1</span><br>Data: <br>
+							<span class="eq">$m_1 = 500 g_m$ $/frac{F}{A} \sqrt{\pi}$ </span><br>
+							<span class="eq">$m_2 = 800 g_f$ </span><br>
+							<span class="eq">$m_3 = 15 poundals$ </span><br>
+							<span class="eq">$m_4 = 3 lb_f$ </span><br>
+							<span class="eq">$m_5 = 0.10slug$ </span><br>
+							<span class="eq">$g = 30.5 ft/s^2$ </span><br>
+							Unknown: <br>
+							<span class="eq">a) Total mass, $m_T$ in $g_m$ </span><br>
+							<span class="eq">b) $m_T$ in $lb_m$ </span><br>
+							<span class="eq">c) $m_T$ in $slugs$ </span><br>
+							Solution: <br>
+							<span class="eq"> $m_T = m_1 + m_2 +$ $m_3 + m_4 + m_5 \longrightarrow (eq. 1)$</span> <br>
+							
+							<span class="eq"> </span> <br>
+						</p>
+						
+						<p id="solution_2"><span>Solution 2</span><br>Data: <br> 
+							<span class="eq"> $g_{sea} = 32.088 fps^2 $ </span> <br>
+							<span class="eq"> $\Delta g = -0.003 fps^2 $ per 1000 ft </span> <br>
+							Unknown: <br>
+							<span class="eq"> a) Height, $h$ if g is 30.504 $fps^2$ </span> <br>
+							<span class="eq"> b) $h$ if $F_g$ is 95% of original </span> <br>
+							<span class="eq"> c) $F_g$ if $h$ is 29,131 ft and $m$ is 180 $lb_m$</span> <br>
+							Solution: <br>
+							<span class="eq">a) $h = (30.504 - 32.088)fps^2$ x $\frac{1000ft}{-0.003 fps^2}$ $= 528,000ft$ $= \underline{100mi}$ </span> <br>
+							<span class="eq"> b) $h = (32.088)(0.95 - 1)$ $fps^2$ x $\frac{1000ft}{-0.003 fps^2}$ $= 534,800$ ft or $\underline{101.29 mi}$</span> <br>
+							<span class="eq"> c) $F_g = mg \longrightarrow (eq. 1)$ </span> <br>
+							But <br>
+							<span class="eq"> $m = 180 lb_m$ x $\frac{1 slug}{32.2 lb_m}$ $=5.59 slugs$ </span> <br>
+							<span class="eq"> $g = 29,131ft$ x $\frac{-0.003 fps^2}{1000 ft}$ $+ 32.088 fps^2$ $32.00 fps^2$</span> <br>
+							Then from $(eq. 1)$ <br>
+							<span class="eq"> $F_g = 5.59 slugs$ x $32.00 fps^2$ $=\underline{178.88 lb_f}$</span> <br>
+						</p> 
+						
+						<p id="solution_3"><span>Solution 3</span><br>Data: <br> 
+							<span class="eq"> $g_{sea} = 32.088 fps^2 $ </span> <br>
+							<span class="eq"> $\Delta g = -0.003 fps^2 $ per 1000 ft </span> <br>
+							Unknown: <br>
+							<span class="eq"> a) Height, $h$ if g is 30.504 $fps^2$ </span> <br>
+							<span class="eq"> b) $h$ if $F_g$ is 95% of original </span> <br>
+							<span class="eq"> c) $F_g$ if $h$ is 29,131 ft and $m$ is 180 $lb_m$</span> <br>
+							Solution: <br>
+							<span class="eq">a) $h = (30.504 - 32.088)fps^2$ x $\frac{1000ft}{-0.003 fps^2}$ $= 528,000ft$ $= \underline{100mi}$ </span> <br>
+							<span class="eq"> b) $h = (32.088)(0.95 - 1)$ $fps^2$ x $\frac{1000ft}{-0.003 fps^2}$ $= 534,800$ ft or $\underline{101.29 mi}$</span> <br>
+							<span class="eq"> c) $F_g = mg \longrightarrow (eq. 1)$ </span> <br>
+							But <br>
+							<span class="eq"> $m = 180 lb_m$ x $\frac{1 slug}{32.2 lb_m}$ $=5.59 slugs$ </span> <br>
+							<span class="eq"> $g = 29,131ft$ x $\frac{-0.003 fps^2}{1000 ft}$ $+ 32.088 fps^2$ $32.00 fps^2$</span> <br>
+							Then from $(eq. 1)$ <br>
+							<span class="eq"> $F_g = 5.59 slugs$ x $32.00 fps^2$ $=\underline{178.88 lb_f}$</span> <br>
+						</p>
+						
+						<p id="solution_4"><span>Solution 4</span><br>Data: <br> 
+							<span class="eq"> $g_{sea} = 32.088 fps^2 $ </span> <br>
+							<span class="eq"> $\Delta g = -0.003 fps^2 $ per 1000 ft </span> <br>
+							Unknown: <br>
+							<span class="eq"> a) Height, $h$ if g is 30.504 $fps^2$ </span> <br>
+							<span class="eq"> b) $h$ if $F_g$ is 95% of original </span> <br>
+							<span class="eq"> c) $F_g$ if $h$ is 29,131 ft and $m$ is 180 $lb_m$</span> <br>
+							Solution: <br>
+							<span class="eq">a) $h = (30.504 - 32.088)fps^2$ x $\frac{1000ft}{-0.003 fps^2}$ $= 528,000ft$ $= \underline{100mi}$ </span> <br>
+							<span class="eq"> b) $h = (32.088)(0.95 - 1)$ $fps^2$ x $\frac{1000ft}{-0.003 fps^2}$ $= 534,800$ ft or $\underline{101.29 mi}$</span> <br>
+							<span class="eq"> c) $F_g = mg \longrightarrow (eq. 1)$ </span> <br>
+							But <br>
+							<span class="eq"> $m = 180 lb_m$ x $\frac{1 slug}{32.2 lb_m}$ $=5.59 slugs$ </span> <br>
+							<span class="eq"> $g = 29,131ft$ x $\frac{-0.003 fps^2}{1000 ft}$ $+ 32.088 fps^2$ $32.00 fps^2$</span> <br>
+							Then from $(eq. 1)$ <br>
+							<span class="eq"> $F_g = 5.59 slugs$ x $32.00 fps^2$ $=\underline{178.88 lb_f}$</span> <br>
+						</p>
+					
+					</div> -->
+					
+					<button id="view_solution" class="button small"> View Solution</button>
+
+										
+				</div>
+				
+								
+				
+				<div class="for_right_ads_quiz">
+					<span> FRA   </span>
+				</div>
+			</div>
+		</div>
+			
+			<script>
+	
+ //star timer
+  var timeElapsed = "";
+	var h1 = document.getElementById('timerContinue'),
+		start = document.getElementById('start'),
+		stop = document.getElementById('stop'),
+		clear = document.getElementById('clear'),
+		seconds = 0, minutes = 0, hours = 0,
+		t;
+
+	function add() {
+		seconds++;
+		if (seconds >= 60) {
+			seconds = 0;
+			minutes++;
+			if (minutes >= 60) {
+				minutes = 0;
+				hours++;
+			}
+		}
+		
+		h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+		timeElapsed =(hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" +  (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+		timer();
+	}
+	function timer() {
+		t = setTimeout(add, 1000);
+	}
+	timer();
+
+	//end timer
+	
+
+var quiz = [{
+	"question": "A compressor piston has a stroke of 380 mm and the clearance volume of 7% of the stroke volume. At the beginning of compression stroke the pressure of air is 0.99 bar. When the piston  has traveled 260 mm from the beginning of the compression stroke the delivery valves open and delivers air at 4 bar. Find the value of n, if the compression follows the law pV^n = C.",
+	"choices": ["1.37", "1.39", "1.26", "1.36"],
+	"correct": "1.37"
+},{
+	"question": "A three-stage single-acting tandem air compressor is driven by a motor that runs 170 rpm. The high pressure and low pressure cylinder diameters are 75 mm and 350 mm diameter, respectively, and the stroke is 300 mm. Find the time to pump up air reservoirs of 22 m^3 total capacity from 19 bar gage, taking the volumetric efficiency as 0.92 and atmospheric pressure as 1.01 bar.",
+	"choices": ["45.306 min", "55.306 min", "62.306 min", "32.306 min"],
+	"correct": "55.306 min"
+},{
+	"question": "A single-stage single acting air compressor running at 5 rev/s has air intake of 22.8 liters at atmospheric pressure and 25˚C. If it compresses 5.7 liters in accordance with the compression law pV^1.2 = C, calculate the temperature of the air at the end of the compression.",
+	"choices": ["120˚C", "110˚C", "115˚C", "125˚C"],
+	"correct": "120˚C"
+},{
+	"question": "A single acting air compressor has a cylinder diameter of 250 mm and the piston stroke of 400 mm. It runs at 2.5 rev/s taking air at 1.01 bar and delivering it at 5.5 bar. Calculate the indicated power when the law of compression is PV^1.2 = C and clearance is to be neglected.",
+	"choices": ["9.69 kW ", "8.69 kW", "10.69 kW", "11.69 kW"],
+	"correct": "9.69 kW "
+},{
+	"question": "A single acting two-stage air compressor delivers air at 16 bar. The volume flow rate of air entering the compressor is 17 m^3/min with the temperature and pressure of 33˚C and 1 bar, respectively. If the compressor is designed for minimum work and complete intercooling, determine the power required to drive the first stage if it follows the compression law of PV^1.3=c.",
+	"choices": ["47 kW", "37 kW", "38 Kw", "39 kW"],
+	"correct": "47 kW"
+
+},{
+	"question": "An AIR COMPRESSOR takes air at 90 kPa and discharges it to 700 kPa. If the volume flow of discharge is 1.3 m^3/s, compute the capacity of the air compressor.",
+	"choices": ["5.63 m^3/s", "4.63 m^3/s", "5.98 m^3/s", "4.98 m^3/s"],
+	"correct": "5.63 m^3/s"
+},{
+	"question": "The mean effective pressure of an air compressor is 500 kPa. If the compressor work is 150 kW, what is the volume displacement in m^3/min.",
+	"choices": ["18 m^3/min", "20 m^3/min", "22 m^3/min", "16 m^3/min"],
+	"correct": "18 m^3/min"
+},{
+	"question": "A two-stage air compressor has a suction pressure of 101.325 kPa and a discharge pressure of 1140 kPa. What is the intercooler pressure in kPa?",
+	"choices": ["339.37 kPa", "341. 26 kPa", "439.37 kPa", "441.26 kPa"],
+	"correct": "339.37 kPa"
+},{
+	"question": "A two-stage air compressor at 90 kPa and 20 ºC discharges  at 700 kPa. Find the polytropic exponent n if the intercooler intake temperature is 100 ºC.",
+	"choices": ["1.31", "1.20", "1.4", "1.25"],
+	"correct": "1.31"
+},{
+	"question": "A two-stage double acting L-type air compressor 16 x 10 x 7 in, 600 rpm, has a free air unloaded at each end for capacity control. It is driven through V-belts by a 150-Hp electric motor, 460 V, 3 phase, 60 Hz, 1200 rpm. Barometric pressure is 125 psi gage. Calculate the piston displacement in m^3/hr",
+	"choices": ["1660.34 m^3/hr, 648.51 m^3/hr", "1567.34 m^3/hr, 541.76 m^3/hr", "1576.45 m^3/hr, 457.82 m^3/hr", "257.34 m^3/hr, 567.24 m^3/hr"],
+	"correct": "1660.34 m^3/hr, 648.51 m^3/hr"
+},{
+	"question": "A two-cylinder single acting air compressor is directly coupled to an electric motor running at 1000 rpm. Other data are as follows: Size of cylinder= 150 mm x200 mm; Clearance volume= 10% of displacement volume;  Exponent n for both compression and re-expansion process = 1.6; Air constant = 1.4; Air molecular mass = 29. Calculate the volume rate of air delivery in terms of standard air for a delivery pressure 8 times the ambient pressure under ambient air conditions of 300 K and 100 kPa.",
+	"choices": ["5.181 m^3min", "5.013 m^3/min", "6.181 m^3/min", "6.013 m^3/min"],
+	"correct": "5.013 m^3/min"
+},{
+	"question": "A double-acting compressor with piston displacement of 0.05 m^3 per stroke operates at 500 rpm. The clearance factor is 5% and it receives air at 100 kPa and discharges it at 600 kPa. The compression and re-expansion curve is polytropic with n= 1.3. Determine the free air capacity of the compressor in m^3/s.",
+	"choices": ["0.710 m^3/s", "0.170 m^3/s", "0.160 m^3/s", "0.610 m^3/s"],
+	"correct": "0.710 m^3/s"
+},{
+	"question": "Air taken from atmosphere at 100 kPaa and 21 ºC is delivered to the air receiver at 689 kPaa and 150 ºC by means of a water jacketed reciprocating compressor. The compressor has a rated capacity of 360 m^3/hr free air. Determine the power required to compress the air.",
+	"choices": ["23.24 kW", "25.226 kW", "33.24 kW", "35.26 kW"],
+	"correct": "23.24 kW"
+},{
+	"question": "A single-acting, single-stage reciprocating compressor is required to deliver 50 kg per hour from 100 kPa and 25 ºC conditions to 900 kPa delivery pressure. The compression is expected to follow PV^1.25=C Determine the required power of the compressor under ideal conditions.",
+	"choices": ["3.28 kW", "4.28 kW", "3.75 kW", "4.75 kW"],
+	"correct": "3.28 kW"
+},{
+	"question": "A single-acting air compressor has a clearance volume of 10%. Air is received at 90 kPa and 293 K and is discharged at 600 kPa. The compression and re-expansion curves are polytropic with n=1.28. The pressure drop is 5 kPa  at the suction port and 10 kPa at the discharge port. The compressor piston displacement is 500 cm^3 when operating at 900 rpm. Determine the mass of air compressed in kg/hr.",
+	"choices": ["16.28", "17.28", "18.28", "19.28"],
+	"correct": "17.28"
+},{
+	"question": "A single-cylinder, double-acting reciprocating compressor is designed to handle 3000 cm^3 of air at 99 kPa per rev. The air is to be compressed to 594 kPa according to the PV^1.32=C. The clearance factor is to be 6 % and the stroke to bore ratio is unity. Assume that displacement of crank end and head end are to be same and no pressure drop in valves. Calculate the cylinder dimension in mm.",
+	"choices": ["132 mm bore and 132 mm stroke", "132 mm bore and 152 mm stroke", "142 mm bore and 142 mm stroke", "162 mm bore and 162 mm stroke "],
+	"correct": "132 mm bore and 132 mm stroke"
+},{
+	"question": "A single-cylinder, double-acting compressor  with bore and stroke of 45 cm x 45 cm is tested at 150 rpm and found to deliver a gas from 101.3 kPa and 300 K to 675 kPa at a rate of 0.166 m^3/s when n= 1.33 for compression and expansion process. Calculate the percentage clearance.",
+	"choices": ["16.95%", "18.21 %", "14.36%", "15.65%"],
+	"correct": "16.95%"
+},{
+	"question": "A two-stage, double-acting reciprocating compressor is rated at 100 L/s of free air. It compresses the air according to the relation PV^1.32=C, from 100 kPa initial pressure with temperature of 32 ºC to 800 kPa delivery pressure when operating at 200 rpm and a clearance factor of 8% in each cylinder. Calculate the work input to the compressor.",
+	"choices": ["23.72 kW", "33.72 kW", "25.75 kW", "35.75 kW"],
+	"correct": "23.72 kW"
+},{
+	"question": "LPG is manufactured by compressing Propane ( C3H8) gas to high pressures. A multi-stage centrifugal compressor driven by electric motor is installed to handle the job. The compressor draws 500 liters per second of the gas at 140 kPa and -35 ºC. The gas is delivered into a spherical tank elevated 7 m from the centerline of the compressor. Discharge pressure and temperature are 4.25 Mpa and 45 ºC, respectively. Suction diameter is 50 cm while the discharge is 30 cm. Rise in temperature of water for cooling the compressor is 6 ºC. Take Cp for propane as 1.65 kJ/kg ºC and M= 44 kg/kg-mol, S.G =0.55. Determine the no. of stages required in the compressor, if each stage can delveop a head of 160 m.",
+	"choices": ["5", "6", "3", "8"],
+	"correct": "5"
+},{
+	"question": "Reciprocating compressor is to compress 47 L/s of dry air from 1 atm and 32 ºC to 6 atm. The clearance in the compressor is 0.05 and the over-all efficiency is 65.6%. Calculate the actual power required to drive the compressor assuming isentropic compression and the piston displacement if the compressor is double-acting and operating at 200 strokes per minute.",
+	"choices": ["17 kW, 8.1 L", "20 kW, 9.1 L", "15 kW, 5.1 L", "18 kW, 7.6 L"],
+	"correct": "17 kW, 8.1 L"
+}];
+
+// mga nadagdag quiz with images
+// array of images  
+	var images = [];
+	var solutionIsVisible;
+
+// define elements
+var content = $("content"),
+  questionContainer = $("question"),
+  choicesContainer = $("choices"),
+  scoreContainer = $("score"), //nabago
+  submitBtn = $("submit");
+  
+  var resultPage = "";
+  
+// init vars
+var currentQuestion = 0,
+	score = 0,
+  askingQuestion = true,
+  questionNumber = 0,
+   maxQ = quiz.length, 
+  questionNumber;
+  
+  wrongAnswerQ = "",
+  wrongAnswerNo=0;
+  var yourAnswer = "You did not pick any answer.";
+  var choicesMistakesG = "";
+  if(maxQ > quiz.length) {
+	maxQ = quiz.length;
+  }
+  var isOnReviewWrongPage = false;
+  var duplicates  =[];
+
+function $(id) { // shortcut for document.getElementById
+  return document.getElementById(id);
+}
+
+function askQuestion() {
+  var choices = quiz[questionNumber].choices,
+    choicesHtml = "", choicesMistakes="" ;
+
+
+  // loop through choices, and create radio buttons
+  for (var i = 0; i < choices.length; i++) {
+  //alert(get_rand(nums));
+    choicesHtml += "<input type='radio' name='quiz" + questionNumber +
+      "' id='choice" + ( i + 1) +
+      "' value='" + choices[i] + "'>" +
+      " <label for='choice" + (i + 1) + "'>" + choices[i] + "</label> <br>";
+	  
+	  choicesMistakes += "<span name='quiz" + questionNumber +
+      "' id='choice" + (i + 1) +
+      "' value='" + choices[i] + "'>"+ (i+1) + ". " + choices[i] + "</span><br>";
+	   if(choices[i] === quiz[questionNumber].correct) {
+			correctAnswer = choices[i];
+			correctAnswerIndex = i;
+	  }
+	  
+	  choicesMistakesG = choicesMistakes;
+  }
+
+  
+  // load the question
+  questionContainer.textContent = (questionNumber + 1) + ". " +
+    quiz[questionNumber].question;
+	
+	
+  // load the choices
+  choicesContainer.innerHTML = choicesHtml;
+
+  // setup for the first time
+  if (questionNumber === 0) {
+  scoreContainer.textContent = "Score: " + score + "/" + maxQ; //nabago
+    submitBtn.textContent = "Submit Answer";
+	//alert(quiz.length);
+  }
+  
+	
+
+}
+
+function checkAnswer() {
+	var yourAnswer = "You did not pick any answer.";
+  // are we asking a question, or proceeding to next question?
+  if (askingQuestion) {
+	
+	//mga nadagdag for view_solution
+	if($('#solution_' + (questionNumber+1)).length > 0) {
+		$('#view_solution').css('visibility', 'visible');
+	}
+    submitBtn.textContent = "Next Question";
+    askingQuestion = false;
+
+    // determine which radio button they clicked
+    var userpick,
+      correctIndex,
+      radios = document.getElementsByName("quiz" + questionNumber);
+    for (var i = 0; i < radios.length; i++) {
+      if (radios[i].checked) { // if this radio button is checked
+        userpick = radios[i].value;
+		yourAnswer = userpick;
+      }
+
+      // get index of correct answer
+      if (radios[i].value == quiz[questionNumber].correct) {
+        correctIndex = i;
+      }
+    }
+
+    // setup if they got it right, or wrong
+    var labelStyle = document.getElementsByTagName("label")[correctIndex].style;
+    labelStyle.fontWeight = "bold";
+    if (userpick == quiz[questionNumber].correct) {
+      labelStyle.color = "green";
+	  score++; 
+    } else {
+		wrongAnswerNo++;
+      labelStyle.color = "red";
+	  wrongAnswerQ += "<br> <span id='question'> " + wrongAnswerNo+". " + quiz[questionNumber].question + "</span><br> " + "<div id='choices'>" + choicesMistakesG + " <strong>Your answer: "+ yourAnswer + "</strong><br> <strong id='answer'>" + "Correct answer: " + correctAnswer  + "</strong></div> ";//  + 
+
+    }
+	
+	
+  } else { // move to next question
+    // setting up so user can ask a question
+    askingQuestion = true;
+    // change button text back to "Submit Answer"
+    submitBtn.textContent = "Submit Answer";
+	scoreContainer.textContent = "Score: " + score + "/" + maxQ;; //nabago
+    // if we're not on last question, increase question number
+    if (questionNumber < maxQ - 1) {
+      //currentQuestion++;
+	  questionNumber++;
+      askQuestion();
+    } else {
+      clearTimeout(t);
+      showFinalResults();
+    }
+	
+	//mga nadagdag quiz with images
+	for(i=0; i<quiz.length; i++) { 
+		$('#for_q_' + (i+1)).hide();
+	}
+	
+	// mga nadagdag quiz with images
+	if((questionNumber+1) === 1) {
+		$('#question').after(images[0]);
+	} else if((questionNumber+1) === 2) {
+		$('#question').after(images[1]);
+	}
+	
+	//mga nadagdag for view_solution
+	for(i=0; i<quiz.length; i++) { 
+		$('#solution_' + (i+1)).hide();
+	}
+	
+	$('.for_view_solution').hide();
+	$('#view_solution').css('visibility', 'hidden');
+	
+	solutionIsVisible = false;
+	if(solutionIsVisible) {
+		document.getElementById('view_solution').textContent = 'Hide Solution';
+		solutionIsVisible = false;
+	}else if(!solutionIsVisible){
+		document.getElementById('view_solution').textContent = 'View Solution';
+		solutionIsVisible = true;
+	}
+  }
+}
+
+function showFinalResults() {
+	//resultPage = "<center><strong class='for_h'>You Passed!</strong></center>";
+	if(score/maxQ >= 0.7){
+		resultPage = "<center><strong class='for_h'>You Passed!</strong></center> <br> <center><strong>Score: " + score + " out of " + maxQ + " </strong></center><center><strong> Equivalent Percentage: " + Math.floor(score/maxQ*100) + "%</strong></center><center><strong>Total time: " + timeElapsed + "</strong></center> <br> <br><button id='restart' class='button fit' onclick='reloadCurrentPage();'> Restart the Test</button><button id='reviewMistakes' class='button fit' onclick='reviewMistakes();'> Review Mistakes</button> <button id='proceedToNext' class='button fit' onclick='proceedToNext();'> Proceed to next Test</button> ";
+	} else {
+		resultPage = "<center><strong class='for_h'>You Failed!</strong></center> <br> <center><strong>Score: " + score + " out of " + maxQ + " </strong></center><center><strong> Equivalent Percentage: " + Math.floor(score/maxQ*100) + "%</strong></center><center><strong>Total time: " + timeElapsed + "</strong></center> <br> <br><button id='restart' class='button fit' onclick='reloadCurrentPage();'> Restart the Test</button><button id='reviewMistakes' class='button fit' onclick='reviewMistakes();'> Review Mistakes</button> <button id='proceedToNext' class='button fit' onclick='proceedToNext();'> Proceed to next Test</button> ";
+	}
+	content.innerHTML = resultPage;
+}
+
+function reviewMistakes() {
+	content.innerHTML = wrongAnswerQ + " <br><br> <center><button id='restart' class='button fit' onclick='reloadCurrentPage();'> Restart the Test</button></center> <button id='proceedToNext' class='button fit' onclick='proceedToNext();'> Proceed to next Test</button>";
+}
+
+function proceedToNext() {
+	document.location.href = "compressors03.html"; //need to be updated per test 
+}
+
+function reloadCurrentPage() {
+	document.location.href = "compressors02.html"; //need to be updated per test 
+}
+
+window.addEventListener("load", askQuestion, false);
+submitBtn.addEventListener("click", checkAnswer, false);
+
+
+
+</script>
+
+
+
+
+			<!-- Scripts for Phantom -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+
+</html>

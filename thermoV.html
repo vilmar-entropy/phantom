@@ -1,0 +1,707 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	
+		<title>Entropiya | Thermodynamics V</title> <!-- need to be updated per test -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link rel="stylesheet" href="css/index.css" />
+		<script src="js/index.js"></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<!-- FontAwesome, jQuery and jQuery Mobile -->
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+		
+		<!-- jqmath -->
+		<link rel="stylesheet" href="mathscribe/jqmath-0.4.3.css">
+		<script src="mathscribe/jquery-1.4.3.min.js"></script>
+		<script src="mathscribe/jqmath-etc-0.4.5.min.js" charset="utf-8"></script>
+		
+		<script>
+			$(document).ready(function() {
+				solutionIsVisible = true;
+				
+				//mga nadagdag for view_solution
+				
+				$('.for_view_solution').hide();
+				$('#view_solution').css('visibility', 'hidden');
+				
+				for(i=0; i<quiz.length; i++) {
+					$('#solution_' + (i+1)).hide();
+				}
+				
+				$('#view_solution').click(function() {
+					for(i=0; i<quiz.length; i++) {
+						$('#solution_' + (i+1)).hide();
+					}
+						
+					$('#solution_' + (questionNumber + 1)).fadeToggle('slow');
+					$('.for_view_solution').fadeToggle('slow');
+					
+					if(solutionIsVisible) {
+						document.getElementById('view_solution').textContent = 'Hide Solution';
+						solutionIsVisible = false;
+					}else if(!solutionIsVisible){
+						document.getElementById('view_solution').textContent = 'View Solution';
+						solutionIsVisible = true;
+					}
+					
+				});
+
+				
+				// Image factory
+				var createImage = function(src, title, id) {
+				  var img   = new Image();
+				  img.src   = src;
+				  img.id = id;
+				  img.alt   = title;
+				  img.title = title;
+				  return img; 
+				};
+
+				// array of images dun dineclare sa main script para global
+				//var images = [];
+
+				// push two images to the array
+				//images.push(createImage("images/for_q_1.png", "pic01 title", "for_q_1"));
+				//images.push(createImage("images/for_q_2.png", "pic03 title", "for_q_2"));
+				
+				// mga nadagdag quiz with images
+				if((questionNumber+1) === 1) {
+					$('#question').after(images[0]);
+				} else if((questionNumber+1) === 2) {
+					$('#question').after(images[1]);
+				}
+				
+			});
+		</script>
+	
+	</head>
+	
+	<body>
+		<div data-role="panel" data-position="right" data-display="overlay" data-theme="a" id="panel">
+			<div class="nav_in_panel_container"> 
+				<ul data-role="listview" data-inset="true" data-theme="b" data-dividertheme="f">
+					<li data-icon="false"><a class="nav_in_panel" href="index.html" rel="external"><i class="fa fa-home" aria-hidden="true" ></i>  Home  </a> </li>
+					<li data-icon="false"><a class="nav_in_panel" href="about.html" rel="external"><i class="fa fa-user-o" aria-hidden="true" ></i>  About  </a> </li>
+					<li data-icon="false"><a class="nav_in_panel" href="references.html" rel="external"><i class="fa fa-book" aria-hidden="true" ></i>  References  </a>
+					<li data-icon="false"><a class="nav_in_panel" href="https://www.facebook.com/vilmar.empino?__nodl" rel="external" ><i class="fa fa-facebook-square" aria-hidden="true"></i>  Like us on facebook!  </a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="header_container">
+			<figure class="logo" id="logo">
+				<a href="index.html" rel="external"><img src="images/logo.png" alt="image"/></a>
+			</figure>
+			<ul class="home_nav_quiz"> 
+				<a href="#panel" class="right_panel"> <i class="fa fa-bars" id="icon_for_right_panel" aria-hidden="true"></i> </a>
+				<div class="toBeHidden">
+				<li class="li"><a class="a" href="references.html" rel="external">References</a></li>
+				<li class="li"><a class="a" href="about.html" rel="external">About</a></li>
+				<!-- <li class="li" id="dropdown">
+					<a class="a" href="javascript:void(0)" class="dropbtn">MCQs <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+					<div class="dropdown-content">
+					<a class="a" href="home-me.html" rel="external">Mechanical Engineering</a>
+					<a class="a" href="home-ece.html" rel="external">Electronics Engineering</a> 
+					</div>
+				</li> -->
+				<li class="li"><a class="a" href="index.html" rel="external">Home</a></li>
+				</div>
+			</ul>
+		</div>
+		<div id="body_container"> 
+			
+			<div id="for_contents_quiz">
+				
+				<div id="for_left_content_quiz">
+					<div id="for_title">
+						<strong class="for_h2">Thermodynamics - Test V (201-250)</strong> <!-- need to be updated per test -->
+					</div>
+					<br>
+					<div id="for_top_ads_quiz">
+						<span> FTA  </span>
+					</div>
+					<div id="for_left_navbar"> <!-- need to be updated per test -->
+						<div data-role="collapsible">
+							<h3>Problems</h3>
+							<ul data-role="listview" id="left_nav" data-inset="true" data-theme="c" data-dividertheme="f">
+								<li><a href="thermo01.html"  rel="external">Test 1</a></li>
+								<li><a href="thermo02.html"  rel="external">Test 2</a></li>
+								<li><a href="thermo03.html"  rel="external">Test 3</a></li>
+								<li><a href="thermo04.html"  rel="external">Test 4</a></li>
+								<li><a href="thermo05.html"  rel="external">Test 5</a></li>
+							</ul>
+						</div>
+					</div>
+					<div id="for_right_navbar"> <!-- need to be updated per test -->
+						<div data-role="collapsible">
+							<h3>Elements</h3>
+							<ul data-role="listview" id="right_nav" data-inset="true" data-theme="c" data-dividertheme="f">
+								<li><a href="thermoI.html"  rel="external">Test I</a></li>
+								<li><a href="thermoII.html"  rel="external">Test II</a></li>
+								<li><a href="thermoIII.html"  rel="external">Test II</a></li>
+								<li><a href="thermoIV.html"  rel="external">Test IV</a></li>
+								<li><a href="thermoV.html"  rel="external">Test V</a></li>
+								<li><a href="thermoVI.html"  rel="external">Test VI</a></li>
+								<li><a href="thermoVII.html"  rel="external">Test VII</a></li>
+								<li><a href="thermoVIII.html"  rel="external">Test VIII</a></li>
+								<li><a href="thermoIX.html"  rel="external">Test IX</a></li>
+								<li><a href="thermoX.html"  rel="external">Test X</a></li>
+								<li><a href="thermoXI.html"  rel="external">Test XI</a></li>
+								<li><a href="thermoXII.html"  rel="external">Test XII</a></li>
+								
+							</ul>
+						</div>
+					</div>
+					<br>
+					<div class="for_quiz">
+						<div id="content">
+							<strong id="timerContinue"><time>00:00:00</time></strong>
+							<strong id="score">Score: 0/50</strong> <br><br>
+							<div class="for_question"><span id="question"></span> </div> 
+							<div id="choices"></div> 
+							<button id="submit" class="button"> Submit Answer</button>
+						</div>
+					</div>
+					<br>
+					<!-- //mga nadagdag for view_solution -->
+					<!-- <div class="for_view_solution">
+						<p id="solution_1">
+							<span>Solution 1</span><br>Data: <br>
+							<span class="eq">$m_1 = 500 g_m$ $/frac{F}{A} \sqrt{\pi}$ </span><br>
+							<span class="eq">$m_2 = 800 g_f$ </span><br>
+							<span class="eq">$m_3 = 15 poundals$ </span><br>
+							<span class="eq">$m_4 = 3 lb_f$ </span><br>
+							<span class="eq">$m_5 = 0.10slug$ </span><br>
+							<span class="eq">$g = 30.5 ft/s^2$ </span><br>
+							Unknown: <br>
+							<span class="eq">a) Total mass, $m_T$ in $g_m$ </span><br>
+							<span class="eq">b) $m_T$ in $lb_m$ </span><br>
+							<span class="eq">c) $m_T$ in $slugs$ </span><br>
+							Solution: <br>
+							<span class="eq"> $m_T = m_1 + m_2 +$ $m_3 + m_4 + m_5 \longrightarrow (eq. 1)$</span> <br>
+							
+							<span class="eq"> </span> <br>
+						</p>
+						
+						<p id="solution_2"><span>Solution 2</span><br>Data: <br> 
+							<span class="eq"> $g_{sea} = 32.088 fps^2 $ </span> <br>
+							<span class="eq"> $\Delta g = -0.003 fps^2 $ per 1000 ft </span> <br>
+							Unknown: <br>
+							<span class="eq"> a) Height, $h$ if g is 30.504 $fps^2$ </span> <br>
+							<span class="eq"> b) $h$ if $F_g$ is 95% of original </span> <br>
+							<span class="eq"> c) $F_g$ if $h$ is 29,131 ft and $m$ is 180 $lb_m$</span> <br>
+							Solution: <br>
+							<span class="eq">a) $h = (30.504 - 32.088)fps^2$ x $\frac{1000ft}{-0.003 fps^2}$ $= 528,000ft$ $= \underline{100mi}$ </span> <br>
+							<span class="eq"> b) $h = (32.088)(0.95 - 1)$ $fps^2$ x $\frac{1000ft}{-0.003 fps^2}$ $= 534,800$ ft or $\underline{101.29 mi}$</span> <br>
+							<span class="eq"> c) $F_g = mg \longrightarrow (eq. 1)$ </span> <br>
+							But <br>
+							<span class="eq"> $m = 180 lb_m$ x $\frac{1 slug}{32.2 lb_m}$ $=5.59 slugs$ </span> <br>
+							<span class="eq"> $g = 29,131ft$ x $\frac{-0.003 fps^2}{1000 ft}$ $+ 32.088 fps^2$ $32.00 fps^2$</span> <br>
+							Then from $(eq. 1)$ <br>
+							<span class="eq"> $F_g = 5.59 slugs$ x $32.00 fps^2$ $=\underline{178.88 lb_f}$</span> <br>
+						</p> 
+						
+						<p id="solution_3"><span>Solution 3</span><br>Data: <br> 
+							<span class="eq"> $g_{sea} = 32.088 fps^2 $ </span> <br>
+							<span class="eq"> $\Delta g = -0.003 fps^2 $ per 1000 ft </span> <br>
+							Unknown: <br>
+							<span class="eq"> a) Height, $h$ if g is 30.504 $fps^2$ </span> <br>
+							<span class="eq"> b) $h$ if $F_g$ is 95% of original </span> <br>
+							<span class="eq"> c) $F_g$ if $h$ is 29,131 ft and $m$ is 180 $lb_m$</span> <br>
+							Solution: <br>
+							<span class="eq">a) $h = (30.504 - 32.088)fps^2$ x $\frac{1000ft}{-0.003 fps^2}$ $= 528,000ft$ $= \underline{100mi}$ </span> <br>
+							<span class="eq"> b) $h = (32.088)(0.95 - 1)$ $fps^2$ x $\frac{1000ft}{-0.003 fps^2}$ $= 534,800$ ft or $\underline{101.29 mi}$</span> <br>
+							<span class="eq"> c) $F_g = mg \longrightarrow (eq. 1)$ </span> <br>
+							But <br>
+							<span class="eq"> $m = 180 lb_m$ x $\frac{1 slug}{32.2 lb_m}$ $=5.59 slugs$ </span> <br>
+							<span class="eq"> $g = 29,131ft$ x $\frac{-0.003 fps^2}{1000 ft}$ $+ 32.088 fps^2$ $32.00 fps^2$</span> <br>
+							Then from $(eq. 1)$ <br>
+							<span class="eq"> $F_g = 5.59 slugs$ x $32.00 fps^2$ $=\underline{178.88 lb_f}$</span> <br>
+						</p>
+						
+						<p id="solution_4"><span>Solution 4</span><br>Data: <br> 
+							<span class="eq"> $g_{sea} = 32.088 fps^2 $ </span> <br>
+							<span class="eq"> $\Delta g = -0.003 fps^2 $ per 1000 ft </span> <br>
+							Unknown: <br>
+							<span class="eq"> a) Height, $h$ if g is 30.504 $fps^2$ </span> <br>
+							<span class="eq"> b) $h$ if $F_g$ is 95% of original </span> <br>
+							<span class="eq"> c) $F_g$ if $h$ is 29,131 ft and $m$ is 180 $lb_m$</span> <br>
+							Solution: <br>
+							<span class="eq">a) $h = (30.504 - 32.088)fps^2$ x $\frac{1000ft}{-0.003 fps^2}$ $= 528,000ft$ $= \underline{100mi}$ </span> <br>
+							<span class="eq"> b) $h = (32.088)(0.95 - 1)$ $fps^2$ x $\frac{1000ft}{-0.003 fps^2}$ $= 534,800$ ft or $\underline{101.29 mi}$</span> <br>
+							<span class="eq"> c) $F_g = mg \longrightarrow (eq. 1)$ </span> <br>
+							But <br>
+							<span class="eq"> $m = 180 lb_m$ x $\frac{1 slug}{32.2 lb_m}$ $=5.59 slugs$ </span> <br>
+							<span class="eq"> $g = 29,131ft$ x $\frac{-0.003 fps^2}{1000 ft}$ $+ 32.088 fps^2$ $32.00 fps^2$</span> <br>
+							Then from $(eq. 1)$ <br>
+							<span class="eq"> $F_g = 5.59 slugs$ x $32.00 fps^2$ $=\underline{178.88 lb_f}$</span> <br>
+						</p>
+					
+					</div> -->
+					
+					<button id="view_solution" class="button small"> View Solution</button>
+
+										
+				</div>
+				
+								
+				
+				<div class="for_right_ads_quiz">
+					<span> FRA   </span>
+				</div>
+			</div>
+		</div>
+			
+			<script>
+	
+ //star timer
+  var timeElapsed = "";
+	var h1 = document.getElementById('timerContinue'),
+		start = document.getElementById('start'),
+		stop = document.getElementById('stop'),
+		clear = document.getElementById('clear'),
+		seconds = 0, minutes = 0, hours = 0,
+		t;
+
+	function add() {
+		seconds++;
+		if (seconds >= 60) {
+			seconds = 0;
+			minutes++;
+			if (minutes >= 60) {
+				minutes = 0;
+				hours++;
+			}
+		}
+		
+		h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+		timeElapsed =(hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" +  (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+		timer();
+	}
+	function timer() {
+		t = setTimeout(add, 1000);
+	}
+	timer();
+
+	//end timer
+	
+
+var quiz = [{
+	"question": "Thermodynamics is the study of heat and its transformation which stems from Greek words meaning _________.",
+	"choices": ["Transformation of heat", "Transformation of energy", "Movement of heat", "Movement of matter"],
+	"correct": "Movement of heat"
+}, {
+	"question": "What is the Si unit for temperature?",
+	"choices": ["Kelvin", "Celsius", "Fahrenheit", "Rankine"],
+	"correct": "Kelvin"
+}, {
+	"question": "The energy that flows from higher temperature object to a lower temperature object because of the difference in temperature is called",
+	"choices": ["Heat", "Temperature", "Thermodynamics cycle", "Energy flow"],
+	"correct": "Heat"
+}, {
+	"question": "The amount of heat energy per kilogram that must be added or removed when a substance changes from one phase to another.",
+	"choices": ["Specific heat", "Heat of expansion", "Latent heat", "Useful heat"],
+	"correct": "Latent heat"
+}, {
+	"question": "It is the change in physical size of a substance when its temperature changes.",
+	"choices": ["Intensive property", "Extinsive property", "Volume expansion", "Thermal expansion"],
+	"correct": "Thermal expansion"
+}, {
+	"question": " A stress which develops within an object when it attempts to expand or contract in response to a temperature changes, but cannot, due to being held rigidly in place.",
+	"choices": ["Elongation", "Thermal stress", "Exapansion contraction", "Thermal expansion"],
+	"correct": "Thermal stress"
+}, {
+	"question": "The energy associated with individual molecules in a gas, liquid or solid.",
+	"choices": ["Specific Energy", "Molecular energy", "Internal energy", "Phase energy"],
+	"correct": "Internal energy"
+}, {
+	"question": "The heat Q per unit mass per degree change in temperature that must be supplied or removed to change the temperature of a substance.",
+	"choices": ["Specific heat capacity", "Latent heat", "Heat of transformation", "Internal heat"],
+	"correct": "Specific heat capacity"
+}, {
+	"question": "The pressure of the vapor phase of a substance that is in equilibrium with the liquid or solid phase.",
+	"choices": ["Phase Pressure", "Equilibrium Vapor Pressure", "Specific Pressure", " Equilibrium Phase Pressure"],
+	"correct": "Equilibrium Vapor Pressure"
+}, {
+	"question": "Vapor pressure depends only on _________.",
+	"choices": ["Pressure", "Force", "Volume", "Temperature"],
+	"correct": "Temperature"
+}, {
+	"question": "A plot of pressure vs. temperature for a given substance showing the various phases possible for that particular substance.",
+	"choices": ["Phase Diagram", "P-T diagram", "Wein Diagram", "Histogram"],
+	"correct": "Phase Diagram"
+}, {
+	"question": " _________ is the grand total of all energies inside a substance.",
+	"choices": ["Internal Energy", "Grand Energy", "Atomic Energy", "Elemental Energy"],
+	"correct": "Internal Energy"
+}, {
+	"question": "The _________ is defined as the amount of heat required to change the temperature of 1 gram of water by 1 Celsius degree.",
+	"choices": ["Specific heat", "Latent heat", "Joule", "Calorie"],
+	"correct": "Calorie"
+}, {
+	"question": "_________ is a measure of the average kinetic energy per molecule in a substance.",
+	"choices": ["Movement", "Temperature", "Heat", "Mass"],
+	"correct": "Temperature"
+}, {
+	"question": "________ is the very small KE still present in molecules at absolute zero temperature.",
+	"choices": ["Internal KE", "Atomic kinetic energy", "Zero-Point Energy", "Subliminal energy"],
+	"correct": "Zero-Point Energy"
+}, {
+	"question": "Convert the change of temperature from 20˚C to 30˚C to Kelvin scale.",
+	"choices": ["10 K", "293 K", "303 K", "272 K"],
+	"correct": "10 K"
+}, {
+	"question": "_________ is a thermodynamic potential which measures the “useful” work obtainable from a closed thermodynamic system at a constant temperature and volume.",
+	"choices": ["Useful work", "Energy consumed", "Helmholtz free energy", "Kinetic energy"],
+	"correct": "Helmholtz free energy"
+}, {
+	"question": "Kulang ng data. How much will the length of a 1.0 km section of concrete highway change if the temperature varies from -15˚C in winter to 41˚C in summer?",
+	"choices": ["0.67 m", "2.2 m", "3.1 m", "0.47 m"],
+	"correct": "0.67 m"
+}, {
+	"question": "Kulang ng data. Two 12 ft. sections of aluminum siding are placed end to end on the outside wall of house. How large a gap should be left between the pieces to prevent buckling if the temperature can change by 55˚C?",
+	"choices": ["0.21 m", "0.18 m", "0.31 in", "0.18 in"],
+	"correct": "0.18 in"
+}, {
+	"question": "What is the amount of radiant energy received each second over each square meter that is at right angles to the sun’s rays at the top of the atmosphere?",
+	"choices": ["1400 J", "6000 J", "10000 J", "800 J"],
+	"correct": "1400 J"
+}, {
+	"question": "_________ is a thermodynamic potential that measures the “useful” or process-initiating work obtainable from an isothermal, isobaric thermodynamic system.",
+	"choices": ["Du-Pont Potential", "Gibbs free energy", "Rabz-Eccles Energy", "Claussius Energy"],
+	"correct": "Gibbs free energy"
+}, {
+	"question": "All the energy we consume ultimately becomes _________.",
+	"choices": ["Heat", "Depleted", "Exhasuted", "Work"],
+	"correct": "Heat"
+}, {
+	"question": "________is the partial pressure of water vapor at the existing temperature divided by the equilibrium vapor pressure of water at the existing temperature.",
+	"choices": ["Vacuum pressure", "Relative humidity", "Absolute pressure", "Vapor pressure"],
+	"correct": "Relative humidity"
+}, {
+	"question": "_________ is the transition of a given substance from the solid to the gas phase with no intermediate liquid stage",
+	"choices": ["Convection", "Conduction", "Radiation", "Sublimation"],
+	"correct": "Sublimation"
+}, {
+	"question": "A process in which heat energy is transferred by the flow of fluid",
+	"choices": ["Convection", "Conduction", "Convection", "Sublimation"],
+	"correct": "Convection"
+}, {
+	"question": "In order to use a substance to make a thermometer the substance must _________ with a temperature change.",
+	"choices": ["Expand", "Contract", "Change", "Increase"],
+	"correct": "Change"
+}, {
+	"question": "For most solids, the coefficient of volume expansion is _________ the coefficient of linear expansion.",
+	"choices": ["Unrelated to", "Proportional to", "Twice", "Three times"],
+	"correct": "Three times"
+}, {
+	"question": "The volume of a given amount of water _________ as the temperature decreases from 4˚C to 0˚C.",
+	"choices": ["Decreases", "Increases", "Remains constant", "None of the above"],
+	"correct": "Increases"
+}, {
+	"question": "The gas in a constant gas thermometer cooled to absolute zero would have _________.",
+	"choices": ["No volume", "No pressure", "Zero temperature at all scales", "None of the above"],
+	"correct": "No pressure"
+}, {
+	"question": "On a day when the partial pressure of water vapor remains constant, what happens as the temperature rises?",
+	"choices": ["The relative humidity increases", "The relative humidity decreases", "The relative humidity remains constant", "The air would eventually become saturated"],
+	"correct": "The relative humidity decreases"
+}, {
+	"question": "The flow of a fluid when heat is transferred by convection.",
+	"choices": ["Placidity", "Mass flow", "Convection current", "Heat transfer"],
+	"correct": "Convection current"
+}, {
+	"question": "An idealized perfect absorber and perfect emitter of radiation.",
+	"choices": ["Elastic material", "Transponder material", "Teflon", "Blackbody"],
+	"correct": "Blackbody"
+}, {
+	"question": "A process by which heat is transferred through a material without a bulk movement of the material.",
+	"choices": ["Convection", "Conduction", "Radiation", "Emission"],
+	"correct": "Conduction"
+}, {
+	"question": "Is the amount of a substance that contains Avogadro’s number of atoms/molecules.",
+	"choices": ["Mass", "Matter", "Gram-mole", "Volume"],
+	"correct": "Gram-mole"
+}, {
+	"question": "The distribution of particle speeds in an ideal gas at a given temperature.",
+	"choices": ["Velocity of propagation", "Escape velocity", "Maxwell speed distribution", "Terminal velocity"],
+	"correct": "Maxwell speed distribution"
+}, {
+	"question": "A convection process in which an external device, such as a fan, is used to produce the fluid flow.",
+	"choices": ["Forced convection", "External convection", "Placid convection", "Thermionic convection"],
+	"correct": "Forced convection"
+}, {
+	"question": "A _________ is a quantity whose value at any state is independent of the path or process used to reach that state.",
+	"choices": ["Cycle", "Path function", "Point function", "Process"],
+	"correct": "Point function"
+}, {
+	"question": "A _________ is a quantity whose value depends on the path followed during a particular change in state.",
+	"choices": ["Path function", "Point function", "Process", "Cycle"],
+	"correct": "Path function"
+}, {
+	"question": "The contact surface shared by both the system and the surroundings is called _________.",
+	"choices": ["Wall", "Boundary", "Interface", "Intersection"],
+	"correct": "Boundary"
+}, {
+	"question": "A closed system is also known as _________.",
+	"choices": ["Isolated system", "Closed container", "Control mass", "Control volume"],
+	"correct": "Control mass"
+}, {
+	"question": "Open system is also known as _________.",
+	"choices": ["Isolated system", "Closed container", "Control mass", "Control volume"],
+	"correct": "Control volume"
+}, {
+	"question": "Liquid hydrogen boils at 17 K. What is the temperature in degrees Celsius?",
+	"choices": ["290", "63", "-120", "-256"],
+	"correct": "-256"
+}, {
+	"question": "When a solid melts,",
+	"choices": ["The temperature of the substance increases", "The temperature of the substance decreases", "Heat leaves the substance", "Heat enters the substance"],
+	"correct": "Heat enters the substance"
+}, {
+	"question": "How many kilocalories of heat are required to heat 750 g of water from 35˚C to 55˚C.",
+	"choices": ["15", "1500", "1.5 x 10^4", "6.3 x 10^4"],
+	"correct": "15"
+}, {
+	"question": "Which of the following does not determine the amount of internal energy an object has?",
+	"choices": ["Temperature", "Amount of material", "Type of material", "Shape of the object"],
+	"correct": "Shape of the object"
+}, {
+	"question": "Which of the following have the highest thermal conductivities?",
+	"choices": ["Liquids", "Gases", "Metals", "Solids other than metals"],
+	"correct": "Metals"
+}, {
+	"question": "Identical objects of four different materials are heated to the same high temperature. Which of the following would least likely burn your hand if touched?",
+	"choices": ["Aluminum", "Brass", "Glass", "Concrete"],
+	"correct": "Glass"
+}, {
+	"question": "As we heat a gas at constant pressure, its volume",
+	"choices": ["Increases", "Decreases", "Stay the same", "None of the above"],
+	"correct": "Increases"
+}, {
+	"question": "The volume of an ideal gas is directly proportional to its",
+	"choices": ["Pressure", "Celcius temperature", "Kelvin temperature", "Fahrenheit temperature"],
+	"correct": "Kelvin temperature"
+}, {
+	"question": "An ideal gas is maintained at constant temperature. If the pressure on the gas is doubled, the volume is",
+	"choices": ["Increased fourfold", "Doubled", "Reduced by half", "Decreased by a quarter"],
+	"correct": "Reduced by half"
+}];
+
+// mga nadagdag quiz with images
+// array of images  
+	var images = [];
+	var solutionIsVisible;
+
+// define elements
+var content = $("content"),
+  questionContainer = $("question"),
+  choicesContainer = $("choices"),
+  scoreContainer = $("score"), //nabago
+  submitBtn = $("submit");
+  
+  var resultPage = "";
+  
+// init vars
+var currentQuestion = 0,
+	score = 0,
+  askingQuestion = true,
+  questionNumber = 0,
+   maxQ = quiz.length, 
+  questionNumber;
+  
+  wrongAnswerQ = "",
+  wrongAnswerNo=0;
+  var yourAnswer = "You did not pick any answer.";
+  var choicesMistakesG = "";
+  if(maxQ > quiz.length) {
+	maxQ = quiz.length;
+  }
+  var isOnReviewWrongPage = false;
+  var duplicates  =[];
+
+function $(id) { // shortcut for document.getElementById
+  return document.getElementById(id);
+}
+
+function askQuestion() {
+  var choices = quiz[questionNumber].choices,
+    choicesHtml = "", choicesMistakes="" ;
+
+
+  // loop through choices, and create radio buttons
+  for (var i = 0; i < choices.length; i++) {
+  //alert(get_rand(nums));
+    choicesHtml += "<input type='radio' name='quiz" + questionNumber +
+      "' id='choice" + ( i + 1) +
+      "' value='" + choices[i] + "'>" +
+      " <label for='choice" + (i + 1) + "'>" + choices[i] + "</label> <br>";
+	  
+	  choicesMistakes += "<span name='quiz" + questionNumber +
+      "' id='choice" + (i + 1) +
+      "' value='" + choices[i] + "'>"+ (i+1) + ". " + choices[i] + "</span><br>";
+	   if(choices[i] === quiz[questionNumber].correct) {
+			correctAnswer = choices[i];
+			correctAnswerIndex = i;
+	  }
+	  
+	  choicesMistakesG = choicesMistakes;
+  }
+
+  
+  // load the question
+  questionContainer.textContent = (questionNumber + 1) + ". " +
+    quiz[questionNumber].question;
+	
+	
+  // load the choices
+  choicesContainer.innerHTML = choicesHtml;
+
+  // setup for the first time
+  if (questionNumber === 0) {
+  scoreContainer.textContent = "Score: " + score + "/" + maxQ; //nabago
+    submitBtn.textContent = "Submit Answer";
+	//alert(quiz.length);
+  }
+  
+	
+
+}
+
+function checkAnswer() {
+	var yourAnswer = "You did not pick any answer.";
+  // are we asking a question, or proceeding to next question?
+  if (askingQuestion) {
+	
+	//mga nadagdag for view_solution
+	if($('#solution_' + (questionNumber+1)).length > 0) {
+		$('#view_solution').css('visibility', 'visible');
+	}
+    submitBtn.textContent = "Next Question";
+    askingQuestion = false;
+
+    // determine which radio button they clicked
+    var userpick,
+      correctIndex,
+      radios = document.getElementsByName("quiz" + questionNumber);
+    for (var i = 0; i < radios.length; i++) {
+      if (radios[i].checked) { // if this radio button is checked
+        userpick = radios[i].value;
+		yourAnswer = userpick;
+      }
+
+      // get index of correct answer
+      if (radios[i].value == quiz[questionNumber].correct) {
+        correctIndex = i;
+      }
+    }
+
+    // setup if they got it right, or wrong
+    var labelStyle = document.getElementsByTagName("label")[correctIndex].style;
+    labelStyle.fontWeight = "bold";
+    if (userpick == quiz[questionNumber].correct) {
+      labelStyle.color = "green";
+	  score++; 
+    } else {
+		wrongAnswerNo++;
+      labelStyle.color = "red";
+	  wrongAnswerQ += "<br> <span id='question'> " + wrongAnswerNo+". " + quiz[questionNumber].question + "</span><br> " + "<div id='choices'>" + choicesMistakesG + " <strong>Your answer: "+ yourAnswer + "</strong><br> <strong id='answer'>" + "Correct answer: " + correctAnswer  + "</strong></div> ";//  + 
+
+    }
+	
+	
+  } else { // move to next question
+    // setting up so user can ask a question
+    askingQuestion = true;
+    // change button text back to "Submit Answer"
+    submitBtn.textContent = "Submit Answer";
+	scoreContainer.textContent = "Score: " + score + "/" + maxQ;; //nabago
+    // if we're not on last question, increase question number
+    if (questionNumber < maxQ - 1) {
+      //currentQuestion++;
+	  questionNumber++;
+      askQuestion();
+    } else {
+      clearTimeout(t);
+      showFinalResults();
+    }
+	
+	//mga nadagdag quiz with images
+	for(i=0; i<quiz.length; i++) { 
+		$('#for_q_' + (i+1)).hide();
+	}
+	
+	// mga nadagdag quiz with images
+	if((questionNumber+1) === 1) {
+		$('#question').after(images[0]);
+	} else if((questionNumber+1) === 2) {
+		$('#question').after(images[1]);
+	}
+	
+	//mga nadagdag for view_solution
+	for(i=0; i<quiz.length; i++) { 
+		$('#solution_' + (i+1)).hide();
+	}
+	
+	$('.for_view_solution').hide();
+	$('#view_solution').css('visibility', 'hidden');
+	
+	solutionIsVisible = false;
+	if(solutionIsVisible) {
+		document.getElementById('view_solution').textContent = 'Hide Solution';
+		solutionIsVisible = false;
+	}else if(!solutionIsVisible){
+		document.getElementById('view_solution').textContent = 'View Solution';
+		solutionIsVisible = true;
+	}
+  }
+}
+
+function showFinalResults() {
+	//resultPage = "<center><strong class='for_h'>You Passed!</strong></center>";
+	if(score/maxQ >= 0.7){
+		resultPage = "<center><strong class='for_h'>You Passed!</strong></center> <br> <center><strong>Score: " + score + " out of " + maxQ + " </strong></center><center><strong> Equivalent Percentage: " + Math.floor(score/maxQ*100) + "%</strong></center><center><strong>Total time: " + timeElapsed + "</strong></center> <br> <br><button id='restart' class='button fit' onclick='reloadCurrentPage();'> Restart the Test</button><button id='reviewMistakes' class='button fit' onclick='reviewMistakes();'> Review Mistakes</button> <button id='proceedToNext' class='button fit' onclick='proceedToNext();'> Proceed to next Test</button> ";
+	} else {
+		resultPage = "<center><strong class='for_h'>You Failed!</strong></center> <br> <center><strong>Score: " + score + " out of " + maxQ + " </strong></center><center><strong> Equivalent Percentage: " + Math.floor(score/maxQ*100) + "%</strong></center><center><strong>Total time: " + timeElapsed + "</strong></center> <br> <br><button id='restart' class='button fit' onclick='reloadCurrentPage();'> Restart the Test</button><button id='reviewMistakes' class='button fit' onclick='reviewMistakes();'> Review Mistakes</button> <button id='proceedToNext' class='button fit' onclick='proceedToNext();'> Proceed to next Test</button> ";
+	}
+	content.innerHTML = resultPage;
+}
+
+function reviewMistakes() {
+	content.innerHTML = wrongAnswerQ + " <br><br> <center><button id='restart' class='button fit' onclick='reloadCurrentPage();'> Restart the Test</button></center> <button id='proceedToNext' class='button fit' onclick='proceedToNext();'> Proceed to next Test</button>";
+}
+
+function proceedToNext() {
+	document.location.href = "thermoVI.html"; //need to be updated per test 
+}
+
+function reloadCurrentPage() {
+	document.location.href = "thermoV.html"; //need to be updated per test 
+}
+
+window.addEventListener("load", askQuestion, false);
+submitBtn.addEventListener("click", checkAnswer, false);
+
+
+
+</script>
+
+
+
+
+			<!-- Scripts for Phantom -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+
+</html>

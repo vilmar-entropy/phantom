@@ -1,0 +1,706 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	
+		<title>Entropiya | Thermodynamics VIII</title> <!-- need to be updated per test -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link rel="stylesheet" href="css/index.css" />
+		<script src="js/index.js"></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<!-- FontAwesome, jQuery and jQuery Mobile -->
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+		
+		<!-- jqmath -->
+		<link rel="stylesheet" href="mathscribe/jqmath-0.4.3.css">
+		<script src="mathscribe/jquery-1.4.3.min.js"></script>
+		<script src="mathscribe/jqmath-etc-0.4.5.min.js" charset="utf-8"></script>
+		
+		<script>
+			$(document).ready(function() {
+				solutionIsVisible = true;
+				
+				//mga nadagdag for view_solution
+				
+				$('.for_view_solution').hide();
+				$('#view_solution').css('visibility', 'hidden');
+				
+				for(i=0; i<quiz.length; i++) {
+					$('#solution_' + (i+1)).hide();
+				}
+				
+				$('#view_solution').click(function() {
+					for(i=0; i<quiz.length; i++) {
+						$('#solution_' + (i+1)).hide();
+					}
+						
+					$('#solution_' + (questionNumber + 1)).fadeToggle('slow');
+					$('.for_view_solution').fadeToggle('slow');
+					
+					if(solutionIsVisible) {
+						document.getElementById('view_solution').textContent = 'Hide Solution';
+						solutionIsVisible = false;
+					}else if(!solutionIsVisible){
+						document.getElementById('view_solution').textContent = 'View Solution';
+						solutionIsVisible = true;
+					}
+					
+				});
+
+				
+				// Image factory
+				var createImage = function(src, title, id) {
+				  var img   = new Image();
+				  img.src   = src;
+				  img.id = id;
+				  img.alt   = title;
+				  img.title = title;
+				  return img; 
+				};
+
+				// array of images dun dineclare sa main script para global
+				//var images = [];
+
+				// push two images to the array
+				//images.push(createImage("images/for_q_1.png", "pic01 title", "for_q_1"));
+				//images.push(createImage("images/for_q_2.png", "pic03 title", "for_q_2"));
+				
+				// mga nadagdag quiz with images
+				if((questionNumber+1) === 1) {
+					$('#question').after(images[0]);
+				} else if((questionNumber+1) === 2) {
+					$('#question').after(images[1]);
+				}
+				
+			});
+		</script>
+	
+	</head>
+	
+	<body>
+		<div data-role="panel" data-position="right" data-display="overlay" data-theme="a" id="panel">
+			<div class="nav_in_panel_container"> 
+				<ul data-role="listview" data-inset="true" data-theme="b" data-dividertheme="f">
+					<li data-icon="false"><a class="nav_in_panel" href="index.html" rel="external"><i class="fa fa-home" aria-hidden="true" ></i>  Home  </a> </li>
+					<li data-icon="false"><a class="nav_in_panel" href="about.html" rel="external"><i class="fa fa-user-o" aria-hidden="true" ></i>  About  </a> </li>
+					<li data-icon="false"><a class="nav_in_panel" href="references.html" rel="external"><i class="fa fa-book" aria-hidden="true" ></i>  References  </a>
+					<li data-icon="false"><a class="nav_in_panel" href="https://www.facebook.com/vilmar.empino?__nodl" rel="external" ><i class="fa fa-facebook-square" aria-hidden="true"></i>  Like us on facebook!  </a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="header_container">
+			<figure class="logo" id="logo">
+				<a href="index.html" rel="external"><img src="images/logo.png" alt="image"/></a>
+			</figure>
+			<ul class="home_nav_quiz"> 
+				<a href="#panel" class="right_panel"> <i class="fa fa-bars" id="icon_for_right_panel" aria-hidden="true"></i> </a>
+				<div class="toBeHidden">
+				<li class="li"><a class="a" href="references.html" rel="external">References</a></li>
+				<li class="li"><a class="a" href="about.html" rel="external">About</a></li>
+				<!-- <li class="li" id="dropdown">
+					<a class="a" href="javascript:void(0)" class="dropbtn">MCQs <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+					<div class="dropdown-content">
+					<a class="a" href="home-me.html" rel="external">Mechanical Engineering</a>
+					<a class="a" href="home-ece.html" rel="external">Electronics Engineering</a> 
+					</div>
+				</li> -->
+				<li class="li"><a class="a" href="index.html" rel="external">Home</a></li>
+				</div>
+			</ul>
+		</div>
+		<div id="body_container"> 
+			
+			<div id="for_contents_quiz">
+				
+				<div id="for_left_content_quiz">
+					<div id="for_title">
+						<strong class="for_h2">Thermodynamics - Test VIII (351-400)</strong> <!-- need to be updated per test -->
+					</div>
+					<br>
+					<div id="for_top_ads_quiz">
+						<span> FTA  </span>
+					</div>
+					<div id="for_left_navbar"> <!-- need to be updated per test -->
+						<div data-role="collapsible">
+							<h3>Problems</h3>
+							<ul data-role="listview" id="left_nav" data-inset="true" data-theme="c" data-dividertheme="f">
+								<li><a href="thermo01.html"  rel="external">Test 1</a></li>
+								<li><a href="thermo02.html"  rel="external">Test 2</a></li>
+								<li><a href="thermo03.html"  rel="external">Test 3</a></li>
+								<li><a href="thermo04.html"  rel="external">Test 4</a></li>
+								<li><a href="thermo05.html"  rel="external">Test 5</a></li>
+							</ul>
+						</div>
+					</div>
+					<div id="for_right_navbar"> <!-- need to be updated per test -->
+						<div data-role="collapsible">
+							<h3>Elements</h3>
+							<ul data-role="listview" id="right_nav" data-inset="true" data-theme="c" data-dividertheme="f">
+								<li><a href="thermoI.html"  rel="external">Test I</a></li>
+								<li><a href="thermoII.html"  rel="external">Test II</a></li>
+								<li><a href="thermoIII.html"  rel="external">Test II</a></li>
+								<li><a href="thermoIV.html"  rel="external">Test IV</a></li>
+								<li><a href="thermoV.html"  rel="external">Test V</a></li>
+								<li><a href="thermoVI.html"  rel="external">Test VI</a></li>
+								<li><a href="thermoVII.html"  rel="external">Test VII</a></li>
+								<li><a href="thermoVIII.html"  rel="external">Test VIII</a></li>
+								<li><a href="thermoIX.html"  rel="external">Test IX</a></li>
+								<li><a href="thermoX.html"  rel="external">Test X</a></li>
+								<li><a href="thermoXI.html"  rel="external">Test XI</a></li>
+								<li><a href="thermoXII.html"  rel="external">Test XII</a></li>
+								
+							</ul>
+						</div>
+					</div>
+					<br>
+					<div class="for_quiz">
+						<div id="content">
+							<strong id="timerContinue"><time>00:00:00</time></strong>
+							<strong id="score">Score: 0/50</strong> <br><br>
+							<div class="for_question"><span id="question"></span> </div> 
+							<div id="choices"></div> 
+							<button id="submit" class="button"> Submit Answer</button>
+						</div>
+					</div>
+					<br>
+					<!-- //mga nadagdag for view_solution -->
+					<!-- <div class="for_view_solution">
+						<p id="solution_1">
+							<span>Solution 1</span><br>Data: <br>
+							<span class="eq">$m_1 = 500 g_m$ $/frac{F}{A} \sqrt{\pi}$ </span><br>
+							<span class="eq">$m_2 = 800 g_f$ </span><br>
+							<span class="eq">$m_3 = 15 poundals$ </span><br>
+							<span class="eq">$m_4 = 3 lb_f$ </span><br>
+							<span class="eq">$m_5 = 0.10slug$ </span><br>
+							<span class="eq">$g = 30.5 ft/s^2$ </span><br>
+							Unknown: <br>
+							<span class="eq">a) Total mass, $m_T$ in $g_m$ </span><br>
+							<span class="eq">b) $m_T$ in $lb_m$ </span><br>
+							<span class="eq">c) $m_T$ in $slugs$ </span><br>
+							Solution: <br>
+							<span class="eq"> $m_T = m_1 + m_2 +$ $m_3 + m_4 + m_5 \longrightarrow (eq. 1)$</span> <br>
+							
+							<span class="eq"> </span> <br>
+						</p>
+						
+						<p id="solution_2"><span>Solution 2</span><br>Data: <br> 
+							<span class="eq"> $g_{sea} = 32.088 fps^2 $ </span> <br>
+							<span class="eq"> $\Delta g = -0.003 fps^2 $ per 1000 ft </span> <br>
+							Unknown: <br>
+							<span class="eq"> a) Height, $h$ if g is 30.504 $fps^2$ </span> <br>
+							<span class="eq"> b) $h$ if $F_g$ is 95% of original </span> <br>
+							<span class="eq"> c) $F_g$ if $h$ is 29,131 ft and $m$ is 180 $lb_m$</span> <br>
+							Solution: <br>
+							<span class="eq">a) $h = (30.504 - 32.088)fps^2$ x $\frac{1000ft}{-0.003 fps^2}$ $= 528,000ft$ $= \underline{100mi}$ </span> <br>
+							<span class="eq"> b) $h = (32.088)(0.95 - 1)$ $fps^2$ x $\frac{1000ft}{-0.003 fps^2}$ $= 534,800$ ft or $\underline{101.29 mi}$</span> <br>
+							<span class="eq"> c) $F_g = mg \longrightarrow (eq. 1)$ </span> <br>
+							But <br>
+							<span class="eq"> $m = 180 lb_m$ x $\frac{1 slug}{32.2 lb_m}$ $=5.59 slugs$ </span> <br>
+							<span class="eq"> $g = 29,131ft$ x $\frac{-0.003 fps^2}{1000 ft}$ $+ 32.088 fps^2$ $32.00 fps^2$</span> <br>
+							Then from $(eq. 1)$ <br>
+							<span class="eq"> $F_g = 5.59 slugs$ x $32.00 fps^2$ $=\underline{178.88 lb_f}$</span> <br>
+						</p> 
+						
+						<p id="solution_3"><span>Solution 3</span><br>Data: <br> 
+							<span class="eq"> $g_{sea} = 32.088 fps^2 $ </span> <br>
+							<span class="eq"> $\Delta g = -0.003 fps^2 $ per 1000 ft </span> <br>
+							Unknown: <br>
+							<span class="eq"> a) Height, $h$ if g is 30.504 $fps^2$ </span> <br>
+							<span class="eq"> b) $h$ if $F_g$ is 95% of original </span> <br>
+							<span class="eq"> c) $F_g$ if $h$ is 29,131 ft and $m$ is 180 $lb_m$</span> <br>
+							Solution: <br>
+							<span class="eq">a) $h = (30.504 - 32.088)fps^2$ x $\frac{1000ft}{-0.003 fps^2}$ $= 528,000ft$ $= \underline{100mi}$ </span> <br>
+							<span class="eq"> b) $h = (32.088)(0.95 - 1)$ $fps^2$ x $\frac{1000ft}{-0.003 fps^2}$ $= 534,800$ ft or $\underline{101.29 mi}$</span> <br>
+							<span class="eq"> c) $F_g = mg \longrightarrow (eq. 1)$ </span> <br>
+							But <br>
+							<span class="eq"> $m = 180 lb_m$ x $\frac{1 slug}{32.2 lb_m}$ $=5.59 slugs$ </span> <br>
+							<span class="eq"> $g = 29,131ft$ x $\frac{-0.003 fps^2}{1000 ft}$ $+ 32.088 fps^2$ $32.00 fps^2$</span> <br>
+							Then from $(eq. 1)$ <br>
+							<span class="eq"> $F_g = 5.59 slugs$ x $32.00 fps^2$ $=\underline{178.88 lb_f}$</span> <br>
+						</p>
+						
+						<p id="solution_4"><span>Solution 4</span><br>Data: <br> 
+							<span class="eq"> $g_{sea} = 32.088 fps^2 $ </span> <br>
+							<span class="eq"> $\Delta g = -0.003 fps^2 $ per 1000 ft </span> <br>
+							Unknown: <br>
+							<span class="eq"> a) Height, $h$ if g is 30.504 $fps^2$ </span> <br>
+							<span class="eq"> b) $h$ if $F_g$ is 95% of original </span> <br>
+							<span class="eq"> c) $F_g$ if $h$ is 29,131 ft and $m$ is 180 $lb_m$</span> <br>
+							Solution: <br>
+							<span class="eq">a) $h = (30.504 - 32.088)fps^2$ x $\frac{1000ft}{-0.003 fps^2}$ $= 528,000ft$ $= \underline{100mi}$ </span> <br>
+							<span class="eq"> b) $h = (32.088)(0.95 - 1)$ $fps^2$ x $\frac{1000ft}{-0.003 fps^2}$ $= 534,800$ ft or $\underline{101.29 mi}$</span> <br>
+							<span class="eq"> c) $F_g = mg \longrightarrow (eq. 1)$ </span> <br>
+							But <br>
+							<span class="eq"> $m = 180 lb_m$ x $\frac{1 slug}{32.2 lb_m}$ $=5.59 slugs$ </span> <br>
+							<span class="eq"> $g = 29,131ft$ x $\frac{-0.003 fps^2}{1000 ft}$ $+ 32.088 fps^2$ $32.00 fps^2$</span> <br>
+							Then from $(eq. 1)$ <br>
+							<span class="eq"> $F_g = 5.59 slugs$ x $32.00 fps^2$ $=\underline{178.88 lb_f}$</span> <br>
+						</p>
+					
+					</div> -->
+					
+					<button id="view_solution" class="button small"> View Solution</button>
+
+										
+				</div>
+				
+								
+				
+				<div class="for_right_ads_quiz">
+					<span> FRA   </span>
+				</div>
+			</div>
+		</div>
+			
+			<script>
+	
+ //star timer
+  var timeElapsed = "";
+	var h1 = document.getElementById('timerContinue'),
+		start = document.getElementById('start'),
+		stop = document.getElementById('stop'),
+		clear = document.getElementById('clear'),
+		seconds = 0, minutes = 0, hours = 0,
+		t;
+
+	function add() {
+		seconds++;
+		if (seconds >= 60) {
+			seconds = 0;
+			minutes++;
+			if (minutes >= 60) {
+				minutes = 0;
+				hours++;
+			}
+		}
+		
+		h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+		timeElapsed =(hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" +  (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+		timer();
+	}
+	function timer() {
+		t = setTimeout(add, 1000);
+	}
+	timer();
+
+	//end timer
+	
+var quiz = [{
+	"question": "A bayabas falls from a branch 5m above the ground with what speed in meter per second does it strike the ground assume g = 10m/s².",
+	"choices": ["11m/s", "12m/s", "13m/s", "10m/s"],
+	"correct": "10m/s"
+}, {
+	"question": "While swimming a depth of 13m in a fresh water lake a fish emits an air bubble of volume 2 mm² atmospheric pressure is 100kpa what is the original pressure of the bubble.",
+	"choices": ["217.17 kpa", "119 kpa", "326.15 kpa", "210 kpa"],
+	"correct": "217.17 kpa"
+}, {
+	"question": "Oxygen at 15ºC and 10.3 Mpa gauge pressure occupies 600L. What is the occupied by the oxygen at 8.28 Mpa gauge pressure and 35ºC?",
+	"choices": ["789.32 L", "796.32 L", "699 L", "588 L"],
+	"correct": "796.32 L"
+}, {
+	"question": "Water is flowing through a 1 foot diameter pipe at the rate of 10ft/sec. What is the volume flow rate of water in ft³/sec?",
+	"choices": ["7.85", "6.85", "8.85", "5.85"],
+	"correct": "7.85"
+}, {
+	"question": "A certain fluid is flowing in a 0.5m x 0.3 channel at the rate of 3 m/s and has a specific volume of 0.012 m³/kg. Determined the mass of water flowing in kg/s.",
+	"choices": ["267 kg/s", "378 kg/s", "375 kg/s", "456.5 kg/s"],
+	"correct": "375 kg/s"
+}, {
+	"question": "A gas having a volume of100 ft³ at 27ºC is expanded to 120 ft³by heated at constant pressure to what temperature has it been heated to have this new volume?",
+	"choices": ["87°C", "85°C", "76°C", "97°C"],
+	"correct": "87°C"
+}, {
+	"question": "Water flow to a terminal 3 mm diameter and has an average speed of 2 m/s. What is the rate of flow in cubic meter/mm?",
+	"choices": ["0.0001m³/min", "0.076 m³/min", "0.085 m³/min", "0.097 m³/min"],
+	"correct": "0.085 m³/min"
+}, {
+	"question": "Water flowing at a 6m/s through a 60 mm pipe is suddenly channeled into a 30 mm pipe. What is the velocity in the small pipe?",
+	"choices": ["34m/s", "24m/s", "15m/s", "27m/s"],
+	"correct": "24m/s"
+}, {
+	"question": "A vertical column of water will be supported to what height by standard atmospheric pressure.",
+	"choices": ["33.9 ft", "45 ft", "67 ft", "25.46 ft"],
+	"correct": "33.9 ft"
+}, {
+	"question": "A fluid flows in a steady manner between two section in a flow line at section 1: A 1 = 1ft², V1 = 100fpm, volume1 of 4ft³/lb. at sec2: A2 = 2 ft², p= 0.20 lb/ft³ calculate the velocity at section 2.",
+	"choices": ["625 fpm", "567 fpm", "356 fpm", "None of the above"],
+	"correct": "625 fpm"
+}, {
+	"question": "The weight of an object is 50lb. What is its mass at standard condition?",
+	"choices": ["50 lbm", "60 lbm", "70 lbm", "80 lbm"],
+	"correct": "50 lbm"
+}, {
+	"question": "A vertical column of water will be supported to what height by standard atmospheric pressure. If the Y w = 62.4lb/ft^3 po = 14.7 psi. ",
+	"choices": ["44.9 ft", "33.9 ft", "22.9 ft", "55.9 ft"],
+	"correct": "33.9 ft"
+}, {
+	"question": "For a certain gas R = 320 J/kg.K and cv= 0.84kJ/kg.K. Find k?",
+	"choices": ["1.36", "1.37", "1.38", "1.39"],
+	"correct": "1.38"
+}, {
+	"question": "Ten cu. ft of air at 300psia and 400°F is cooled to 140°F at constant volume. What is the transferred heat?",
+	"choices": ["-120Btu", "-220Btu", "-320Btu", "-420Btu"],
+	"correct": "-420Btu"
+}, {
+	"question": "Utilizing the answer to the previous problem, estimate the overall or average increase in temperature ( ΔT) of the concrete roof from the energy absorbed from the sun during a12hour day. Assume that all of the radiation absorbed goes into heating the roof. The speci埜󐁣 heat of concrete is about 900 J/kg, and the density is about 2,300 kg/m^3 . ",
+	"choices": ["7.9 °C", "8.9 °C", "9.9 °C", "10.9 °C"],
+	"correct": "7.9 °C"
+}, {
+	"question": "The concrete roof of a house is 10 m by 8 m and 10 cm thick. Estimate the total heat the roof would absorb over the 12 day?",
+	"choices": [" 1.3 x 10^9 J", "2.3 x 10^9 J", "3.3 x 10^9 J", "4.3 x 10^9 J"],
+	"correct": "1.3 x 10^9 J"
+}, {
+	"question": "The value for the ΔU of a system is -120 J. If the system is known to have absorbed 420 J of heat, how much work was done?",
+	"choices": ["-540 J", "-640 J", "-740 J", "-840 J"],
+	"correct": "-540 J"
+}, {
+	"question": "When the pressure on a 1 kg liquid is increased isothermally from 1 bar to 3000 bar the Gibbs free energy increases by 360 kJ. Estimate the density of the liquid.",
+	"choices": ["0.66 kg liter^-1", "0.77 kg liter^-1", "0.88 kg liter^-1 ", "0.99 kg liter^-1"],
+	"correct": "0.77 kg liter^-1"
+}, {
+	"question": "A car whose mass is 2 metric tons is accelerated uniformly from stand hill to 100 kmph in 5 sec. Find the driving force in Newton’s.",
+	"choices": ["11,120 N", "11,320 N", "11,420 N", "11520 N"],
+	"correct": "11,120N"
+}, {
+	"question": "An ideal gas of volume 1liter and pressure 10 bar undergoes a quasistatic adiabatic expansion until the pressure drops to 1 bar. Assume γ to be 1.4 what is the final volume?",
+	"choices": ["3.18 l", "4.18 l", "5.18 l", "6.18 l"],
+	"correct": "5.18 l"
+}, {
+	"question": "Two masses, one of the 10kg and the other unknown, are placed on a scale in a region where g = 9.67 m/sec . The combined weight of these two masses is 174.06 N. Find the unknown mass in kg. ",
+	"choices": ["20 kg", "19 kg", "18 kg", "17 kg"],
+	"correct": "18 kg"
+}, {
+	"question": " The flow energy of 5 ft of a fluid passing a boundary to a system is 80,000 ft-lb. Determine the pressure at this point. ",
+	"choices": ["222 psi", "333 psi", "444 psi", "111 psi"],
+	"correct": "111 psi"
+}, {
+	"question": " Find и for steam at 100 psia and 600°F.If h = 1329.6 and v = 6.216",
+	"choices": ["1214Btu /lb", "1234 Btu /lb", "1342 Btu /lb", "1324 Btu /lb"],
+	"correct": "1214Btu /lb"
+}, {
+	"question": "What mass of nitrogen is contained in a10 ft vessel at a pressure of 840atm and 820°R? Make a computation by using ideal gas equation. ",
+	"choices": ["194 lb", "214 lb", "394 lb", "413 lb"],
+	"correct": "394 lb"
+}, {
+	"question": "A rotary compressor receives 6m3/ min of a gas(R=410J/ kgK, cp=1.03kJ /kgK,k= 1.67) at 105 k/Paa, 27°C and delivers it at 630kPaa: ΔP = 0, ΔK= 0. Find the work if the process is isentropic?",
+	"choices": ["–1664 kJ/min", "–1774 kJ/min", "–1884 kJ/min", "–1994 kJ/min"],
+	"correct": "–1664 kJ/min"
+}, {
+	"question": "A carnot power cycle operates on 2 lb of air between the limits of 71 °F and 500°F. The pressure at the beginning of isothermal expansion is 400 psia and at the end of isothermal expansion is 185psig. Determine the volume at the end of isothermal compression.",
+	"choices": ["7.849 ft^3", "7.850 ft^3", "7.851 ft^3", "852 ft^3"],
+	"correct": "7.849 ft^3"
+}, {
+	"question": "During a polytropic process,10lb of an ideal gas, whose R= 40ft.lb/lb.R and cp = 0.25Btu/lb.R, changes state from 20 psia and 40°F to 120psia and 340°F. Determine n?",
+	"choices": ["1.234", "1.345", "1.456", "1.356"],
+	"correct": "1.356"
+}, {
+	"question": " A perfect gas has a value of R= 319.2 J/ kf.K and k= 1.26. If 120 kJ are added to 2.27 kf\g of this gas at constant pressure when the initial temp is 32.2°C? Find T2.",
+	"choices": ["339.4 K", "449.4 K", "559.4 K", "669.4 K"],
+	"correct": "339.4 K"
+}, {
+	"question": "A certain gas, with cp = 0.529Btu/ lb. °Rand R = 96.2ft.lb/lb. °R, expands from 5 cu ft and 80°F to 15 cu ft while the pressure remains constant at 15.5psia. Compute for T2.",
+	"choices": ["1520°R", "1620°R", "1720°R", "1820°R"],
+	"correct": "1620°R"
+}, {
+	"question": "A System has a temperature of 250°F. Convert this Value to °R?",
+	"choices": ["740°R", "730°R", "720°R", "710°R"],
+	"correct": "710°R"
+}, {
+	"question": "Steam with a specific volume of 0.09596 m³/kg undergoes a constant pressure process at 1.70 MPa until the specific volume becomes 0.13796 m³/kg. What are (a) the final temperature, (b) ∆u, (c) W, (d)∆s, and (e) Q?",
+	"choices": ["265.4°C, 430.7kJ/kg, 71.4kJ/kg, 1.0327kJ/(kg)(K),502.1 kJ/kg", "204.2°C, -703.2 kJ/kg, -84.15 kJ/kg, -1.7505 kJ/(kg)(K), -787.4 kJ/kg", "304.2°C, -803.2 kJ/kg, -89.15 kJ/kg, -2.7505 kJ/(kg)(K), -987.4 kJ/kg", "279.4°C, 439.7kJ/kg, 79.4kJ/kg, 3.0327kJ/(kg)(K),602.1 kJ/kg"],
+	"correct": "265.4°C, 430.7kJ/kg, 71.4kJ/kg, 1.0327kJ/(kg)(K),502.1 kJ/kg"
+}, {
+	"question": "Steam with an enthalpy of 2843.5 kJ/kg undergoes a constant pressure process at 0.9 MPa until the enthalpy becomes 2056.1 kJ/kg. What are (a) the initial temperature or quality, (b) ∆u, (c)W, (d) ∆s, and(e) Q?",
+	"choices": ["265.4°C, 430.7kJ/kg, 71.4kJ/kg, 1.0327kJ/(kg)(K),502.1 kJ/kg", "204.2°C, -703.2 kJ/kg, -84.15 kJ/kg, -1.7505 kJ/(kg)(K),-787.4 kJ/kg", "304.2°C, -803.2 kJ/kg, -89.15 kJ/kg, -2.7505 kJ/(kg)(K), -987.4 kJ/kg", "279.4°C, 439.7kJ/kg, 79.4kJ/kg, 3.0327kJ/(kg)(K), 602.1 kJ/kg"],
+	"correct": "204.2°C, -703.2 kJ/kg, -84.15 kJ/kg, -1.7505 kJ/(kg)(K),-787.4 kJ/kg"
+}, {
+	"question": " At throttling calorimeter receives steam from a boiler drum at0.11MPa and is superheated by 10 degrees. If the boiler drum pressure is 1.55 MPa, what is the quality of the steam generated by the boiler?",
+	"choices": ["95.20%", "70.10%", "65.60%", "95.56%"],
+	"correct": "95.20%"
+}, {
+	"question": "A steam calorimeter receives steam from a pipe at 0.1 MPa and 20°SH. For a pipe steam pressure of 2 MPa, what is the quality of the steam?",
+	"choices": ["95.56%", "70.10%", "95.20%", "85.10%"],
+	"correct": "95.56%"
+}, {
+	"question": " A 1-kg steam-water mixture at 1.0 MPa is contained in an inflexible tank. Heat is added until the pressure rises to 3.5 MPa and the temperature to 400°. Determine the heat added.",
+	"choices": ["1378.7 kJ", "1348.5 kJ", "1278,7 kJ", "1246,5 kJ"],
+	"correct": "1378.7 kJ"
+}, {
+	"question": " Water vapor at 100 KPa and 150°C is compressed isothermally until half the vapor has condensed. How much work must be performed on the steam in this compression process per kilogram?",
+	"choices": ["-1384.7 kJ", "1384.7 kJ", "-2384.7 kJ", "2384.7 kJ"],
+	"correct": "-1384.7 kJ"
+}, {
+	"question": " Wet steam at 1 MPa flowing through a pipe is throttled to a pressure of 0.1 MPa. If the throttling temperature is110°C, What is the quality of the steam in the pipe?",
+	"choices": ["96%", "86%", "76%", "66%"],
+	"correct": "96%"
+}, {
+	"question": "Steam is throttled to 0.1 MPa with 20 degrees of superheat. (a) What is the quality of throttled steam if its pressure is 0.75 MPa (b) What is the enthalpy of the process?",
+	"choices": ["97.6%,2713 kJ/kg", "-97.6%, 2713 kJ/kg", "87.6%,3713 kJ/kg", "-87.6%, 3713 kJ/kg"],
+	"correct": "97.6%,2713 kJ/kg"
+}, {
+	"question": "The pressure gauge on a 2000 m³ tank of oxygen gas reads 600 kPa. How much volumes will the oxygen occupied at pressure of the outside air 100 kPa?",
+	"choices": ["14026.5 m³", "15026.5 m³", "13026.5 m³", "16026.5 m³"],
+	"correct": "14026.5 m³"
+}, {
+	"question": "Assuming compression is according to the Law PV = C, Calculate the initial volume of the gas at a pressure of 2 bars w/c will occupy a volume of 6m³ when it is compressed to a pressure of 42 Bars.",
+	"choices": ["130m³", "136m³", "120m³", "126m³"],
+	"correct": "126m³"
+}, {
+	"question": "A Gas tank registers1000 kPa. After some gas has been used, the gauge registers 500 kPa. What percent of the gas remains in the tank?",
+	"choices": ["64.40%", "74.60%", "58.40%", "54.60%"],
+	"correct": "54.60%"
+}, {
+	"question": "The volume of a gas under standard atmospheric pressure & 76 cmHg is 200m³. What is the volume when pressure is 80 cmHg if the temperature is unchanged?",
+	"choices": ["180 in³", "170 in³", "180 in³", "190 in³"],
+	"correct": "190 in³"
+}, {
+	"question": "While swimming at depth of120m in a fresh water lake, A 埜󐁳h emits an air bubbles of volume 2.0mm³ atmospheric pressure is 100kPa. What is the pressure of the bubble?",
+	"choices": ["217.7 kPa", "317.7 kPa", "417.7 kPa", "517.7 kPa"],
+	"correct": "217.7 kPa"
+}, {
+	"question": "How many joules of work is the equivalent of 15000 cal of heat?",
+	"choices": ["62850 joules", "3579.95 joules", "14995.81 joules", "15004.19 joules"],
+	"correct": "62850 joules"
+}, {
+	"question": "Two thick slices of bread, when completely oxidized by the body, can supply 200,000 cal of heat. How much work is this equivalent to?",
+	"choices": ["4,190,000 joules", "8,390,000 joules", "839,000 joules", "419 000 joules"],
+	"correct": "419 000 joules"
+}, {
+	"question": "3 horsepower (hp) = _____________watts?",
+	"choices": ["1492 watts", "2238 watts", "746 watts", "2238 kilowatts"],
+	"correct": "2238 watts"
+}, {
+	"question": "How many Newton’s (N) in 900,000 dynes?",
+	"choices": ["8 Newton’s", "9 Newton’s", "7 Newton’s", "6 Newton’s"],
+	"correct": "9 Newton’s"
+}, {
+	"question": "Calculate the power output in horsepower of an 80-kg man that climbs a flight of stairs 3.8 m high in 4.0 s.",
+	"choices": ["744.8 hp", "0.998 hp", "746 hp", "1.998 hp"],
+	"correct": "0.998 hp"
+}, {
+	"question": "How many calories of heat will be needed to raise the temperature of 200 g of iron from 27°C to 80°C? (c = 0.11 cal/g. °C)",
+	"choices": ["1.16 kcal", "2166 cal", "3.16 kcal", "4166 cal"],
+	"correct": "1.16 kcal"
+}, {
+	"question": "100g of iron was heated to 100°C and mixed with 22g of water at 40°C. The 埜󐁮al temperature of the mixture was 60°C. Show that the heat given off by the iron equals the heat absorbed by the water.",
+	"choices": ["440 cal", "540 cal", "340 cal", "640 cal"],
+	"correct": "440 cal"
+}];
+
+// mga nadagdag quiz with images
+// array of images  
+	var images = [];
+	var solutionIsVisible;
+
+// define elements
+var content = $("content"),
+  questionContainer = $("question"),
+  choicesContainer = $("choices"),
+  scoreContainer = $("score"), //nabago
+  submitBtn = $("submit");
+  
+  var resultPage = "";
+  
+// init vars
+var currentQuestion = 0,
+	score = 0,
+  askingQuestion = true,
+  questionNumber = 0,
+   maxQ = quiz.length, 
+  questionNumber;
+  
+  wrongAnswerQ = "",
+  wrongAnswerNo=0;
+  var yourAnswer = "You did not pick any answer.";
+  var choicesMistakesG = "";
+  if(maxQ > quiz.length) {
+	maxQ = quiz.length;
+  }
+  var isOnReviewWrongPage = false;
+  var duplicates  =[];
+
+function $(id) { // shortcut for document.getElementById
+  return document.getElementById(id);
+}
+
+function askQuestion() {
+  var choices = quiz[questionNumber].choices,
+    choicesHtml = "", choicesMistakes="" ;
+
+
+  // loop through choices, and create radio buttons
+  for (var i = 0; i < choices.length; i++) {
+  //alert(get_rand(nums));
+    choicesHtml += "<input type='radio' name='quiz" + questionNumber +
+      "' id='choice" + ( i + 1) +
+      "' value='" + choices[i] + "'>" +
+      " <label for='choice" + (i + 1) + "'>" + choices[i] + "</label> <br>";
+	  
+	  choicesMistakes += "<span name='quiz" + questionNumber +
+      "' id='choice" + (i + 1) +
+      "' value='" + choices[i] + "'>"+ (i+1) + ". " + choices[i] + "</span><br>";
+	   if(choices[i] === quiz[questionNumber].correct) {
+			correctAnswer = choices[i];
+			correctAnswerIndex = i;
+	  }
+	  
+	  choicesMistakesG = choicesMistakes;
+  }
+
+  
+  // load the question
+  questionContainer.textContent = (questionNumber + 1) + ". " +
+    quiz[questionNumber].question;
+	
+	
+  // load the choices
+  choicesContainer.innerHTML = choicesHtml;
+
+  // setup for the first time
+  if (questionNumber === 0) {
+  scoreContainer.textContent = "Score: " + score + "/" + maxQ; //nabago
+    submitBtn.textContent = "Submit Answer";
+	//alert(quiz.length);
+  }
+  
+	
+
+}
+
+function checkAnswer() {
+	var yourAnswer = "You did not pick any answer.";
+  // are we asking a question, or proceeding to next question?
+  if (askingQuestion) {
+	
+	//mga nadagdag for view_solution
+	if($('#solution_' + (questionNumber+1)).length > 0) {
+		$('#view_solution').css('visibility', 'visible');
+	}
+    submitBtn.textContent = "Next Question";
+    askingQuestion = false;
+
+    // determine which radio button they clicked
+    var userpick,
+      correctIndex,
+      radios = document.getElementsByName("quiz" + questionNumber);
+    for (var i = 0; i < radios.length; i++) {
+      if (radios[i].checked) { // if this radio button is checked
+        userpick = radios[i].value;
+		yourAnswer = userpick;
+      }
+
+      // get index of correct answer
+      if (radios[i].value == quiz[questionNumber].correct) {
+        correctIndex = i;
+      }
+    }
+
+    // setup if they got it right, or wrong
+    var labelStyle = document.getElementsByTagName("label")[correctIndex].style;
+    labelStyle.fontWeight = "bold";
+    if (userpick == quiz[questionNumber].correct) {
+      labelStyle.color = "green";
+	  score++; 
+    } else {
+		wrongAnswerNo++;
+      labelStyle.color = "red";
+	  wrongAnswerQ += "<br> <span id='question'> " + wrongAnswerNo+". " + quiz[questionNumber].question + "</span><br> " + "<div id='choices'>" + choicesMistakesG + " <strong>Your answer: "+ yourAnswer + "</strong><br> <strong id='answer'>" + "Correct answer: " + correctAnswer  + "</strong></div> ";//  + 
+
+    }
+	
+	
+  } else { // move to next question
+    // setting up so user can ask a question
+    askingQuestion = true;
+    // change button text back to "Submit Answer"
+    submitBtn.textContent = "Submit Answer";
+	scoreContainer.textContent = "Score: " + score + "/" + maxQ;; //nabago
+    // if we're not on last question, increase question number
+    if (questionNumber < maxQ - 1) {
+      //currentQuestion++;
+	  questionNumber++;
+      askQuestion();
+    } else {
+      clearTimeout(t);
+      showFinalResults();
+    }
+	
+	//mga nadagdag quiz with images
+	for(i=0; i<quiz.length; i++) { 
+		$('#for_q_' + (i+1)).hide();
+	}
+	
+	// mga nadagdag quiz with images
+	if((questionNumber+1) === 1) {
+		$('#question').after(images[0]);
+	} else if((questionNumber+1) === 2) {
+		$('#question').after(images[1]);
+	}
+	
+	//mga nadagdag for view_solution
+	for(i=0; i<quiz.length; i++) { 
+		$('#solution_' + (i+1)).hide();
+	}
+	
+	$('.for_view_solution').hide();
+	$('#view_solution').css('visibility', 'hidden');
+	
+	solutionIsVisible = false;
+	if(solutionIsVisible) {
+		document.getElementById('view_solution').textContent = 'Hide Solution';
+		solutionIsVisible = false;
+	}else if(!solutionIsVisible){
+		document.getElementById('view_solution').textContent = 'View Solution';
+		solutionIsVisible = true;
+	}
+  }
+}
+
+function showFinalResults() {
+	//resultPage = "<center><strong class='for_h'>You Passed!</strong></center>";
+	if(score/maxQ >= 0.7){
+		resultPage = "<center><strong class='for_h'>You Passed!</strong></center> <br> <center><strong>Score: " + score + " out of " + maxQ + " </strong></center><center><strong> Equivalent Percentage: " + Math.floor(score/maxQ*100) + "%</strong></center><center><strong>Total time: " + timeElapsed + "</strong></center> <br> <br><button id='restart' class='button fit' onclick='reloadCurrentPage();'> Restart the Test</button><button id='reviewMistakes' class='button fit' onclick='reviewMistakes();'> Review Mistakes</button> <button id='proceedToNext' class='button fit' onclick='proceedToNext();'> Proceed to next Test</button> ";
+	} else {
+		resultPage = "<center><strong class='for_h'>You Failed!</strong></center> <br> <center><strong>Score: " + score + " out of " + maxQ + " </strong></center><center><strong> Equivalent Percentage: " + Math.floor(score/maxQ*100) + "%</strong></center><center><strong>Total time: " + timeElapsed + "</strong></center> <br> <br><button id='restart' class='button fit' onclick='reloadCurrentPage();'> Restart the Test</button><button id='reviewMistakes' class='button fit' onclick='reviewMistakes();'> Review Mistakes</button> <button id='proceedToNext' class='button fit' onclick='proceedToNext();'> Proceed to next Test</button> ";
+	}
+	content.innerHTML = resultPage;
+}
+
+function reviewMistakes() {
+	content.innerHTML = wrongAnswerQ + " <br><br> <center><button id='restart' class='button fit' onclick='reloadCurrentPage();'> Restart the Test</button></center> <button id='proceedToNext' class='button fit' onclick='proceedToNext();'> Proceed to next Test</button>";
+}
+
+function proceedToNext() {
+	document.location.href = "thermoIX.html"; //need to be updated per test 
+}
+
+function reloadCurrentPage() {
+	document.location.href = "thermoVIII.html"; //need to be updated per test 
+}
+
+window.addEventListener("load", askQuestion, false);
+submitBtn.addEventListener("click", checkAnswer, false);
+
+
+
+</script>
+
+
+
+
+			<!-- Scripts for Phantom -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+
+</html>

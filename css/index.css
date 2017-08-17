@@ -277,7 +277,7 @@ a {
 
 	#logo img {
 		display: inline-block;
-		max-width: 0.2vw;
+		max-width: 20em;
 		height: 4.2em;
 		margin: 0.01em auto;
 	}
@@ -436,7 +436,7 @@ a {
 
 	#logo img {
 		display: inline-block;
-		max-width: 9em;
+		max-width: 16em;
 		height: 4.2em;
 		margin: 0.01em auto;
 	}
@@ -543,7 +543,7 @@ a {
 
 	#logo img {
 		display: inline-block;
-		max-width: 9em;
+		max-width: 12em;
 		height: 4.2em;
 		margin: 0.01em auto;
 	}

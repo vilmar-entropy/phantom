@@ -106,6 +106,7 @@ a {
 	}
 	
 	#for_left_content_quiz {
+		
 		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 		position: relative;
 		float: left;
@@ -276,7 +277,7 @@ a {
 
 	#logo img {
 		display: inline-block;
-		max-width: 9em;
+		max-width: 0.2vw;
 		height: 4.2em;
 		margin: 0.01em auto;
 	}
